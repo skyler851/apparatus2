@@ -168,12 +168,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Apparatus-White1color" translatesAutoresizingMaskIntoConstraints="NO" id="wXZ-rK-vFw">
                                 <rect key="frame" x="168" y="241" width="432" height="151"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4 digit password" borderStyle="roundedRect" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="wNr-Zx-e2P">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4 digit password" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="wNr-Zx-e2P">
                                 <rect key="frame" x="195" y="413" width="383" height="30"/>
                                 <rect key="contentStretch" x="0.0" y="1.3877787807814457e-17" width="1" height="1"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-Mn-rUP">
                                 <rect key="frame" x="195" y="476" width="383" height="33"/>
@@ -378,9 +378,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b5e-Af-tko" id="6Rb-XT-QOM">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="VAt-me-lpW" kind="show" id="POL-SS-fXf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -990,7 +987,7 @@
         <image name="red-banner" width="2880" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yLI-T9-dCU"/>
         <segue reference="wis-wa-JDH"/>
+        <segue reference="t1j-l2-rM9"/>
     </inferredMetricsTieBreakers>
 </document>
