@@ -6,10 +6,7 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 
-#ifndef Recruitment_Recruitment_Bridging_Header_h
-#define Recruitment_Recruitment_Bridging_Header_h
-
 #import "SWRevealViewController.h"
 
 
-#endif
+this is random text
