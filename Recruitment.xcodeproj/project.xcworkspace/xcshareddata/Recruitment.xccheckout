@@ -12,6 +12,8 @@
 	<dict>
 		<key>77C21C965F3EAE7E8849F4536CBC684D8510EE56</key>
 		<string>https://github.com/seanvanpelt2/Recruitment.git</string>
+		<key>A0E3810E9B0759D8EB877336EDEF4F8817D440CB</key>
+		<string>https://github.com/skyler851/apparatus2.git</string>
 		<key>F47F6BB9FA7E6950087CF5E4E634F156757E4816</key>
 		<string>https://github.com/skyler851/apparatus1.git</string>
 	</dict>
@@ -21,15 +23,17 @@
 	<dict>
 		<key>77C21C965F3EAE7E8849F4536CBC684D8510EE56</key>
 		<string>../../../APP@US</string>
-		<key>F47F6BB9FA7E6950087CF5E4E634F156757E4816</key>
+		<key>A0E3810E9B0759D8EB877336EDEF4F8817D440CB</key>
 		<string>../..</string>
+		<key>F47F6BB9FA7E6950087CF5E4E634F156757E4816</key>
+		<string>../../../apparatus1</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/skyler851/apparatus1.git</string>
+	<string>https://github.com/skyler851/apparatus2.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F47F6BB9FA7E6950087CF5E4E634F156757E4816</string>
+	<string>A0E3810E9B0759D8EB877336EDEF4F8817D440CB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -47,6 +51,14 @@
 			<string>F47F6BB9FA7E6950087CF5E4E634F156757E4816</string>
 			<key>IDESourceControlWCCName</key>
 			<string>apparatus1</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A0E3810E9B0759D8EB877336EDEF4F8817D440CB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>apparatus2</string>
 		</dict>
 	</array>
 </dict>
