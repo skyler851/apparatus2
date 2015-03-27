@@ -177,7 +177,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-Mn-rUP">
                                 <rect key="frame" x="195" y="476" width="383" height="33"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.5450980392" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.37417312956204379" green="0.54509803919999988" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -987,7 +987,7 @@
         <image name="red-banner" width="2880" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wis-wa-JDH"/>
         <segue reference="t1j-l2-rM9"/>
+        <segue reference="wis-wa-JDH"/>
     </inferredMetricsTieBreakers>
 </document>
