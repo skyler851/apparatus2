@@ -6,4 +6,8 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 
+
 #import "SWRevealViewController.h"
+
+#import <Parse/Parse.h>
+// or #import <ParseOSX/ParseOSX.h>
