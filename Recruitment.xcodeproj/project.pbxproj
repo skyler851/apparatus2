@@ -42,6 +42,8 @@
 		57CA15EA1A9E62B4009EC3C7 /* AdminMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */; };
 		57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15EB1A9E8508009EC3C7 /* Score.swift */; };
 		57CA15F01A9E89F6009EC3C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CA15EF1A9E89F6009EC3C7 /* Images.xcassets */; };
+		57E3094B1AC4F9F000B3B40E /* SkillsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E3094A1AC4F9F000B3B40E /* SkillsCollectionViewController.m */; };
+		57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E3094D1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,10 @@
 		57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminMenu.swift; path = ../AdminMenu.swift; sourceTree = "<group>"; };
 		57CA15EB1A9E8508009EC3C7 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		57CA15EF1A9E89F6009EC3C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		57E309491AC4F9F000B3B40E /* SkillsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillsCollectionViewController.h; sourceTree = "<group>"; };
+		57E3094A1AC4F9F000B3B40E /* SkillsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillsCollectionViewController.m; sourceTree = "<group>"; };
+		57E3094C1AC4F9FC00B3B40E /* SkillsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillsCollectionViewCell.h; sourceTree = "<group>"; };
+		57E3094D1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillsCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +227,15 @@
 				56847ADC1AC0E31E00082B65 /* Recruitment-Bridging-Header.h */,
 				5696A2641AC0CE6F0032BCCF /* SWRevealViewController */,
 				5696A25B1AC0C72E0032BCCF /* Controllers */,
+<<<<<<< HEAD
+=======
+				57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */,
+				5696B3911AC232B900E82061 /* Parse.framework */,
+				5696B3921AC232B900E82061 /* ParseCrashReporting.framework */,
+				5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */,
+				5696B3941AC232B900E82061 /* ParseUI.framework */,
+				5696B38F1AC2329E00E82061 /* Bolts.framework */,
+>>>>>>> 11039813a2a48931f38d3e97b6b8f8bf9bd49262
 				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
 				5696B3671AC219A000E82061 /* CandidateViewController.swift */,
 				563FD37F1AAA44A3004B6EB7 /* Fonts */,
@@ -258,6 +273,17 @@
 				57CA15DA1A9BADE1009EC3C7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				57E309491AC4F9F000B3B40E /* SkillsCollectionViewController.h */,
+				57E3094A1AC4F9F000B3B40E /* SkillsCollectionViewController.m */,
+				57E3094C1AC4F9FC00B3B40E /* SkillsCollectionViewCell.h */,
+				57E3094D1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m */,
+			);
+			name = SkillsCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E3094B1AC4F9F000B3B40E /* SkillsCollectionViewController.m in Sources */,
 				57CA15C81A9BADE1009EC3C7 /* ViewController.swift in Sources */,
 				5696A25D1AC0C77D0032BCCF /* LoginController.swift in Sources */,
 				5696A2611AC0CAE60032BCCF /* NewCandidateController.swift in Sources */,
@@ -370,6 +397,7 @@
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
 				565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
+				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
 				5696B3681AC219A000E82061 /* CandidateViewController.swift in Sources */,
