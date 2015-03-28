@@ -27,12 +27,7 @@ class LoginController: UIViewController {
             alert.show()
             
             return false
-<<<<<<< HEAD
-            
-=======
-        
-        
->>>>>>> f3da512e38a4944df6028cd1dee1e11d2c74ce5d
+
         }
         
         

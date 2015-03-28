@@ -227,23 +227,14 @@
 				56847ADC1AC0E31E00082B65 /* Recruitment-Bridging-Header.h */,
 				5696A2641AC0CE6F0032BCCF /* SWRevealViewController */,
 				5696A25B1AC0C72E0032BCCF /* Controllers */,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> f3da512e38a4944df6028cd1dee1e11d2c74ce5d
 				57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */,
 				5696B3911AC232B900E82061 /* Parse.framework */,
 				5696B3921AC232B900E82061 /* ParseCrashReporting.framework */,
 				5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */,
 				5696B3941AC232B900E82061 /* ParseUI.framework */,
 				5696B38F1AC2329E00E82061 /* Bolts.framework */,
-<<<<<<< HEAD
->>>>>>> 11039813a2a48931f38d3e97b6b8f8bf9bd49262
-=======
 
->>>>>>> f3da512e38a4944df6028cd1dee1e11d2c74ce5d
 				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
 				5696B3671AC219A000E82061 /* CandidateViewController.swift */,
 				563FD37F1AAA44A3004B6EB7 /* Fonts */,
