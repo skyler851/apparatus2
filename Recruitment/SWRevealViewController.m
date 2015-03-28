@@ -29,7 +29,7 @@
 #import "SWRevealViewController.h"
 
 
-#pragma mark - StatusBar Helper Function
+#pragma mark - statusBar Helper Function
 
 // computes the required offset adjustment due to the status bar for the passed in view,
 // it will return the statusBar height if view fully overlaps the statusBar, otherwise returns 0.0f
@@ -654,9 +654,9 @@ const int FrontViewPositionNone = 0xff;
 }
 
 
-#pragma mark - StatusBar
+#pragma mark - statusBar
 
-- (UIViewController *)childViewControllerForStatusBarStyle
+- (UIViewController *)childViewControllerForstatusBarStyle
 {
     int positionDif =  _frontViewPosition - FrontViewPositionRight;
     
@@ -667,9 +667,9 @@ const int FrontViewPositionNone = 0xff;
     return controller;
 }
 
-- (UIViewController *)childViewControllerForStatusBarHidden
+- (UIViewController *)childViewControllerForstatusBarHidden
 {
-    UIViewController *controller = [self childViewControllerForStatusBarStyle];
+    UIViewController *controller = [self childViewControllerForstatusBarStyle];
     return controller;
 }
 
