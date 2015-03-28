@@ -1,20 +1,23 @@
-//
-//  NewCandidateController.swift
-//  Recruitment
-//
-//  Created by Stephanie Kyler on 3/23/15.
-//  Copyright (c) 2015 AppAtUs. All rights reserved.
-//
-
 import UIKit
+import Parse
 
-class NewCandidateController: UIViewController {
+class NewCandidateController: UIViewController, UIPickerViewDelegate {
+    
     @IBOutlet weak var menuButton:UIBarButtonItem!
+    
+    @IBOutlet weak var AreaOfInterest: UIPickerView!
+    
+    var TempArray = ["Temp Interest 1",
+        "Temp Interest 2",
+        "Temp Interest 3",
+        "Temp Interest 4"]
+    
+    var AoIArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -26,6 +29,32 @@ class NewCandidateController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func retrieveFromParse() {
+        //Get info from the database
+        var retrieveAoI = PFQuery(className:"SkillsTable")
+        
+        //Orders AoI in ABC Order
+        retrieveAoI.orderByAscending("AoI")
+        
+        //Puts info in an Array
+        
+
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return 4
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        
+        return TempArray[row]
     }
     
     

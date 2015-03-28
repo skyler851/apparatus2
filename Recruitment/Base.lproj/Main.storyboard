@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
+>>>>>>> SkillsList
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -23,6 +27,7 @@
             <string>OpenSans-Light</string>
         </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -177,7 +182,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-Mn-rUP">
                                 <rect key="frame" x="195" y="476" width="383" height="33"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.5450980392" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="368" y="-133"/>
         </scene>
-        <!--Skills-->
+        <!--Profile-->
         <scene sceneID="SNR-Zs-kNX">
             <objects>
-                <viewController title="Skills" id="DGa-VG-AdE" customClass="NewCandidateController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DGa-VG-AdE" customClass="NewCandidateController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wVN-rM-Mns"/>
                         <viewControllerLayoutGuide type="bottom" id="dyz-ao-Fsb"/>
@@ -227,18 +232,6 @@
                                 <rect key="frame" x="16" y="137" width="152.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check boxes for skills go here. No, we're not using Switches because it would look bad." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bki-fg-nHX">
-                                <rect key="frame" x="21" y="474" width="676" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check boxes for Team go here. No, we're not using Switches because it would look bad." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqO-2F-3vz">
-                                <rect key="frame" x="53" y="746" width="679" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Time MAY  |  May 2015 Grad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egm-dD-0e0">
@@ -291,8 +284,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <pickerView contentMode="scaleToFill" restorationIdentifier="areaPicker" translatesAutoresizingMaskIntoConstraints="NO" id="wU9-2U-b9j">
-                                <rect key="frame" x="0.0" y="788" width="768" height="162"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJA-Ib-RcY">
+                                <rect key="frame" x="16" y="448" width="736" height="556"/>
+                                <connections>
+                                    <segue destination="ojU-cR-2hB" kind="embed" id="lyJ-Nn-z8k"/>
+                                </connections>
+                            </containerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djh-1B-1Vj">
+                                <rect key="frame" x="16" y="278" width="736" height="162"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DGa-VG-AdE" id="fdi-Jq-XWu"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,11 +303,8 @@
                             <constraint firstItem="t6t-yS-JIh" firstAttribute="top" secondItem="wVN-rM-Mns" secondAttribute="bottom" id="0x7-8s-iK5"/>
                             <constraint firstItem="Zmj-xN-oQv" firstAttribute="top" secondItem="LgJ-EA-h7v" secondAttribute="bottom" constant="18" id="3bo-WD-lNK"/>
                             <constraint firstAttribute="trailing" secondItem="LgJ-EA-h7v" secondAttribute="trailing" id="8Mg-2F-ZIN"/>
-                            <constraint firstItem="LgJ-EA-h7v" firstAttribute="trailing" secondItem="wU9-2U-b9j" secondAttribute="trailing" id="DbY-ij-f58"/>
-                            <constraint firstItem="Zmj-xN-oQv" firstAttribute="bottom" secondItem="wU9-2U-b9j" secondAttribute="bottom" constant="-680" id="HAe-Mn-Cgr"/>
                             <constraint firstItem="LgJ-EA-h7v" firstAttribute="trailing" secondItem="t6t-yS-JIh" secondAttribute="trailing" id="LsT-c6-WWe"/>
                             <constraint firstItem="Zmj-xN-oQv" firstAttribute="leading" secondItem="q2v-9O-PxM" secondAttribute="leading" id="M3B-3n-2gw"/>
-                            <constraint firstItem="LgJ-EA-h7v" firstAttribute="leading" secondItem="wU9-2U-b9j" secondAttribute="leading" id="MVU-Ie-h1P"/>
                             <constraint firstItem="Zmj-xN-oQv" firstAttribute="top" secondItem="3A8-3X-eYO" secondAttribute="top" constant="240" id="QRe-QK-dea"/>
                             <constraint firstItem="LgJ-EA-h7v" firstAttribute="leading" secondItem="9Z7-O9-flm" secondAttribute="leading" id="WHA-X8-yXc"/>
                             <constraint firstItem="LgJ-EA-h7v" firstAttribute="leading" secondItem="3A8-3X-eYO" secondAttribute="leading" id="Xsj-NL-0v7"/>
@@ -333,12 +332,60 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="AreaOfInterest" destination="djh-1B-1Vj" id="pGI-yx-40u"/>
                         <outlet property="menuButton" destination="cYY-8A-2MR" id="BlP-b5-Zr7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPA-up-xcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2365" y="1134"/>
+        </scene>
+        <!--Skills Collection View Controller-->
+        <scene sceneID="vbr-Dp-2o3">
+            <objects>
+                <collectionViewController id="ojU-cR-2hB" customClass="SkillsCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rBc-GT-IJr">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FcO-mK-0T9">
+                            <size key="itemSize" width="175" height="70"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6j5-bz-LFq" customClass="SkillsCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="175" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="textLabel" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-bZ-n3n">
+                                            <rect key="frame" x="8" y="8" width="159" height="54"/>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="SkillsLabel" destination="vqB-bZ-n3n" id="2EX-0b-ASa"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ojU-cR-2hB" id="UOQ-4u-UKp"/>
+                            <outlet property="delegate" destination="ojU-cR-2hB" id="0jp-fh-RlG"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nd6-ou-U3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349" y="2081"/>
         </scene>
         <!--Candidates-->
         <scene sceneID="qm1-BQ-Y1p">
