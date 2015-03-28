@@ -185,7 +185,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wc1-GC-iJH" kind="show" id="t1j-l2-rM9"/>
+                                    <action selector="btnSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8pf-R8-C2p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,6 +199,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="menuButton" destination="soI-o3-Xcz" id="yi8-F8-rri"/>
+                        <outlet property="txtUsername" destination="wNr-Zx-e2P" id="IaH-a2-YB7"/>
+                        <segue destination="wc1-GC-iJH" kind="show" identifier="toCandidatePage" id="33a-Pp-5FJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -702,7 +704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR9-AR-Uo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="998"/>
+            <point key="canvasLocation" x="368" y="1031"/>
         </scene>
         <!--Score-->
         <scene sceneID="qkJ-9t-9SI">
@@ -1030,7 +1032,7 @@
         <image name="red-banner" width="2880" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t1j-l2-rM9"/>
+        <segue reference="33a-Pp-5FJ"/>
         <segue reference="wis-wa-JDH"/>
     </inferredMetricsTieBreakers>
 </document>
