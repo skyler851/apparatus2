@@ -618,8 +618,8 @@
                                 <rect key="frame" x="123" y="592" width="523" height="29"/>
                                 <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                                 <segments>
-                                    <segment title="Full Time (May)"/>
-                                    <segment title="Full Time (Dec)"/>
+                                    <segment title="Full-Time (May)"/>
+                                    <segment title="Full-Time (Dec)"/>
                                     <segment title="Internship"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -634,12 +634,6 @@
                                 <rect key="frame" x="306" y="711" width="157" height="136"/>
                                 <color key="backgroundColor" red="0.54509803921568623" green="0.77647058823529413" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5F-Ee-HOA">
-                                <rect key="frame" x="123" y="178" width="332" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -647,7 +641,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="19z-wQ-Ypm"/>
                         <barButtonItem title="SUBMIT INFORMATION" id="Bst-Gu-eFa">
                             <connections>
-                                <action selector="submit:" destination="wc1-GC-iJH" id="ccU-qd-UzQ"/>
+                                <action selector="submit:" destination="wc1-GC-iJH" id="SOJ-4C-z33"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="AmO-8w-0C2"/>
@@ -663,14 +657,15 @@
                     <connections>
                         <outlet property="emailTextField" destination="xgb-ow-9UN" id="xLf-cM-zSa"/>
                         <outlet property="gradDate" destination="Z5o-bk-wJr" id="Vvi-Cm-Io1"/>
+                        <outlet property="jobType" destination="mWU-Nc-6Vl" id="RcJ-ta-m0c"/>
                         <outlet property="menuButton" destination="1Xa-EV-LlW" id="iAN-1L-HhY"/>
-                        <outlet property="messageLabel" destination="Z5F-Ee-HOA" id="e1L-RG-0v7"/>
                         <outlet property="usernameTextField" destination="fp1-Ab-EpN" id="jc1-2g-aYl"/>
+                        <segue destination="oKE-DZ-8er" kind="show" identifier="toThankYouPage" id="iAN-ge-9wb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR9-AR-Uo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="998"/>
+            <point key="canvasLocation" x="368" y="1209"/>
         </scene>
         <!--Score-->
         <scene sceneID="qkJ-9t-9SI">
@@ -999,6 +994,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Tx4-7B-G2q"/>
-        <segue reference="yLI-T9-dCU"/>
+        <segue reference="t1j-l2-rM9"/>
     </inferredMetricsTieBreakers>
 </document>
