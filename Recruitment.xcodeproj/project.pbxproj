@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560127A81AC8ED630009AF1E /* ThankYouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560127A71AC8ED630009AF1E /* ThankYouController.swift */; };
 		563FD37E1AAA43B1004B6EB7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563FD37D1AAA43B1004B6EB7 /* OpenSans-Regular.ttf */; };
 		563FD3811AAA4C83004B6EB7 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563FD3801AAA4C83004B6EB7 /* OpenSans-Light.ttf */; };
 		563FD3831AAA4C90004B6EB7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563FD3821AAA4C90004B6EB7 /* OpenSans-Bold.ttf */; };
@@ -33,6 +34,7 @@
 		5696B3961AC232B900E82061 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3921AC232B900E82061 /* ParseCrashReporting.framework */; };
 		5696B3971AC232B900E82061 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */; };
 		5696B3981AC232B900E82061 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3941AC232B900E82061 /* ParseUI.framework */; };
+		56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5902E1AC8F43300F29A86 /* ProfileController.swift */; };
 		56BE0FE01AAD2413008B0848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0FDE1AAD2413008B0848 /* Main.storyboard */; };
 		57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */; };
 		57CA15C81A9BADE1009EC3C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15C71A9BADE1009EC3C7 /* ViewController.swift */; };
@@ -57,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560127A71AC8ED630009AF1E /* ThankYouController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouController.swift; sourceTree = "<group>"; };
 		563FD37D1AAA43B1004B6EB7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		563FD3801AAA4C83004B6EB7 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		563FD3821AAA4C90004B6EB7 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		5696B3921AC232B900E82061 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		5696B3941AC232B900E82061 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		56B5902E1AC8F43300F29A86 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		56BE0FDF1AAD2413008B0848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57CA15C01A9BADE1009EC3C7 /* Recruitment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recruitment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CA15C41A9BADE1009EC3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				5696A25E1AC0CA870032BCCF /* CandidateListController.swift */,
 				5696A2601AC0CAE60032BCCF /* NewCandidateController.swift */,
 				565A9D511AC4DD3D00819C07 /* MenuController.swift */,
+				560127A71AC8ED630009AF1E /* ThankYouController.swift */,
+				56B5902E1AC8F43300F29A86 /* ProfileController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -227,14 +233,7 @@
 				56847ADC1AC0E31E00082B65 /* Recruitment-Bridging-Header.h */,
 				5696A2641AC0CE6F0032BCCF /* SWRevealViewController */,
 				5696A25B1AC0C72E0032BCCF /* Controllers */,
-
 				57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */,
-				5696B3911AC232B900E82061 /* Parse.framework */,
-				5696B3921AC232B900E82061 /* ParseCrashReporting.framework */,
-				5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */,
-				5696B3941AC232B900E82061 /* ParseUI.framework */,
-				5696B38F1AC2329E00E82061 /* Bolts.framework */,
-
 				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
 				5696B3671AC219A000E82061 /* CandidateViewController.swift */,
 				563FD37F1AAA44A3004B6EB7 /* Fonts */,
@@ -392,6 +391,8 @@
 				57CA15C81A9BADE1009EC3C7 /* ViewController.swift in Sources */,
 				5696A25D1AC0C77D0032BCCF /* LoginController.swift in Sources */,
 				5696A2611AC0CAE60032BCCF /* NewCandidateController.swift in Sources */,
+				560127A81AC8ED630009AF1E /* ThankYouController.swift in Sources */,
+				56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */,
 				56847AE21AC20B2200082B65 /* SWRevealViewController.m in Sources */,
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
 				565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */,

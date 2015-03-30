@@ -1,108 +1,98 @@
 import UIKit
 
-class NewCandidateController: UIViewController, UIPickerViewDelegate {
-    
-    //menu
-    @IBOutlet weak var menuButton:UIBarButtonItem!
-    @IBOutlet weak var AreaOfInterest: UIPickerView!
-    //submit new candidate info
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var gradDate: UIDatePicker!
-    @IBOutlet weak var jobType: UISegmentedControl!
-    
-    //perform segue to go to thank you page
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+class NewCandidateController: UIViewController{
+
+        @IBOutlet weak var menuButton:UIBarButtonItem!
         
-        //check if segue identifier is toThankYouPage
-        if identifier == "toThankYouPage"{
+        //submit new candidate info
+        @IBOutlet weak var usernameTextField: UITextField!
+        @IBOutlet weak var emailTextField: UITextField!
+        @IBOutlet weak var gradDate: UIDatePicker!
+        @IBOutlet weak var jobType: UISegmentedControl!
+        
+        //perform segue to go to thank you page
+        override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
             
-            if (emailTextField.text.isEmpty) {
-                //alert empty email
-                let alert = UIAlertView()
-                alert.title = "Invalid Email"
-                alert.message = "Please enter your email address"
-                alert.addButtonWithTitle("Ok")
-                alert.show()
+            //check if segue identifier is toThankYouPage
+            if identifier == "toThankYouPage"{
                 
-                return false
-            }
-            
-            if status == "false"{
-                //alert that email already exists
-                let alert = UIAlertView()
-                alert.title = "Email Already Exists"
-                alert.message = "Please let the recruiter know that your email is already in our system"
-                alert.addButtonWithTitle("Ok")
-                alert.show()
-                
-                return false
-            }
-            
-            if status == "true"{
-                performSegueWithIdentifier("toThankYouPage", sender: self)
-                return true
-            }
-        }
-        return true
-    }
-    
-    
-    //enter submit button
-    @IBAction func submit(sender: UIBarButtonItem) {
-        
-        //get what user typed
-        var usrEntered = usernameTextField.text
-        var emlEntered = emailTextField.text
-        var gradEntered = gradDate.date
-        var jobEntered = jobType.selectedSegmentIndex
-        var jobToParse = ""
-        
-        if (jobEntered == 0){ jobToParse = "Full-Time May"}
-        else if (jobEntered == 1){jobToParse = "Full-Time Dec"}
-        else {jobToParse = "Internship"}
-        
-        var query = PFQuery(className:"Candidates")
-        query.whereKey("email", equalTo: emlEntered )
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            
-            //make sure name and email are filled out
-            if usrEntered != "" && emlEntered != "" && gradEntered != "" || error == nil {
-                
-                if (objects.count == 0) {
-                    //get the call Candidate from parse and enter the data into the columns
-                    var object = PFObject(className: "Candidates")
-                    object.setObject(usrEntered , forKey: "name")
-                    object.setObject(emlEntered, forKey: "email")
-                    object.setObject(gradEntered, forKey: "gradDate")
-                    object.setObject(jobToParse, forKey: "jobType")
-                    object.save()
-                    status = "true"
+                if (emailTextField.text.isEmpty) {
+                    //alert empty email
+                    let alert = UIAlertView()
+                    alert.title = "Invalid Email"
+                    alert.message = "Please enter your email address"
+                    alert.addButtonWithTitle("OK")
+                    alert.show()
+                    
+                    return false
                 }
                 
-                if (objects.count != 0) {
-                    //email already exists, do not push segue
-                    status = "false"
+                if status == "false"{
+                    //alert that email already exists
+                    let alert = UIAlertView()
+                    alert.title = "Email Already Exists"
+                    alert.message = "Please let the recruiter know that your email is already in our system"
+                    alert.addButtonWithTitle("OK")
+                    alert.show()
+                    
+                    return false
+                }
+                
+                if status == "true"{
+                    performSegueWithIdentifier("toThankYouPage", sender: self)
+                    return true
                 }
             }
-                
-            else {
-                println("Error: \(error) \(error.userInfo!)")
-            }
-            self.shouldPerformSegueWithIdentifier("toThankYouPage", sender: self)
+            return true
         }
-    }
-    //end submit stuff
-    
-    //Area of interest
-    var TempArray = ["Temp Interest 1",
-        "Temp Interest 2",
-        "Temp Interest 3",
-        "Temp Interest 4"]
-    
-    var AoIArray = []
-//end area of interest
+        
+        
+        //enter submit button
+        @IBAction func submit(sender: UIBarButtonItem) {
+            
+            //get what user typed
+            var usrEntered = usernameTextField.text
+            var emlEntered = emailTextField.text
+            var gradEntered = gradDate.date
+            var jobEntered = jobType.selectedSegmentIndex
+            var jobToParse = ""
+            
+            if (jobEntered == 0){ jobToParse = "Full-Time May"}
+            else if (jobEntered == 1){jobToParse = "Full-Time Dec"}
+            else {jobToParse = "Internship"}
+            
+            var query = PFQuery(className:"Candidates")
+            query.whereKey("email", equalTo: emlEntered )
+            query.findObjectsInBackgroundWithBlock {
+                (objects: [AnyObject]!, error: NSError!) -> Void in
+                
+                //make sure name and email are filled out
+                if usrEntered != "" && emlEntered != "" && gradEntered != "" || error == nil {
+                    
+                    if (objects.count == 0) {
+                        //get the call Candidate from parse and enter the data into the columns
+                        var object = PFObject(className: "Candidates")
+                        object.setObject(usrEntered , forKey: "name")
+                        object.setObject(emlEntered, forKey: "email")
+                        object.setObject(gradEntered, forKey: "gradDate")
+                        object.setObject(jobToParse, forKey: "jobType")
+                        object.save()
+                        status = "true"
+                    }
+                    
+                    if (objects.count != 0) {
+                        //email already exists, do not push segue
+                        status = "false"
+                    }
+                }
+                    
+                else {
+                    println("Error: \(error) \(error.userInfo!)")
+                }
+                self.shouldPerformSegueWithIdentifier("toThankYouPage", sender: self)
+            }
+        }
+        //end submit stuff
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,32 +107,6 @@ class NewCandidateController: UIViewController, UIPickerViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func retrieveFromParse() {
-        //Get info from the database
-        var retrieveAoI = PFQuery(className:"SkillsTable")
-        
-        //Orders AoI in ABC Order
-        retrieveAoI.orderByAscending("AoI")
-        
-        //Puts info in an Array
-        
-
-    }
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        return 4
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        
-        return TempArray[row]
     }
     
     

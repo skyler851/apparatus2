@@ -210,7 +210,7 @@
         <!--Profile-->
         <scene sceneID="SNR-Zs-kNX">
             <objects>
-                <viewController id="DGa-VG-AdE" customClass="NewCandidateController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DGa-VG-AdE" customClass="ProfileControllerController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wVN-rM-Mns"/>
                         <viewControllerLayoutGuide type="bottom" id="dyz-ao-Fsb"/>
@@ -330,7 +330,6 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="AreaOfInterest" destination="djh-1B-1Vj" id="pGI-yx-40u"/>
                         <outlet property="menuButton" destination="cYY-8A-2MR" id="BlP-b5-Zr7"/>
                     </connections>
                 </viewController>
@@ -516,7 +515,7 @@
         <!--Thank You-->
         <scene sceneID="BeQ-gV-Ryn">
             <objects>
-                <viewController title="Thank You" id="oKE-DZ-8er" customClass="NewCandidateController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Thank You" id="oKE-DZ-8er" customClass="ThankYouController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yk3-Fe-ukV"/>
                         <viewControllerLayoutGuide type="bottom" id="q5H-ZQ-hwH"/>
@@ -557,7 +556,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="qqv-82-RIB"/>
                         <barButtonItem title="RECRUITER" id="dQG-LN-hE3">
                             <connections>
-                                <segue destination="DGa-VG-AdE" kind="show" identifier="Profile" id="kny-7C-omz"/>
+                                <segue destination="DGa-VG-AdE" kind="show" identifier="toProfilePage" id="dsc-AS-S5W"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="NZ1-lN-kGS"/>
@@ -569,7 +568,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="menuButton" destination="1dF-Ry-N7A" id="mZu-BZ-e3J"/>
+                        <outlet property="menuButton" destination="1dF-Ry-N7A" id="qh3-f0-gC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5CE-XX-Kh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -686,7 +685,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="19z-wQ-Ypm"/>
                         <barButtonItem title="SUBMIT INFORMATION" id="Bst-Gu-eFa">
                             <connections>
-                                <action selector="submit:" destination="wc1-GC-iJH" id="rYg-wS-hyo"/>
+                                <action selector="submit:" destination="wc1-GC-iJH" id="rPu-UX-cDB"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="AmO-8w-0C2"/>
@@ -705,7 +704,7 @@
                         <outlet property="jobType" destination="mWU-Nc-6Vl" id="8zg-sZ-Pia"/>
                         <outlet property="menuButton" destination="1Xa-EV-LlW" id="iAN-1L-HhY"/>
                         <outlet property="usernameTextField" destination="fp1-Ab-EpN" id="I0h-tl-jpu"/>
-                        <segue destination="oKE-DZ-8er" kind="show" identifier="toThankYouPage" id="PSL-Es-WEP"/>
+                        <segue destination="oKE-DZ-8er" kind="show" identifier="toThankYouPage" id="EDG-rv-Ooi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR9-AR-Uo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1038,7 +1037,7 @@
         <image name="red-banner" width="2880" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="33a-Pp-5FJ"/>
         <segue reference="wis-wa-JDH"/>
+        <segue reference="yLI-T9-dCU"/>
     </inferredMetricsTieBreakers>
 </document>
