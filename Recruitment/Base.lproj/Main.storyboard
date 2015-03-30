@@ -617,7 +617,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z5o-bk-wJr">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Z5o-bk-wJr">
                                 <rect key="frame" x="123" y="369" width="523" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -641,13 +641,13 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Full Name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-Ab-EpN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-Ab-EpN">
                                 <rect key="frame" x="123" y="212" width="523" height="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgb-ow-9UN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgb-ow-9UN">
                                 <rect key="frame" x="123" y="279" width="523" height="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -663,8 +663,8 @@
                                 <rect key="frame" x="123" y="592" width="523" height="29"/>
                                 <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                                 <segments>
-                                    <segment title="Full Time (May)"/>
-                                    <segment title="Full Time (Dec)"/>
+                                    <segment title="Full-Time (May)"/>
+                                    <segment title="Full-Time (Dec)"/>
                                     <segment title="Internship"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -686,7 +686,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="19z-wQ-Ypm"/>
                         <barButtonItem title="SUBMIT INFORMATION" id="Bst-Gu-eFa">
                             <connections>
-                                <segue destination="oKE-DZ-8er" kind="show" id="uyk-1K-TGj"/>
+                                <action selector="submit:" destination="wc1-GC-iJH" id="rYg-wS-hyo"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="AmO-8w-0C2"/>
@@ -697,9 +697,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="emailTextField" destination="xgb-ow-9UN" id="p4r-OB-X8X"/>
+                        <outlet property="gradDate" destination="Z5o-bk-wJr" id="AiQ-Yq-Fqf"/>
+                        <outlet property="jobType" destination="mWU-Nc-6Vl" id="8zg-sZ-Pia"/>
                         <outlet property="menuButton" destination="1Xa-EV-LlW" id="iAN-1L-HhY"/>
+                        <outlet property="usernameTextField" destination="fp1-Ab-EpN" id="I0h-tl-jpu"/>
+                        <segue destination="oKE-DZ-8er" kind="show" identifier="toThankYouPage" id="PSL-Es-WEP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR9-AR-Uo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
