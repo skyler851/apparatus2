@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -184,6 +184,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8pf-R8-C2p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -196,7 +199,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="menuButton" destination="soI-o3-Xcz" id="yi8-F8-rri"/>
-                        <segue destination="wc1-GC-iJH" kind="show" identifier="toCandidatePage" id="ovZ-vP-rP4"/>
+                        <outlet property="txtUsername" destination="wNr-Zx-e2P" id="IaH-a2-YB7"/>
+                        <segue destination="wc1-GC-iJH" kind="show" identifier="toCandidatePage" id="33a-Pp-5FJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -700,7 +704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR9-AR-Uo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="998"/>
+            <point key="canvasLocation" x="368" y="1031"/>
         </scene>
         <!--Score-->
         <scene sceneID="qkJ-9t-9SI">
@@ -1028,7 +1032,7 @@
         <image name="red-banner" width="2880" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="33a-Pp-5FJ"/>
         <segue reference="wis-wa-JDH"/>
-        <segue reference="ovZ-vP-rP4"/>
     </inferredMetricsTieBreakers>
 </document>
