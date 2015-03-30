@@ -632,7 +632,7 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-Ku-Dy1">
                                 <rect key="frame" x="306" y="711" width="157" height="136"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.5450980392" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.5450980392" green="0.77647058820000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
