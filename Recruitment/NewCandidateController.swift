@@ -76,7 +76,14 @@ class NewCandidateController: UIViewController{
                         object.setObject(emlEntered, forKey: "email")
                         object.setObject(gradEntered, forKey: "gradDate")
                         object.setObject(jobToParse, forKey: "jobType")
-                        object.save()
+                        object.saveInBackgroundWithBlock {
+                            (success: Bool, error: NSError!) -> Void in
+                            if (success) {
+                                // The object has been saved.
+                            } else {
+                                // There was a problem, check error.description
+                            }
+                        }
                         status = "true"
                     }
                     
