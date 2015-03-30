@@ -1,5 +1,7 @@
 import UIKit
 
+var candidateEmail = ""
+
 class NewCandidateController: UIViewController{
 
         @IBOutlet weak var menuButton:UIBarButtonItem!
@@ -85,6 +87,8 @@ class NewCandidateController: UIViewController{
                             }
                         }
                         status = "true"
+                        
+                        candidateEmail = emlEntered
                     }
                     
                     if (objects.count != 0) {
