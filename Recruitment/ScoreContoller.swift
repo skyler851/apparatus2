@@ -19,27 +19,23 @@ class ScoreController: UIViewController{
     @IBOutlet weak var decision: UISegmentedControl!
     @IBOutlet weak var star: Score!
     
+    //go to next pageif segue is fromScoreToBewCandidate
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
         
-        //check if segue identifier is toThankYouPage
+        //check if segue identifier is fromScoreToNewCandidate
         if identifier == "fromScoreToNewCandidate"{
-            return true
-        }
-        
-        if status == "false" {
-            return false
-        }
-        
-        if status == "true"{
-            performSegueWithIdentifier("fromScoreToNewCandidate", sender: self)
-            return true
+            if status == "false" { return false }
+            if status == "true"{
+                performSegueWithIdentifier("fromScoreToNewCandidate", sender: self)
+                return true
+            }
         }
         return true
     }
     
     //enter submit button
     @IBAction func submit(sender: UIBarButtonItem) {
-        
+
         //get what user typed
         var cultureEntered = culture.selectedSegmentIndex + 1
         var aptitudeEntered = aptitude.selectedSegmentIndex + 1
@@ -48,19 +44,41 @@ class ScoreController: UIViewController{
         var decisionEntered = decision.selectedSegmentIndex
         var decisionToParse = ""
         
-        println(techEntered)
-        
         if (decisionEntered == 0){ decisionToParse = "No"}
         else {decisionToParse = "Yes"}
         
-        var object = PFObject(className: "Candidates")
-        object.setObject(cultureEntered , forKey: "culture")
-        object.setObject(aptitudeEntered, forKey: "aptitude")
-        object.setObject(techEntered, forKey: "tech")
-        object.setObject(notesEntered, forKey: "notes")
-        object.setObject(decisionToParse, forKey: "decision")
-        object.save()
-        status = "true"
+        println(candidateEmail)
+        
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            for object in objects {
+                
+                object.setObject(cultureEntered , forKey: "culture")
+                object.setObject(aptitudeEntered, forKey: "aptitude")
+                object.setObject(techEntered, forKey: "tech")
+                object.setObject(notesEntered, forKey: "notes")
+                object.setObject(decisionToParse, forKey: "decision")
+                object.saveInBackgroundWithBlock {
+                    (success: Bool, error: NSError!) -> Void in
+                    if (success) {
+                        // The object has been saved.
+                    } else {
+                        // There was a problem, check error.description
+                    }
+                }
+                status = "true"
+
+            }
+            
+            if (objects.count == 0) {
+                //wrong password, do not push segue
+                status = "false"
+                println(status)
+            }
+        }
         
         self.shouldPerformSegueWithIdentifier("fromScoreToNewCandidate", sender: self)
 
