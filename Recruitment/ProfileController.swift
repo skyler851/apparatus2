@@ -6,11 +6,14 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 import UIKit
-
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
-    @IBOutlet weak var menuButton:UIBarButtonItem!
 
+    @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
+    
+    @IBOutlet weak var candidateName: UILabel!
+    @IBOutlet weak var candidateInfo: UILabel!
+    
     //Area of interest
     var TempArray = ["Temp Interest 1",
         "Temp Interest 2",
@@ -25,6 +28,12 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     
         //display recruiter name in toolbar
         lblRecruiterName.title = name
+        
+        //display candidate name in heading
+        candidateName.text = candName
+        
+        //display candidate name in heading
+        candidateInfo.text = jobType + " | " + gradDate
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()

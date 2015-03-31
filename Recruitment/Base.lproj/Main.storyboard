@@ -226,8 +226,8 @@
                                     <constraint firstAttribute="height" constant="109" id="psl-9q-ZqH"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JANE DOE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2v-9O-PxM">
-                                <rect key="frame" x="16" y="137" width="152.5" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JANE DOE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2v-9O-PxM">
+                                <rect key="frame" x="16" y="137" width="454.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -330,6 +330,8 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="candidateInfo" destination="egm-dD-0e0" id="mFM-w8-Wuk"/>
+                        <outlet property="candidateName" destination="q2v-9O-PxM" id="hwn-8P-cgm"/>
                         <outlet property="lblRecruiterName" destination="COi-U7-vst" id="MCI-QV-rRW"/>
                         <outlet property="menuButton" destination="cYY-8A-2MR" id="BlP-b5-Zr7"/>
                     </connections>
@@ -642,7 +644,7 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-Ab-EpN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First and Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-Ab-EpN">
                                 <rect key="frame" x="123" y="212" width="523" height="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -862,8 +864,8 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JANE DOE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5k-45-4fq">
-                                <rect key="frame" x="16" y="137" width="153" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JANE DOE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5k-45-4fq">
+                                <rect key="frame" x="16" y="137" width="511" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="153" id="Cr0-fe-M4Q"/>
                                 </constraints>
@@ -1011,6 +1013,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="aptitude" destination="j88-33-07X" id="BrR-k2-oqY"/>
+                        <outlet property="candidateInfo" destination="jNJ-zi-T8d" id="9Io-Uu-GzE"/>
+                        <outlet property="candidateName" destination="P5k-45-4fq" id="9rP-WX-nQ2"/>
                         <outlet property="culture" destination="avw-hh-0L8" id="6Ud-ai-pi6"/>
                         <outlet property="decision" destination="wrf-c7-eOd" id="zIA-o4-jaj"/>
                         <outlet property="lblRecruiterName" destination="KK6-6m-g1K" id="kMZ-2I-0UH"/>

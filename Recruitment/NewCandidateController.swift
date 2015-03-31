@@ -20,10 +20,21 @@ class NewCandidateController: UIViewController{
             //check if segue identifier is toThankYouPage
             if identifier == "toThankYouPage"{
                 
+                if (usernameTextField.text.isEmpty) {
+                    //alert empty email
+                    let alert = UIAlertView()
+                    alert.title = "Invalid Entry"
+                    alert.message = "Please enter your full name"
+                    alert.addButtonWithTitle("OK")
+                    alert.show()
+                    
+                    return false
+                }
+                
                 if (emailTextField.text.isEmpty) {
                     //alert empty email
                     let alert = UIAlertView()
-                    alert.title = "Invalid Email"
+                    alert.title = "Invalid Entry"
                     alert.message = "Please enter your email address"
                     alert.addButtonWithTitle("OK")
                     alert.show()
@@ -87,6 +98,7 @@ class NewCandidateController: UIViewController{
                             } else {
                                 // There was a problem, check error.description
                             }
+                        
                         }
                         status = "true"
                         

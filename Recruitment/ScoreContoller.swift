@@ -12,6 +12,9 @@ class ScoreController: UIViewController{
     
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
+    @IBOutlet weak var candidateName: UILabel!
+    @IBOutlet weak var candidateInfo: UILabel!
+    
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     @IBOutlet weak var culture: UISegmentedControl!
     @IBOutlet weak var aptitude: UISegmentedControl!
@@ -90,6 +93,12 @@ class ScoreController: UIViewController{
         
         //display Recruiter name
         lblRecruiterName.title = name
+        
+        //display candidate name in heading
+        candidateName.text = candName
+        
+        //display candidate name in heading
+        candidateInfo.text = jobType + " | " + gradDate
         
         //menu
         if self.revealViewController() != nil {
