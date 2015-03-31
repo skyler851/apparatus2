@@ -10,6 +10,7 @@ import UIKit
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var menuButton:UIBarButtonItem!
 
+    @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     //Area of interest
     var TempArray = ["Temp Interest 1",
         "Temp Interest 2",
@@ -22,6 +23,9 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        //display recruiter name in toolbar
+        lblRecruiterName.title = name
+        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"

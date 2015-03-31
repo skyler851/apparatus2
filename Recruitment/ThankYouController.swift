@@ -11,9 +11,14 @@ import UIKit
 class ThankYouController: UIViewController{
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
+    @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //display recruiter name in toolbar
+        lblRecruiterName.title = name
+
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"

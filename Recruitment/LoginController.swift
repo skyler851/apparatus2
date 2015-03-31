@@ -66,8 +66,7 @@ class LoginController: UIViewController {
                 if let objects = objects as? [PFObject] {
                     for object in objects {
                         status = "true"
-                        //println(status)
-                        //println(object["Name"])
+                        name = object["Name"] as String
                         
                     }
                 
@@ -110,5 +109,15 @@ class LoginController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //passes the employee name to next contoller
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toCandidatePage") {
+            var svc = segue.destinationViewController as NewCandidateController;
+            
+            svc.toPass = name
+            
+        }
     }
 }
