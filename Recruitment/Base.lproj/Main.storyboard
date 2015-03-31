@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -330,6 +330,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="lblRecruiterName" destination="COi-U7-vst" id="MCI-QV-rRW"/>
                         <outlet property="menuButton" destination="cYY-8A-2MR" id="BlP-b5-Zr7"/>
                     </connections>
                 </viewController>
@@ -568,6 +569,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="lblRecruiterName" destination="1rB-br-5kZ" id="qXa-5i-X4l"/>
                         <outlet property="menuButton" destination="1dF-Ry-N7A" id="qh3-f0-gC2"/>
                     </connections>
                 </viewController>
@@ -702,6 +704,7 @@
                         <outlet property="emailTextField" destination="xgb-ow-9UN" id="p4r-OB-X8X"/>
                         <outlet property="gradDate" destination="Z5o-bk-wJr" id="AiQ-Yq-Fqf"/>
                         <outlet property="jobType" destination="mWU-Nc-6Vl" id="8zg-sZ-Pia"/>
+                        <outlet property="lblRecruiterName" destination="tLP-Cl-sfY" id="dxT-Pl-fKL"/>
                         <outlet property="menuButton" destination="1Xa-EV-LlW" id="iAN-1L-HhY"/>
                         <outlet property="usernameTextField" destination="fp1-Ab-EpN" id="I0h-tl-jpu"/>
                         <segue destination="oKE-DZ-8er" kind="show" identifier="toThankYouPage" id="EDG-rv-Ooi"/>
@@ -1010,6 +1013,7 @@
                         <outlet property="aptitude" destination="j88-33-07X" id="BrR-k2-oqY"/>
                         <outlet property="culture" destination="avw-hh-0L8" id="6Ud-ai-pi6"/>
                         <outlet property="decision" destination="wrf-c7-eOd" id="zIA-o4-jaj"/>
+                        <outlet property="lblRecruiterName" destination="KK6-6m-g1K" id="kMZ-2I-0UH"/>
                         <outlet property="menuButton" destination="Tb5-Xn-aq9" id="zj5-or-rSy"/>
                         <outlet property="notes" destination="XdU-5E-vYv" id="CV8-Uj-nlS"/>
                         <outlet property="star" destination="1R1-W1-hxn" id="K9a-LA-5QS"/>

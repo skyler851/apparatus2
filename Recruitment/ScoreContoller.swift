@@ -12,6 +12,7 @@ class ScoreController: UIViewController{
     
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
+    @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     @IBOutlet weak var culture: UISegmentedControl!
     @IBOutlet weak var aptitude: UISegmentedControl!
     @IBOutlet weak var tech: UISegmentedControl!
@@ -87,6 +88,9 @@ class ScoreController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //display Recruiter name
+        lblRecruiterName.title = name
+        
         //menu
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -101,14 +105,6 @@ class ScoreController: UIViewController{
     }
     
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
+
 
 }

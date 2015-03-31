@@ -3,9 +3,11 @@ import UIKit
 var candidateEmail = ""
 
 class NewCandidateController: UIViewController{
+    
+    var toPass:String!
+    @IBOutlet weak var menuButton:UIBarButtonItem!
+    @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
 
-        @IBOutlet weak var menuButton:UIBarButtonItem!
-        
         //submit new candidate info
         @IBOutlet weak var usernameTextField: UITextField!
         @IBOutlet weak var emailTextField: UITextField!
@@ -108,6 +110,8 @@ class NewCandidateController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //display Recruiter name
+        lblRecruiterName.title = name
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
