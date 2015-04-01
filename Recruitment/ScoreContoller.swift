@@ -35,7 +35,16 @@ class ScoreController: UIViewController{
             }
         }
         if identifier == "toResume"{
-            if statusResume == "false" { return false }
+            if statusResume == "false" {
+                //alert that email already exists
+                let alert = UIAlertView()
+                alert.title = "Resume Does Not Exist"
+                alert.message = "Please take a picture of the resume and save it to the database"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+                
+                return false
+            }
             if statusResume == "true"{
                 performSegueWithIdentifier("toResume", sender: self)
                 return true
@@ -96,7 +105,26 @@ class ScoreController: UIViewController{
     //view resume button
     @IBAction func resume(sender: UIButton) {
         
-        self.shouldPerformSegueWithIdentifier("toResume", sender: self)
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            for object in objects {
+                if (object .objectForKey("resume") != nil){
+                    statusResume = "true"
+                    println(statusResume)
+                }
+                else{
+                    statusResume = "false"
+                    println(statusResume)
+                }
+                
+            }
+            self.shouldPerformSegueWithIdentifier("toResume", sender: self)
+        }
+        
+
         
 
     }

@@ -890,7 +890,6 @@
                                 </state>
                                 <connections>
                                     <action selector="resume:" destination="yHA-8N-HMh" eventType="touchUpInside" id="f8k-wK-2Z7"/>
-                                    <segue destination="sHI-Vc-KBD" kind="show" identifier="toResume" id="tY7-43-HZL"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" restorationIdentifier="Hire-DontHire-Control" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wrf-c7-eOd">
@@ -1027,6 +1026,7 @@
                         <outlet property="star" destination="1R1-W1-hxn" id="K9a-LA-5QS"/>
                         <outlet property="tech" destination="jQR-b7-Ilx" id="Ga0-hR-6RT"/>
                         <segue destination="wc1-GC-iJH" kind="show" identifier="fromScoreToNewCandidate" id="spy-1Q-FEW"/>
+                        <segue destination="sHI-Vc-KBD" kind="show" identifier="toResume" id="JeT-gW-cdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtC-kI-8DQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
