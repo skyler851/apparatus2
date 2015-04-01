@@ -8,7 +8,7 @@
 
 import UIKit
 import ParseUI
-var statusResume = ""
+
 
 class ScoreController: UIViewController{
     

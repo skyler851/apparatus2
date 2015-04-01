@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 import UIKit
+var statusResume = ""
+
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
     @IBOutlet weak var menuButton:UIBarButtonItem!
@@ -22,7 +24,59 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
     var AoIArray = []
     //end area of interest
+    
+    //go to next pageif segue is fromScoreToBewCandidate
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        
+        //check if segue identifier is fromScoreToNewCandidate
+        if identifier == nil{
+            println("nil")
+            return true
+        }
+        if identifier == "profileToResume"{
+            if statusResume == "false" {
+                //alert that email already exists
+                let alert = UIAlertView()
+                alert.title = "Resume Does Not Exist"
+                alert.message = "Please take a picture of the resume and save it to the database"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+                
+                return false
+            }
+            if statusResume == "true"{
+                performSegueWithIdentifier("profileToResume", sender: self)
+                return true
+            }
+        }
+        return true
+    }
 
+
+    @IBAction func viewResume(sender: UIButton) {
+        
+        //find candidates class in Parse where column email = candidate's email
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            for object in objects {
+                //if resume column in Parse is not nil
+                if (object .objectForKey("resume") != nil){
+                    statusResume = "true"
+                    println(statusResume)
+                }
+                else{
+                    statusResume = "false"
+                    println(statusResume)
+                }
+                
+            }
+            self.shouldPerformSegueWithIdentifier("profileToResume", sender: self)
+        }
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     

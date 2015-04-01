@@ -15,7 +15,7 @@ var backPressed = false
 class ThankYouController: UIViewController{
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
-
+    
     override func didMoveToParentViewController(parent: UIViewController?) {
         if parent == nil {
             //"Back was pressed"

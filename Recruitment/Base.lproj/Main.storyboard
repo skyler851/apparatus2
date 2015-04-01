@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -281,11 +281,14 @@
                                     <color key="titleColor" red="1" green="0.23529411759999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="viewResume:" destination="DGa-VG-AdE" eventType="touchUpInside" id="WJ2-9M-8dQ"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJA-Ib-RcY">
                                 <rect key="frame" x="16" y="448" width="736" height="556"/>
                                 <connections>
-                                    <segue destination="ojU-cR-2hB" kind="embed" id="lyJ-Nn-z8k"/>
+                                    <segue destination="ojU-cR-2hB" kind="embed" identifier="skills" id="lyJ-Nn-z8k"/>
                                 </connections>
                             </containerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djh-1B-1Vj">
@@ -334,6 +337,7 @@
                         <outlet property="candidateName" destination="q2v-9O-PxM" id="hwn-8P-cgm"/>
                         <outlet property="lblRecruiterName" destination="COi-U7-vst" id="MCI-QV-rRW"/>
                         <outlet property="menuButton" destination="cYY-8A-2MR" id="BlP-b5-Zr7"/>
+                        <segue destination="sHI-Vc-KBD" kind="show" identifier="profileToResume" id="KCJ-hB-M1z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPA-up-xcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -559,7 +563,8 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="qqv-82-RIB"/>
                         <barButtonItem title="RECRUITER" id="dQG-LN-hE3">
                             <connections>
-                                <segue destination="DGa-VG-AdE" kind="show" identifier="toProfilePage" id="dsc-AS-S5W"/>
+                                <action selector="toProfile:" destination="oKE-DZ-8er" id="dNy-R0-uye"/>
+                                <segue destination="DGa-VG-AdE" kind="show" identifier="toProfilePage" id="JxV-Qc-oR0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="NZ1-lN-kGS"/>
@@ -1104,6 +1109,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wis-wa-JDH"/>
+        <segue reference="KCJ-hB-M1z"/>
         <segue reference="spy-1Q-FEW"/>
     </inferredMetricsTieBreakers>
 </document>
