@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ParseUI
+var statusResume = ""
 
 class ScoreController: UIViewController{
     
@@ -22,6 +24,8 @@ class ScoreController: UIViewController{
     @IBOutlet weak var notes: UITextField!
     @IBOutlet weak var decision: UISegmentedControl!
     @IBOutlet weak var star: Score!
+
+    @IBOutlet weak var resumeView: PFImageView!
     
     //go to next pageif segue is fromScoreToBewCandidate
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
@@ -31,6 +35,22 @@ class ScoreController: UIViewController{
             if status == "false" { return false }
             if status == "true"{
                 performSegueWithIdentifier("fromScoreToNewCandidate", sender: self)
+                return true
+            }
+        }
+        if identifier == "toResume"{
+            if statusResume == "false" {
+                //alert that email already exists
+                let alert = UIAlertView()
+                alert.title = "Resume Does Not Exist"
+                alert.message = "Please take a picture of the resume and save it to the database"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+                
+                return false
+            }
+            if statusResume == "true"{
+                performSegueWithIdentifier("toResume", sender: self)
                 return true
             }
         }
@@ -74,7 +94,6 @@ class ScoreController: UIViewController{
                     }
                 }
                 status = "true"
-
             }
             
             if (objects.count == 0) {
@@ -82,9 +101,35 @@ class ScoreController: UIViewController{
                 status = "false"
                 println(status)
             }
+            self.shouldPerformSegueWithIdentifier("fromScoreToNewCandidate", sender: self)
+        }
+
+    }
+    
+    //view resume button
+    @IBAction func resume(sender: UIButton) {
+        
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            for object in objects {
+                if (object .objectForKey("resume") != nil){
+                    statusResume = "true"
+                    println(statusResume)
+                }
+                else{
+                    statusResume = "false"
+                    println(statusResume)
+                }
+                
+            }
+            self.shouldPerformSegueWithIdentifier("toResume", sender: self)
         }
         
-        self.shouldPerformSegueWithIdentifier("fromScoreToNewCandidate", sender: self)
+
+        
 
     }
     

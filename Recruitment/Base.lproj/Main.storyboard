@@ -893,6 +893,9 @@
                                     <color key="titleColor" red="1" green="0.23529411759999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="resume:" destination="yHA-8N-HMh" eventType="touchUpInside" id="f8k-wK-2Z7"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" restorationIdentifier="Hire-DontHire-Control" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wrf-c7-eOd">
                                 <rect key="frame" x="139" y="862" width="483" height="66"/>
@@ -926,8 +929,12 @@
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZ2-Mm-cXz">
+                                <rect key="frame" x="0.0" y="222" width="768" height="758"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="91m-9q-Pvs" firstAttribute="leading" secondItem="hPZ-7b-o4O" secondAttribute="leading" id="0NH-4N-FGi"/>
                             <constraint firstItem="TeN-YQ-3XV" firstAttribute="top" secondItem="U6h-qP-23T" secondAttribute="bottom" id="1F1-de-7HY"/>
@@ -992,6 +999,9 @@
                             <constraint firstItem="8Gt-Ec-str" firstAttribute="trailing" secondItem="35c-s0-tvD" secondAttribute="trailing" id="yLM-6u-Sva"/>
                             <constraint firstItem="pV7-II-azx" firstAttribute="leading" secondItem="RvA-do-tga" secondAttribute="leading" id="zv9-Wj-VZS"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dAO-fj-PU6" appends="YES" id="ws3-06-AeD"/>
+                        </connections>
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="PMe-z4-RX7"/>
@@ -1020,14 +1030,49 @@
                         <outlet property="lblRecruiterName" destination="KK6-6m-g1K" id="kMZ-2I-0UH"/>
                         <outlet property="menuButton" destination="Tb5-Xn-aq9" id="zj5-or-rSy"/>
                         <outlet property="notes" destination="XdU-5E-vYv" id="CV8-Uj-nlS"/>
+                        <outlet property="resumeView" destination="fZ2-Mm-cXz" id="5ST-Yl-cLG"/>
                         <outlet property="star" destination="1R1-W1-hxn" id="K9a-LA-5QS"/>
                         <outlet property="tech" destination="jQR-b7-Ilx" id="Ga0-hR-6RT"/>
                         <segue destination="wc1-GC-iJH" kind="show" identifier="fromScoreToNewCandidate" id="spy-1Q-FEW"/>
+                        <segue destination="sHI-Vc-KBD" kind="show" identifier="toResume" id="JeT-gW-cdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtC-kI-8DQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="dAO-fj-PU6"/>
             </objects>
             <point key="canvasLocation" x="3325" y="1134"/>
+        </scene>
+        <!--Resume Controller-->
+        <scene sceneID="88i-4S-PIC">
+            <objects>
+                <viewController id="sHI-Vc-KBD" customClass="ResumeController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lyd-II-kdw"/>
+                        <viewControllerLayoutGuide type="bottom" id="VaU-XI-LOl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gfq-IW-phJ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ivq-VR-EcJ">
+                                <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FJO-we-Z9d">
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="O27-Dj-cEx">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="O27-Dj-cEx" id="Lmp-hg-H9V"/>
+                        <outlet property="resumeView" destination="Ivq-VR-EcJ" id="E9q-JQ-Neg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyo-IZ-0Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4220" y="922"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bMH-L0-45T">
