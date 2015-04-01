@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -75,7 +75,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Candidate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5x-pG-fy6">
                                                     <rect key="frame" x="27" y="11" width="119" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -92,7 +92,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List of Candidates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Me-wC-a3r">
                                                     <rect key="frame" x="27" y="11" width="140" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -109,7 +109,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMP-gf-KQH">
                                                     <rect key="frame" x="27" y="11" width="54" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -387,7 +387,7 @@
         <!--Candidates-->
         <scene sceneID="qm1-BQ-Y1p">
             <objects>
-                <viewController id="yQ1-Qp-aTG" customClass="CandidateListController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yQ1-Qp-aTG" customClass="CandidateTableViewController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aeg-z9-BY7"/>
                         <viewControllerLayoutGuide type="bottom" id="4ST-ft-zmC"/>
@@ -412,18 +412,13 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Candidates" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y6d-mq-zgV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y6d-mq-zgV">
                                 <rect key="frame" x="0.0" y="113" width="768" height="911"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="candidateList" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListofCandidates" id="b5e-Af-tko">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b5e-Af-tko" id="6Rb-XT-QOM">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yQ1-Qp-aTG" id="Z8x-BD-IaV"/>
+                                    <outlet property="delegate" destination="yQ1-Qp-aTG" id="RR7-Gx-mqT"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -439,11 +434,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="menuButton" destination="2hS-77-oTm" id="han-r3-2RR"/>
+                        <outlet property="tableView" destination="Y6d-mq-zgV" id="C5j-X7-MqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fki-ic-3jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="-1369"/>
+            <point key="canvasLocation" x="325" y="-1401"/>
         </scene>
         <!--Summary-->
         <scene sceneID="olK-GT-sMw">
