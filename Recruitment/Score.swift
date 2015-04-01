@@ -1,4 +1,5 @@
 import UIKit
+var favorite = ""
 
 
 //Code for Favorite Button
@@ -6,8 +7,8 @@ class Score: UIButton {
     
     
     //images
-    let checkedImage = UIImage(named: "fav_selected")
-    let unCheckedImage = UIImage(named: "fav_unselected")
+    let checkedImage = UIImage(named: "starChecked")
+    let unCheckedImage = UIImage(named: "star")
     
     //bool property
     var isChecked:Bool = false{
@@ -29,8 +30,12 @@ class Score: UIButton {
         if(sender == self){
             if isChecked == true {
                 isChecked = false
+                favorite = "false"
+                println(favorite)
             }else{
                 isChecked = true
+                favorite = "true"
+                println(favorite)
             }
         }
     }
