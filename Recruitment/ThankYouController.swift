@@ -10,11 +10,20 @@ import UIKit
 var candName = ""
 var jobType = ""
 var gradDate = ""
+var backPressed = false
 
 class ThankYouController: UIViewController{
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
-    
+
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        if parent == nil {
+            //"Back was pressed"
+            backPressed = true
+            println(backPressed)
+            
+        }
+    }
 func getCandidateName(){
         var query = PFQuery(className:"Candidates")
         query.whereKey("email", equalTo: candidateEmail )
