@@ -18,12 +18,13 @@
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
+            <string>OpenSans-Bold</string>
         </mutableArray>
         <mutableArray key="OpenSans-Light.ttf">
             <string>OpenSans-Light</string>
+            <string>OpenSans-Light</string>
         </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
-            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -949,16 +950,22 @@
                                     <constraint firstAttribute="width" constant="67" id="E5m-UG-ued"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="618FD378-D767-45D5-B268-EB6A46E2C0CB" backgroundImage="618FD378-D767-45D5-B268-EB6A46E2C0CB">
+                                <state key="normal" image="EE9BE7DE-D50D-4F1E-8F4C-670E363158A8" backgroundImage="EE9BE7DE-D50D-4F1E-8F4C-670E363158A8">
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This person is a superstar!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jz9-iZ-fX7">
-                                <rect key="frame" x="408" y="458" width="280" height="45"/>
+                                <rect key="frame" x="381" y="446" width="280" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="K5u-yF-wEQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="They should be contacted immediately" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEi-XM-iyE">
+                                <rect key="frame" x="382" y="484" width="297" height="21"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14.5"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -983,7 +990,7 @@
                             <constraint firstItem="j88-33-07X" firstAttribute="top" secondItem="Ksa-Bn-zXV" secondAttribute="bottom" id="DCb-Ap-plq"/>
                             <constraint firstItem="91m-9q-Pvs" firstAttribute="trailing" secondItem="avw-hh-0L8" secondAttribute="trailing" id="EfS-2v-EQR"/>
                             <constraint firstItem="91m-9q-Pvs" firstAttribute="trailing" secondItem="j88-33-07X" secondAttribute="trailing" id="EyE-Ff-mcT"/>
-                            <constraint firstItem="1R1-W1-hxn" firstAttribute="leading" secondItem="jz9-iZ-fX7" secondAttribute="trailing" constant="-34" id="FRK-XB-Qky"/>
+                            <constraint firstItem="1R1-W1-hxn" firstAttribute="leading" secondItem="jz9-iZ-fX7" secondAttribute="trailing" constant="-7" id="FRK-XB-Qky"/>
                             <constraint firstItem="avw-hh-0L8" firstAttribute="top" secondItem="91m-9q-Pvs" secondAttribute="bottom" id="GpW-0D-D2W"/>
                             <constraint firstItem="O7N-Md-uSr" firstAttribute="top" secondItem="Zrj-zu-FWE" secondAttribute="bottom" id="HSU-yl-Exj"/>
                             <constraint firstItem="91m-9q-Pvs" firstAttribute="trailing" secondItem="cHh-Qp-Yrl" secondAttribute="trailingMargin" id="IIn-AL-Vgh"/>
@@ -994,7 +1001,7 @@
                             <constraint firstItem="EKA-40-IhK" firstAttribute="leading" secondItem="RvA-do-tga" secondAttribute="trailing" constant="8" symbolic="YES" id="Kxa-ic-0jU"/>
                             <constraint firstItem="wrf-c7-eOd" firstAttribute="leading" secondItem="cHh-Qp-Yrl" secondAttribute="leading" constant="139" id="Lic-Bk-V9O"/>
                             <constraint firstItem="P5k-45-4fq" firstAttribute="leading" secondItem="jNJ-zi-T8d" secondAttribute="leading" id="Pq9-XD-fJc"/>
-                            <constraint firstItem="jz9-iZ-fX7" firstAttribute="leading" secondItem="EKA-40-IhK" secondAttribute="trailing" constant="47" id="Qba-ea-SkY"/>
+                            <constraint firstItem="jz9-iZ-fX7" firstAttribute="leading" secondItem="EKA-40-IhK" secondAttribute="trailing" constant="20" id="Qba-ea-SkY"/>
                             <constraint firstItem="pV7-II-azx" firstAttribute="top" secondItem="ht8-Ls-ApK" secondAttribute="bottom" constant="36" id="SFq-rK-Pya"/>
                             <constraint firstItem="EKA-40-IhK" firstAttribute="firstBaseline" secondItem="hPZ-7b-o4O" secondAttribute="firstBaseline" id="T39-sc-pZ2"/>
                             <constraint firstItem="yR1-Sj-sTQ" firstAttribute="top" secondItem="Zrj-zu-FWE" secondAttribute="bottom" constant="32" id="T7v-fC-kUm"/>
@@ -1020,7 +1027,7 @@
                             <constraint firstItem="ht8-Ls-ApK" firstAttribute="top" secondItem="avw-hh-0L8" secondAttribute="top" id="pSH-x5-fgr"/>
                             <constraint firstItem="wrf-c7-eOd" firstAttribute="top" secondItem="uxc-8j-H4c" secondAttribute="bottom" constant="15" id="pUK-6l-KNM"/>
                             <constraint firstItem="EKA-40-IhK" firstAttribute="baseline" secondItem="hPZ-7b-o4O" secondAttribute="baseline" id="peO-nh-tbb"/>
-                            <constraint firstItem="jz9-iZ-fX7" firstAttribute="top" secondItem="j88-33-07X" secondAttribute="bottom" constant="102" id="plO-xa-0mh"/>
+                            <constraint firstItem="jz9-iZ-fX7" firstAttribute="top" secondItem="j88-33-07X" secondAttribute="bottom" constant="90" id="plO-xa-0mh"/>
                             <constraint firstItem="yR1-Sj-sTQ" firstAttribute="leading" secondItem="P5k-45-4fq" secondAttribute="trailing" constant="57" id="qgQ-ec-fa3"/>
                             <constraint firstItem="91m-9q-Pvs" firstAttribute="trailing" secondItem="jQR-b7-Ilx" secondAttribute="trailing" id="rSX-R6-BZa"/>
                             <constraint firstItem="uxc-8j-H4c" firstAttribute="centerX" secondItem="Zrj-zu-FWE" secondAttribute="centerX" id="rc4-SN-SYX"/>
@@ -1130,7 +1137,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="618FD378-D767-45D5-B268-EB6A46E2C0CB" width="240" height="228">
+        <image name="Apparatus-Color-logo" width="98" height="21"/>
+        <image name="Apparatus-Symbol" width="300" height="300"/>
+        <image name="Apparatus-White1color" width="325" height="108"/>
+        <image name="EE9BE7DE-D50D-4F1E-8F4C-670E363158A8" width="240" height="228">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -4831,9 +4841,6 @@ A2DPAANg3gADYOIAA2DpAANg8QADYP4AA2EDAANhBQADYQcAA2EMAANhFAADYRcAA2EcAANhJAADYScA
 A2E5AANhPAADYUEAAAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAANhQw
 </mutableData>
         </image>
-        <image name="Apparatus-Color-logo" width="98" height="21"/>
-        <image name="Apparatus-Symbol" width="300" height="300"/>
-        <image name="Apparatus-White1color" width="325" height="108"/>
         <image name="camera" width="116" height="94"/>
         <image name="menu" width="33" height="26"/>
         <image name="red-banner" width="2880" height="16"/>
