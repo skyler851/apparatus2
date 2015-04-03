@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ParseUI
 
 class CandidateTableViewController: UIViewController {
     
@@ -16,6 +17,9 @@ class CandidateTableViewController: UIViewController {
     var sectionContentDict : NSMutableDictionary = NSMutableDictionary()
     var arrayForBool : NSMutableArray = NSMutableArray()
     
+    var CandidateListArray: NSArray = NSArray()
+    var CandidateNameArray: NSArray = NSArray()
+    
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -23,6 +27,13 @@ class CandidateTableViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //Run Parse function
+        retrieveFromParse()
+        
+        //Variables for the Arrays to display the info
+        
+        
+        //Arrays used for displaying info
         arrayForBool = ["0","0"]
         sectionTitleArray = ["Pool A","Pool B"]
         var tmp1 : NSArray = ["New Zealand","Australia","Bangladesh","Sri Lanka"]
@@ -42,6 +53,23 @@ class CandidateTableViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 
+    }
+    
+    func retrieveFromParse() {
+        //Get info from the database
+        var retrieveAoI = PFQuery(className:"Candidates")
+        
+        
+        
+        //Orders AoI in ABC Order
+        retrieveAoI.orderByAscending("name")
+        
+        //Puts info in an Array
+        CandidateListArray = retrieveAoI.findObjects()
+        
+        //CandidateNameArray = CandidateListArray["name"]
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

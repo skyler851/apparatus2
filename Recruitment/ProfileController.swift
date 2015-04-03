@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 import UIKit
+import ParseUI
 
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var menuButton:UIBarButtonItem!
@@ -16,7 +17,7 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         "Temp Interest 3",
         "Temp Interest 4"]
 
-    var AoIArray = []
+    var AoIArray: NSArray = NSArray()
     //end area of interest
 
     override func viewDidLoad() {
@@ -42,6 +43,7 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         retrieveAoI.orderByAscending("AoI")
         
         //Puts info in an Array
+        AoIArray = retrieveAoI.findObjects()
     
     
     }

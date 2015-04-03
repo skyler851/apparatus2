@@ -216,7 +216,7 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
-		57C027A91ACC733B0005F44C /* CandidateList */ = {
+		57C027A91ACC733B0005F44C /* CandidateList-DO_NOT_DELETE */ = {
 			isa = PBXGroup;
 			children = (
 				57C027A31ACC73310005F44C /* CandidateListTableViewCell.h */,
@@ -224,7 +224,7 @@
 				57C027A51ACC73310005F44C /* CandidateListTableViewController.h */,
 				57C027A61ACC73310005F44C /* CandidateListTableViewController.m */,
 			);
-			name = CandidateList;
+			name = "CandidateList-DO_NOT_DELETE";
 			sourceTree = "<group>";
 		};
 		57CA15B71A9BADE1009EC3C7 = {
@@ -254,7 +254,7 @@
 				5696A2641AC0CE6F0032BCCF /* SWRevealViewController */,
 				5696A25B1AC0C72E0032BCCF /* Controllers */,
 				57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */,
-				57C027A91ACC733B0005F44C /* CandidateList */,
+				57C027A91ACC733B0005F44C /* CandidateList-DO_NOT_DELETE */,
 				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
 				563FD37F1AAA44A3004B6EB7 /* Fonts */,
 				57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */,
