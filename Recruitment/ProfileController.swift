@@ -10,6 +10,7 @@ var statusResume = ""
 
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
+    @IBOutlet weak var submitButton: UIBarButtonItem!
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     
@@ -50,6 +51,41 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
             }
         }
         return true
+    }
+
+    //enter submit button ############## LOOK HERE!!!! ################
+    //I need to send "SkillResult" into the database.
+    @IBAction func submit(sender: UIBarButtonItem) {
+        
+        println(SkillResult)
+        
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            for object in objects {
+                
+                object.setObject(SkillResult, forKey: "skills")
+                object.saveInBackgroundWithBlock {
+                    (success: Bool, error: NSError!) -> Void in
+                    if (success) {
+                        // The object has been saved.
+                    } else {
+                        // There was a problem, check error.description
+                    }
+                }
+                status = "true"
+            }
+            
+            if (objects.count == 0) {
+                //wrong password, do not push segue
+                status = "false"
+                println(status)
+            }
+            self.shouldPerformSegueWithIdentifier("fromScoreToNewCandidate", sender: self)
+        }
+    
     }
 
 
@@ -124,6 +160,13 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
     
+        return TempArray[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) -> String {
+        
+        //SelectedAoI = TempArray[row]
+        
         return TempArray[row]
     }
 
