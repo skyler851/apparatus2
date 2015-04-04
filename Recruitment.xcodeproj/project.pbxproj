@@ -36,7 +36,6 @@
 		5696B3981AC232B900E82061 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3941AC232B900E82061 /* ParseUI.framework */; };
 		56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5902E1AC8F43300F29A86 /* ProfileController.swift */; };
 		56BE0FE01AAD2413008B0848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0FDE1AAD2413008B0848 /* Main.storyboard */; };
-		57C027A21ACC722A0005F44C /* CandidateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C027A11ACC722A0005F44C /* CandidateTableViewController.swift */; };
 		57C027A71ACC73310005F44C /* CandidateListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C027A41ACC73310005F44C /* CandidateListTableViewCell.m */; };
 		57C027A81ACC73310005F44C /* CandidateListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C027A61ACC73310005F44C /* CandidateListTableViewController.m */; };
 		57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */; };
@@ -97,7 +96,6 @@
 		5696B3941AC232B900E82061 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		56B5902E1AC8F43300F29A86 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		56BE0FDF1AAD2413008B0848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		57C027A11ACC722A0005F44C /* CandidateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateTableViewController.swift; sourceTree = "<group>"; };
 		57C027A31ACC73310005F44C /* CandidateListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateListTableViewCell.h; sourceTree = "<group>"; };
 		57C027A41ACC73310005F44C /* CandidateListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateListTableViewCell.m; sourceTree = "<group>"; };
 		57C027A51ACC73310005F44C /* CandidateListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateListTableViewController.h; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 		5696A25B1AC0C72E0032BCCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				57C027A11ACC722A0005F44C /* CandidateTableViewController.swift */,
 				57CA15C71A9BADE1009EC3C7 /* ViewController.swift */,
 				5696A25C1AC0C77D0032BCCF /* LoginController.swift */,
 				5696A25E1AC0CA870032BCCF /* CandidateListController.swift */,
@@ -417,7 +414,6 @@
 				56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */,
 				56847AE21AC20B2200082B65 /* SWRevealViewController.m in Sources */,
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
-				57C027A21ACC722A0005F44C /* CandidateTableViewController.swift in Sources */,
 				565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
 				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
