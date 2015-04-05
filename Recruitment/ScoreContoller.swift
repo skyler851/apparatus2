@@ -24,6 +24,8 @@ class ScoreController: UIViewController{
     @IBOutlet weak var notes: UITextField!
     @IBOutlet weak var decision: UISegmentedControl!
     @IBOutlet weak var star: Score!
+
+    @IBOutlet weak var resumeView: PFImageView!
     
     //go to next pageif segue is fromScoreToBewCandidate
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
@@ -65,13 +67,9 @@ class ScoreController: UIViewController{
         var notesEntered = notes.text
         var decisionEntered = decision.selectedSegmentIndex
         var decisionToParse = ""
-        var favoriteToParse = ""
         
         if (decisionEntered == 0){ decisionToParse = "No"}
         else {decisionToParse = "Yes"}
-        
-        if (favorite == "true"){ favoriteToParse = "Yes"}
-        else {decisionToParse = "No"}
         
         println(candidateEmail)
         
@@ -85,7 +83,6 @@ class ScoreController: UIViewController{
                 object.setObject(cultureEntered , forKey: "culture")
                 object.setObject(aptitudeEntered, forKey: "aptitude")
                 object.setObject(techEntered, forKey: "tech")
-                object.setObject(favoriteToParse, forKey: "favorite")
                 object.setObject(notesEntered, forKey: "notes")
                 object.setObject(decisionToParse, forKey: "decision")
                 object.saveInBackgroundWithBlock {
