@@ -18,33 +18,33 @@ class LoginController: UIViewController {
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
         
         if identifier == "toCandidatePage"{
-        if (txtUsername.text.isEmpty) {
-            //alert empty password
-            let alert = UIAlertView()
-            alert.title = "Invalid Password"
-            alert.message = "Please enter your 4 digit password"
-            alert.addButtonWithTitle("Ok")
-            alert.show()
+            if (txtUsername.text.isEmpty) {
+                //alert empty password
+                let alert = UIAlertView()
+                alert.title = "Invalid Password"
+                alert.message = "Please enter your 4 digit password"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
             
-            return false
+                return false
 
-        }
+            }
         
         
-        if status == "false"{
-        //alert that password is wrong
-        let alert = UIAlertView()
-        alert.title = "Invalid Password"
-        alert.message = "Password not found"
-        alert.addButtonWithTitle("Ok")
-        alert.show()
+            if status == "false"{
+                //alert that password is wrong
+                let alert = UIAlertView()
+                alert.title = "Invalid Password"
+                alert.message = "Password not found"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
         
-        return false
-        }
+                return false
+            }
         
-        if status == "true"{
-           performSegueWithIdentifier("toCandidatePage", sender: self)
-        return true
+            if status == "true"{
+                performSegueWithIdentifier("toCandidatePage", sender: self)
+                return true
             }
         }
         return true
@@ -66,8 +66,7 @@ class LoginController: UIViewController {
                 if let objects = objects as? [PFObject] {
                     for object in objects {
                         status = "true"
-                        //println(status)
-                        //println(object["Name"])
+                        name = object["Name"] as String
                         
                     }
                 
@@ -110,5 +109,15 @@ class LoginController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //passes the employee name to next contoller
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toCandidatePage") {
+            var svc = segue.destinationViewController as NewCandidateController;
+            
+            svc.toPass = name
+            
+        }
     }
 }

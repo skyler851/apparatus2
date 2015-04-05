@@ -35,9 +35,11 @@
 		5696B3971AC232B900E82061 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */; };
 		5696B3981AC232B900E82061 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3941AC232B900E82061 /* ParseUI.framework */; };
 		56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5902E1AC8F43300F29A86 /* ProfileController.swift */; };
+		56BA83F91ACA19640045C0CF /* ResumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BA83F81ACA19640045C0CF /* ResumeController.swift */; };
 		56BE0FE01AAD2413008B0848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0FDE1AAD2413008B0848 /* Main.storyboard */; };
 		57C027A71ACC73310005F44C /* CandidateListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C027A41ACC73310005F44C /* CandidateListTableViewCell.m */; };
 		57C027A81ACC73310005F44C /* CandidateListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C027A61ACC73310005F44C /* CandidateListTableViewController.m */; };
+
 		57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */; };
 		57CA15C81A9BADE1009EC3C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15C71A9BADE1009EC3C7 /* ViewController.swift */; };
 		57CA15D01A9BADE1009EC3C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57CA15CE1A9BADE1009EC3C7 /* LaunchScreen.xib */; };
@@ -95,11 +97,16 @@
 		5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		5696B3941AC232B900E82061 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		56B5902E1AC8F43300F29A86 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		56BA83F81ACA19640045C0CF /* ResumeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeController.swift; sourceTree = "<group>"; };
 		56BE0FDF1AAD2413008B0848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		57C027A31ACC73310005F44C /* CandidateListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateListTableViewCell.h; sourceTree = "<group>"; };
 		57C027A41ACC73310005F44C /* CandidateListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateListTableViewCell.m; sourceTree = "<group>"; };
 		57C027A51ACC73310005F44C /* CandidateListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateListTableViewController.h; sourceTree = "<group>"; };
 		57C027A61ACC73310005F44C /* CandidateListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateListTableViewController.m; sourceTree = "<group>"; };
+=======
+		56FE897A1AC8F7D600A4E4EB /* ScoreContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreContoller.swift; sourceTree = "<group>"; };
+>>>>>>> master
 		57CA15C01A9BADE1009EC3C7 /* Recruitment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recruitment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CA15C41A9BADE1009EC3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +207,8 @@
 				565A9D511AC4DD3D00819C07 /* MenuController.swift */,
 				560127A71AC8ED630009AF1E /* ThankYouController.swift */,
 				56B5902E1AC8F43300F29A86 /* ProfileController.swift */,
+				56FE897A1AC8F7D600A4E4EB /* ScoreContoller.swift */,
+				56BA83F81ACA19640045C0CF /* ResumeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -415,11 +424,13 @@
 				56847AE21AC20B2200082B65 /* SWRevealViewController.m in Sources */,
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
 				565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */,
+				56BA83F91ACA19640045C0CF /* ResumeController.swift in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
 				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
 				57C027A71ACC73310005F44C /* CandidateListTableViewCell.m in Sources */,
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
+				56FE897B1AC8F7D600A4E4EB /* ScoreContoller.swift in Sources */,
 				5696B3681AC219A000E82061 /* CandidateViewController.swift in Sources */,
 				57CA15EA1A9E62B4009EC3C7 /* AdminMenu.swift in Sources */,
 			);
