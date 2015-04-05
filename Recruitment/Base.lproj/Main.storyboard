@@ -202,12 +202,113 @@
                     <connections>
                         <outlet property="menuButton" destination="soI-o3-Xcz" id="yi8-F8-rri"/>
                         <outlet property="txtUsername" destination="wNr-Zx-e2P" id="IaH-a2-YB7"/>
-                        <segue destination="wc1-GC-iJH" kind="show" identifier="toCandidatePage" id="33a-Pp-5FJ"/>
+                        <segue destination="UIn-i4-U68" kind="show" identifier="toEventsPage" id="I3h-Uo-UN9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="368" y="-133"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="rUg-HI-piu">
+            <objects>
+                <viewController id="UIn-i4-U68" customClass="EventsController" customModule="Recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TZh-bF-JHX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZyZ-W3-fUh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oBr-qp-jDL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="gjK-Ld-7MH">
+                                <rect key="frame" x="0.0" y="64" width="768" height="5"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-ff-ZV0">
+                                <rect key="frame" x="0.0" y="69" width="768" height="44"/>
+                                <items>
+                                    <barButtonItem title="JOHN DOE" id="cyf-DV-LUj">
+                                        <color key="tintColor" red="1" green="0.23529411759999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SS6-9E-N4M"/>
+                                    <barButtonItem tag="1" image="Apparatus-Color-logo" id="cXA-8B-3oQ">
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGw-JQ-mOT">
+                                <rect key="frame" x="16" y="131" width="736" height="854"/>
+                                <connections>
+                                    <segue destination="ux4-0t-2l9" kind="embed" identifier="events" id="s9a-an-ZWm"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="LJR-OA-HhY">
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="1KO-1t-qOh">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="lblRecruiterName" destination="cyf-DV-LUj" id="iYz-MP-jwK"/>
+                        <outlet property="menuButton" destination="1KO-1t-qOh" id="3kQ-qZ-FMx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="US9-3S-jNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="-916"/>
+        </scene>
+        <!--Events Collection View Controller-->
+        <scene sceneID="fyR-bf-NGx">
+            <objects>
+                <collectionViewController id="ux4-0t-2l9" customClass="EventsCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fqv-WA-flg">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="854"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9yf-gw-QW8">
+                            <size key="itemSize" width="195" height="85"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="FDB-Hp-BOT" customClass="EventsCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="195" height="85"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90L-u9-oHp">
+                                            <rect key="frame" x="8" y="8" width="179" height="69"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="EventsLabel" destination="90L-u9-oHp" id="W36-RJ-V5X"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ux4-0t-2l9" id="Ibu-u3-Zhs"/>
+                            <outlet property="delegate" destination="ux4-0t-2l9" id="R1E-yw-GAk"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Shb-2k-4TQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="151"/>
         </scene>
         <!--Profile-->
         <scene sceneID="SNR-Zs-kNX">
@@ -532,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVs-IT-bXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="-1377"/>
+            <point key="canvasLocation" x="1370" y="-1743"/>
         </scene>
         <!--Thank You-->
         <scene sceneID="BeQ-gV-Ryn">
