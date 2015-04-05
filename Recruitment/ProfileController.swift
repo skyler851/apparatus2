@@ -6,13 +6,9 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 import UIKit
-<<<<<<< HEAD
 var statusResume = ""
 var areaEntered = ""
 var statusProfile = ""
-=======
-import ParseUI
->>>>>>> CandidateList
 
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
@@ -40,7 +36,7 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         "Sales",
         "Solutions Development"]
 
-    var AoIArray: NSArray = NSArray()
+    var AoIArray = []
     //end area of interest
     
     //go to next pageif segue is fromScoreToBewCandidate
@@ -238,7 +234,6 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         retrieveAoI.orderByAscending("AoI")
         
         //Puts info in an Array
-        AoIArray = retrieveAoI.findObjects()
     
     
     }
