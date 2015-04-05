@@ -10,6 +10,7 @@ import Foundation
 
 var statusResume = ""
 var statusSkills = ""
+var areaEntered = ""
 
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
@@ -21,10 +22,22 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var candidateInfo: UILabel!
     
     //Area of interest
-    var TempArray = ["Temp Interest 1",
-        "Temp Interest 2",
-        "Temp Interest 3",
-        "Temp Interest 4"]
+    var TempArray = ["AREA OF INTEREST:",
+        "Genreral",
+        "Business Intelligence",
+        "Client Services",
+        "Cloud Delivery",
+        "Database Administration",
+        "Development Operations",
+        "Enterprise Application Delivery",
+        "Identity Management",
+        "Information Security",
+        "Infrastructure",
+        "Kore Platform Development",
+        "Project Management",
+        "Saas Administration",
+        "Sales",
+        "Solutions Development"]
 
     var AoIArray = []
     //end area of interest
@@ -39,6 +52,7 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         }
         if identifier == "profileToResume"{
             if statusResume == "false" {
+                
                 //alert that email already exists
                 let alert = UIAlertView()
                 alert.title = "Resume Does Not Exist"
@@ -55,6 +69,12 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         }
         if identifier == "toScorePage"{
             if statusSkills == "false" {
+                //alert that email already exists
+                let alert = UIAlertView()
+                alert.title = "Resume Does Not Exist"
+                alert.message = "Please take a picture of the resume and save it to the database"
+                alert.addButtonWithTitle("OK")
+                alert.show()
                 return false
             }
             if statusSkills == "true"{
@@ -64,11 +84,85 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         }
         return true
     }
+    
+    //Enter Area of Interest
+    func createNewPFObject(){
+        
+        //get candidate where email = candidate email entered
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            //find area column in parse
+            for object in objects {
+                object.setObject(areaEntered , forKey: "area")
+                object.setObject(SkillResult , forKey: "skills")
+                object.saveInBackgroundWithBlock {
+                    (success: Bool, error: NSError!) -> Void in
+                    if (success) {
+                        // The object has been saved.
+                        
+                    } else {
+                        // There was a problem, check error.description
+                    }
+                }
+                statusSkills = "true"
+            }
+            self.shouldPerformSegueWithIdentifier("toScorePage", sender: self)
+        }
+    }
+    
+    //Update Area of Interest
+    func updatePFObject(){
+        
+        //get candidate where email = candidate email entered
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            //make sure name and email are filled out
+            if error == nil {
+                
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        
+                        //get the call area from parse and update the data in the columns
+                        object["area"] = areaEntered
+                        object["skills"] = SkillResult
+                        object.saveInBackgroundWithBlock {
+                            (success: Bool, error: NSError!) -> Void in
+                            if (success) {
+                                // The object has been saved.
+                            } else {
+                                // There was a problem, check error.description
+                            }
+                        }
+                        statusSkills = "true"
+                        
+                        //If there is nothing in the area column in Parse, add the newly entered one
+                        if (objects.count == 0) {
+                            object.delete()
+                            self.createNewPFObject()
+                        }
+                    }
+                }
+                else {
+                    println("Error: \(error) \(error.userInfo!)")
+                }
+                
+                self.shouldPerformSegueWithIdentifier("toScorePage", sender: self)
+            }
+        }
+        
+    }
+
 
     //enter skills into Parse
     @IBAction func submit(sender: AnyObject) {
         
-        var query = PFQuery(className:"Candidates")
+        /*var query = PFQuery(className:"Candidates")
         query.whereKey("email", equalTo: candidateEmail )
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
@@ -90,7 +184,21 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
                     statusSkills = "false"
                 }
             self.shouldPerformSegueWithIdentifier("toScorePage", sender: self)
+        }*/
+        
+        if (backPressed == false){
+            createNewPFObject()
         }
+        
+        
+        if (backPressed == true){
+            //if this page is accessed again via the back button from ThankYou page, the user presumably wants to make changes that will overwrite his/her submitted entry. The following code ensures that a new object is NOT created IF and ONLY IF the back button is pressed from the ThankYou page
+            
+            updatePFObject()
+            
+            
+        }
+
     }
 
 
@@ -154,22 +262,20 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
-
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    
-        return 4
+        
+        return 16
     }
-
+    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-    
+        
         return TempArray[row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) -> String {
-        
-        //SelectedAoI = TempArray[row]
-        
-        return TempArray[row]
+    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
+    {
+        areaEntered = TempArray[row]
     }
 
 
