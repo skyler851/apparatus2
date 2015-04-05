@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "CandidateListTableViewCell.h"
+#import "UniversityListTableViewController.h"
 
 @interface CandidateListTableViewController : UITableViewController
 

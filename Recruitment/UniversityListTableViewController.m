@@ -1,21 +1,20 @@
 //
-//  CandidateListTableViewController.m
+//  UniversityListTableViewController.m
 //  Recruitment
 //
-//  Created by Sean VanPelt on 4/1/15.
+//  Created by Sean VanPelt on 4/4/15.
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 
-#import "CandidateListTableViewController.h"
-#import "CandidateListTableViewCell.h"
+#import "UniversityListTableViewController.h"
+#import "UniversityListTableViewCell.h"
 
-@interface CandidateListTableViewController ()
+@interface UniversityListTableViewController ()
 
 @end
 
-@implementation CandidateListTableViewController {
-    NSArray *CandidateListArray; //Sets up my Array
-    NSArray *CandidateDecisionArray;
+@implementation UniversityListTableViewController {
+    NSArray *UniversityListArray; //Sets up my Array
 }
 
 - (void)viewDidLoad {
@@ -23,22 +22,17 @@
     
     //Runs the "retrieveFromParse method
     [self performSelector:@selector(retrieveFromParse)];
-    
 }
 
 - (void) retrieveFromParse {
     //Get info from the database
-    PFQuery *retrieveCandidates =[PFQuery queryWithClassName:@"Candidates"];
+    PFQuery *retrieveUniversity =[PFQuery queryWithClassName:@"EventsTable"];
     
-    [retrieveCandidates whereKey:@"university" equalTo:UniversitySelected];
-    
-    [retrieveCandidates orderByDescending:@"decision"];
-    
-    CandidateDecisionArray = [retrieveCandidates findObjects];
+    //Orders the Skills in ABC Order
+    [retrieveUniversity orderByAscending:@"university"];
     
     //Puts Table info into a array
-    CandidateListArray = [retrieveCandidates findObjects];
-    
+    UniversityListArray = [retrieveUniversity findObjects];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,34 +51,30 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return CandidateListArray.count;
+    return UniversityListArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CandidateListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CandidateCell" forIndexPath:indexPath];
+    UniversityListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UniversityCell" forIndexPath:indexPath];
     
     //Sets up the Array to be displayed (needed if wanting a different row in different places)
-    PFObject *TempObjectCandidates = [CandidateListArray objectAtIndex:indexPath.row];
-    
-    //PFObject *TempObject2 = [TempObject objectForKey:@"name"];
+    PFObject *TempObject = [UniversityListArray objectAtIndex:indexPath.row];
     
     //Displays the Skills in the labels
-    cell.CandidateLabel.text = [TempObjectCandidates objectForKey:@"name"];
-    
-    PFObject *TempObjectDecision = [CandidateDecisionArray objectAtIndex:indexPath.row];
-    
-    cell.CandidateDecisionLabel.text = [TempObjectDecision objectForKey:@"decision"];
-    
-    if ([cell.CandidateDecisionLabel.text  isEqual: @"Yes"]) {
-        cell.CandidateDecisionLabel.textColor = [UIColor colorWithRed:(0/255.0) green:(139/255.0) blue:(3/255.0) alpha:1.0];
-    } else {
-        cell.CandidateDecisionLabel.textColor = [UIColor colorWithRed:(212/255.0) green:(0/255.0) blue:(0/255.0) alpha:1.0];
-    }
+    cell.UniversityLabel.text = [TempObject objectForKey:@"university"];
     
     return cell;
 }
 
+//User selects a University
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    PFObject *TempObjectUniversity = [UniversityListArray objectAtIndex:indexPath.row];
+    
+    UniversitySelected = [TempObjectUniversity objectForKey:@"university"];
+    
+}
 
 
 /*

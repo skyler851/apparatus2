@@ -36,6 +36,9 @@
 		5696B3981AC232B900E82061 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3941AC232B900E82061 /* ParseUI.framework */; };
 		56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5902E1AC8F43300F29A86 /* ProfileController.swift */; };
 		56BE0FE01AAD2413008B0848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0FDE1AAD2413008B0848 /* Main.storyboard */; };
+		579FA75E1AD08C7600C72699 /* UniversityListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579FA75D1AD08C7600C72699 /* UniversityListTableViewController.m */; };
+		579FA7611AD08C8900C72699 /* UniversityListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 579FA7601AD08C8900C72699 /* UniversityListTableViewCell.m */; };
+		579FA7631AD09E7700C72699 /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FA7621AD09E7700C72699 /* UniversityListViewController.swift */; };
 		57C027A71ACC73310005F44C /* CandidateListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C027A41ACC73310005F44C /* CandidateListTableViewCell.m */; };
 		57C027A81ACC73310005F44C /* CandidateListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C027A61ACC73310005F44C /* CandidateListTableViewController.m */; };
 		57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */; };
@@ -96,6 +99,11 @@
 		5696B3941AC232B900E82061 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		56B5902E1AC8F43300F29A86 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		56BE0FDF1AAD2413008B0848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		579FA75C1AD08C7600C72699 /* UniversityListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityListTableViewController.h; sourceTree = "<group>"; };
+		579FA75D1AD08C7600C72699 /* UniversityListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityListTableViewController.m; sourceTree = "<group>"; };
+		579FA75F1AD08C8900C72699 /* UniversityListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityListTableViewCell.h; sourceTree = "<group>"; };
+		579FA7601AD08C8900C72699 /* UniversityListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityListTableViewCell.m; sourceTree = "<group>"; };
+		579FA7621AD09E7700C72699 /* UniversityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
 		57C027A31ACC73310005F44C /* CandidateListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateListTableViewCell.h; sourceTree = "<group>"; };
 		57C027A41ACC73310005F44C /* CandidateListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateListTableViewCell.m; sourceTree = "<group>"; };
 		57C027A51ACC73310005F44C /* CandidateListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateListTableViewController.h; sourceTree = "<group>"; };
@@ -200,6 +208,7 @@
 				565A9D511AC4DD3D00819C07 /* MenuController.swift */,
 				560127A71AC8ED630009AF1E /* ThankYouController.swift */,
 				56B5902E1AC8F43300F29A86 /* ProfileController.swift */,
+				579FA7621AD09E7700C72699 /* UniversityListViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -213,7 +222,18 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
-		57C027A91ACC733B0005F44C /* CandidateList-DO_NOT_DELETE */ = {
+		579FA75B1AD08C4800C72699 /* UniversityList */ = {
+			isa = PBXGroup;
+			children = (
+				579FA75F1AD08C8900C72699 /* UniversityListTableViewCell.h */,
+				579FA7601AD08C8900C72699 /* UniversityListTableViewCell.m */,
+				579FA75C1AD08C7600C72699 /* UniversityListTableViewController.h */,
+				579FA75D1AD08C7600C72699 /* UniversityListTableViewController.m */,
+			);
+			name = UniversityList;
+			sourceTree = "<group>";
+		};
+		57C027A91ACC733B0005F44C /* CandidateList */ = {
 			isa = PBXGroup;
 			children = (
 				57C027A31ACC73310005F44C /* CandidateListTableViewCell.h */,
@@ -221,7 +241,7 @@
 				57C027A51ACC73310005F44C /* CandidateListTableViewController.h */,
 				57C027A61ACC73310005F44C /* CandidateListTableViewController.m */,
 			);
-			name = "CandidateList-DO_NOT_DELETE";
+			name = CandidateList;
 			sourceTree = "<group>";
 		};
 		57CA15B71A9BADE1009EC3C7 = {
@@ -251,7 +271,8 @@
 				5696A2641AC0CE6F0032BCCF /* SWRevealViewController */,
 				5696A25B1AC0C72E0032BCCF /* Controllers */,
 				57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */,
-				57C027A91ACC733B0005F44C /* CandidateList-DO_NOT_DELETE */,
+				57C027A91ACC733B0005F44C /* CandidateList */,
+				579FA75B1AD08C4800C72699 /* UniversityList */,
 				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
 				563FD37F1AAA44A3004B6EB7 /* Fonts */,
 				57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */,
@@ -294,10 +315,10 @@
 		57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				57E309491AC4F9F000B3B40E /* SkillsCollectionViewController.h */,
-				57E3094A1AC4F9F000B3B40E /* SkillsCollectionViewController.m */,
 				57E3094C1AC4F9FC00B3B40E /* SkillsCollectionViewCell.h */,
 				57E3094D1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m */,
+				57E309491AC4F9F000B3B40E /* SkillsCollectionViewController.h */,
+				57E3094A1AC4F9F000B3B40E /* SkillsCollectionViewController.m */,
 			);
 			name = SkillsCollectionView;
 			sourceTree = "<group>";
@@ -407,11 +428,13 @@
 			files = (
 				57E3094B1AC4F9F000B3B40E /* SkillsCollectionViewController.m in Sources */,
 				57C027A81ACC73310005F44C /* CandidateListTableViewController.m in Sources */,
+				579FA7631AD09E7700C72699 /* UniversityListViewController.swift in Sources */,
 				57CA15C81A9BADE1009EC3C7 /* ViewController.swift in Sources */,
 				5696A25D1AC0C77D0032BCCF /* LoginController.swift in Sources */,
 				5696A2611AC0CAE60032BCCF /* NewCandidateController.swift in Sources */,
 				560127A81AC8ED630009AF1E /* ThankYouController.swift in Sources */,
 				56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */,
+				579FA75E1AD08C7600C72699 /* UniversityListTableViewController.m in Sources */,
 				56847AE21AC20B2200082B65 /* SWRevealViewController.m in Sources */,
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
 				565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */,
@@ -420,6 +443,7 @@
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
 				57C027A71ACC73310005F44C /* CandidateListTableViewCell.m in Sources */,
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
+				579FA7611AD08C8900C72699 /* UniversityListTableViewCell.m in Sources */,
 				5696B3681AC219A000E82061 /* CandidateViewController.swift in Sources */,
 				57CA15EA1A9E62B4009EC3C7 /* AdminMenu.swift in Sources */,
 			);
