@@ -6,17 +6,10 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 
-
-
-
-// THIS IS AN OLD FILE THAT ISN'T USED.
-// Only kept this because it has code you may want. Idk.
-
 import UIKit
 
 class CandidateListController: UIViewController {
-    
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton:UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
