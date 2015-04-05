@@ -9,5 +9,7 @@
 
 #import "SWRevealViewController.h"
 
+#import "SkillsCollectionViewController.m"
+
 #import <Parse/Parse.h>
 // or #import <ParseOSX/ParseOSX.h>

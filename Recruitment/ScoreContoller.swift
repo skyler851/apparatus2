@@ -73,8 +73,6 @@ class ScoreController: UIViewController{
         if (favorite == "true"){ favoriteToParse = "Yes"}
         else {decisionToParse = "No"}
         
-        println(candidateEmail)
-        
         var query = PFQuery(className:"Candidates")
         query.whereKey("email", equalTo: candidateEmail )
         query.findObjectsInBackgroundWithBlock {

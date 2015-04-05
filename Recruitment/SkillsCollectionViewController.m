@@ -9,8 +9,11 @@
     NSArray *SkillsArray; //Sets up my Array
 }
 
-static NSString * const reuseIdentifier = @"Cell";
+NSArray *SkillIndexPath;
 
+NSString *SkillResult = @"";
+
+static NSString * const reuseIdentifier = @"Cell";
 
 
 - (void)viewDidLoad {
@@ -71,6 +74,14 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell* cell = [collectionView cellForItemAtIndexPath:indexPath];
     cell.contentView.backgroundColor = [UIColor colorWithRed:(253/255.0) green:(128/255.0) blue:(35/255.0) alpha:1.0];
+    
+    //Gets selected Skills and puts them into a string
+    PFObject *TempObject = [SkillsArray objectAtIndex:indexPath.row];
+    SkillResult = [SkillResult stringByAppendingString:[TempObject objectForKey:@"Skills"]];
+    SkillResult = [SkillResult stringByAppendingString:@", "];
+    
+    //NSLog(@"SkillResult: %@", SkillResult);
+    
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {

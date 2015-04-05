@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CandidateListTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *CandidateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *CandidateDecisionLabel;
 
 @end
