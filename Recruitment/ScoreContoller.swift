@@ -71,8 +71,6 @@ class ScoreController: UIViewController{
         if (decisionEntered == 0){ decisionToParse = "No"}
         else {decisionToParse = "Yes"}
         
-        println(candidateEmail)
-        
         var query = PFQuery(className:"Candidates")
         query.whereKey("email", equalTo: candidateEmail )
         query.findObjectsInBackgroundWithBlock {

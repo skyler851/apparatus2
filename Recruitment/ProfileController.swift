@@ -6,10 +6,14 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 import UIKit
+import Foundation
+
 var statusResume = ""
+var statusSkills = ""
 
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
+    @IBOutlet weak var submitButton: UIBarButtonItem!
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     
@@ -49,7 +53,44 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
                 return true
             }
         }
+        if identifier == "toScorePage"{
+            if statusSkills == "false" {
+                return false
+            }
+            if statusSkills == "true"{
+                performSegueWithIdentifier("toScorePage", sender: self)
+                return true
+            }
+        }
         return true
+    }
+
+    //enter skills into Parse
+    @IBAction func submit(sender: AnyObject) {
+        
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+                
+                for object in objects {
+                    object.setObject(SkillResult , forKey: "skills")
+                    object.saveInBackgroundWithBlock {
+                        (success: Bool, error: NSError!) -> Void in
+                        if (success) {
+                            // The object has been saved.
+                        } else {
+                            // There was a problem, check error.description
+                        }
+                    }
+                    statusSkills = "true"
+                }
+                if (objects.count == 0) {
+                    //already exists, do not push segue
+                    statusSkills = "false"
+                }
+            self.shouldPerformSegueWithIdentifier("toScorePage", sender: self)
+        }
     }
 
 
@@ -71,12 +112,11 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
                     statusResume = "false"
                     println(statusResume)
                 }
-                
             }
             self.shouldPerformSegueWithIdentifier("profileToResume", sender: self)
         }
-
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -109,8 +149,6 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         retrieveAoI.orderByAscending("AoI")
         
         //Puts info in an Array
-    
-    
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -124,6 +162,13 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
     
+        return TempArray[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) -> String {
+        
+        //SelectedAoI = TempArray[row]
+        
         return TempArray[row]
     }
 
