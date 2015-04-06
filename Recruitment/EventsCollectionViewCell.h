@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EventsCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *EventsLable;
+@property (weak, nonatomic) IBOutlet UILabel *EventsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *UniversityEventLabel;
+@property (weak, nonatomic) IBOutlet UILabel *EventDateLabel;
 
 @end

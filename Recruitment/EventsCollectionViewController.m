@@ -17,7 +17,9 @@
     NSArray *EventsArray; //Sets up my Array
 }
 
+NSArray *UniversitiesSelected;
 NSArray *EventSelected;
+NSArray *EventTimeSelected;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -72,7 +74,9 @@ NSArray *EventSelected;
     PFObject *TempObject = [EventsArray objectAtIndex:indexPath.row];
     
     //Displays the Skills in the labels
-    cell.EventsLable.text = [TempObject objectForKey:@"university"];
+    cell.EventsLabel.text = [TempObject objectForKey:@"eventName"];
+    cell.UniversityEventLabel.text = [TempObject objectForKey:@"university"];
+    cell.EventDateLabel.text = [TempObject objectForKey:@"date"];
     
     return cell;
 }
@@ -81,7 +85,17 @@ NSArray *EventSelected;
     
     PFObject *TempObject = [EventsArray objectAtIndex:indexPath.row];
     
-    EventSelected = [TempObject objectForKey:@"universitys"];
+    EventSelected = [TempObject objectForKey:@"eventName"];
+    
+    //Getting the University of Event selected
+    PFQuery *retrieveEventUniversity =[PFQuery queryWithClassName:@"EventsTable"];
+    [retrieveEventUniversity whereKey:@"university" equalTo:EventSelected];
+    UniversitiesSelected = [retrieveEventUniversity findObjects];
+    
+    //Getting the Date/Time of Event selected
+    PFQuery *retrieveEventTime =[PFQuery queryWithClassName:@"EventsTable"];
+    [retrieveEventTime whereKey:@"date" equalTo:EventSelected];
+    EventTimeSelected = [retrieveEventTime findObjects];
     
 }
 
