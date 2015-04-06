@@ -11,5 +11,7 @@
 
 #import "SkillsCollectionViewController.m"
 
+#import "EventsCollectionViewController.m"
+
 #import <Parse/Parse.h>
 // or #import <ParseOSX/ParseOSX.h>
