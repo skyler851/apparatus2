@@ -46,6 +46,18 @@
         
         
     }
+    if ([segue.identifier isEqualToString:@"editProfile"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ProfileControllerController *destViewController = segue.destinationViewController;
+        
+        //get data from object
+        PFObject *TempObjectCandidates = [CandidateListArray objectAtIndex:indexPath.row];
+        
+        //save as variables in SummaryDetailViewController.h file
+        destViewController.editCandidateName = [TempObjectCandidates objectForKey:@"name"];
+        
+    }
+
     
     
     

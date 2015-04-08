@@ -9,10 +9,12 @@ import UIKit
 import Foundation
 import ParseUI
 
+
+var statusSkills = ""
 var statusResume = ""
 var areaEntered = ""
 var statusProfile = ""
-var statusSkills = ""
+
 
 @objc class AreaConstant {
     private init() {}
@@ -24,8 +26,10 @@ var statusSkills = ""
     class func candidate() -> String { return candName }
 }
 
-class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
+
+class ProfileControllerController: UIViewController, UIPickerViewDelegate {
+    
     @IBOutlet weak var submitButton: UIBarButtonItem!
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
@@ -33,9 +37,11 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var candidateName: UILabel!
     @IBOutlet weak var candidateInfo: UILabel!
     
+    var editCandidateName = candName
+    
     //Area of interest
     var TempArray = ["AREA OF INTEREST:",
-        "Genreral",
+        "General",
         "Business Intelligence",
         "Client Services",
         "Cloud Delivery",
@@ -50,7 +56,6 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         "Saas Administration",
         "Sales",
         "Solutions Development"]
-
     var AoIArray = []
     //end area of interest
     
@@ -62,6 +67,7 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
             println("nil")
             return true
         }
+        
         if identifier == "profileToResume"{
             if statusResume == "false" {
                 
@@ -169,33 +175,33 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         }
         
     }
-
-
+    
+    
     //enter skills into Parse
     @IBAction func submit(sender: AnyObject) {
         
         /*var query = PFQuery(className:"Candidates")
         query.whereKey("email", equalTo: candidateEmail )
         query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-                
-                for object in objects {
-                    object.setObject(SkillResult , forKey: "skills")
-                    object.saveInBackgroundWithBlock {
-                        (success: Bool, error: NSError!) -> Void in
-                        if (success) {
-                            // The object has been saved.
-                        } else {
-                            // There was a problem, check error.description
-                        }
-                    }
-                    statusSkills = "true"
-                }
-                if (objects.count == 0) {
-                    //already exists, do not push segue
-                    statusSkills = "false"
-                }
-            self.shouldPerformSegueWithIdentifier("toScorePage", sender: self)
+        (objects: [AnyObject]!, error: NSError!) -> Void in
+        
+        for object in objects {
+        object.setObject(SkillResult , forKey: "skills")
+        object.saveInBackgroundWithBlock {
+        (success: Bool, error: NSError!) -> Void in
+        if (success) {
+        // The object has been saved.
+        } else {
+        // There was a problem, check error.description
+        }
+        }
+        statusSkills = "true"
+        }
+        if (objects.count == 0) {
+        //already exists, do not push segue
+        statusSkills = "false"
+        }
+        self.shouldPerformSegueWithIdentifier("toScorePage", sender: self)
         }*/
         
         if (backPressed == false){
@@ -208,12 +214,11 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
             
             updatePFObject()
             
-            
         }
-
+        
     }
-
-
+    
+    
     @IBAction func viewResume(sender: UIButton) {
         
         //find candidates class in Parse where column email = candidate's email
@@ -237,40 +242,56 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "editProfile"{
+            self.candidateName.text = editCandidateName
+            println("hello")
+        }
+        if segue.identifier == "toProfilePage"{
+            self.candidateName.text = candName
+        }
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         //display recruiter name in toolbar
         lblRecruiterName.title = name
+        //var x = tempVar
+        candidateName.text = editCandidateName
         
         //display candidate name in heading
-        candidateName.text = candName
+        var instanceOfCustomObject: CandidateListTableViewController = CandidateListTableViewController()
+        
         
         //display candidate name in heading
         candidateInfo.text = jobType + " | " + gradDate
-        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func retrieveFromParse() {
         //Get info from the database
         var retrieveAoI = PFQuery(className:"SkillsTable")
-    
+        
         //Orders AoI in ABC Order
         retrieveAoI.orderByAscending("AoI")
         
         //Puts info in an Array
     }
-
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -289,17 +310,17 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     {
         areaEntered = TempArray[row]
     }
-
-
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using segue.destinationViewController.
     // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
 
