@@ -23,7 +23,6 @@
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
-            <string>OpenSans-Bold</string>
         </mutableArray>
         <mutableArray key="OpenSans-Light.ttf">
             <string>OpenSans-Light</string>
@@ -43,13 +42,6 @@
             <string>OpenSans-Light</string>
         </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
-            <string>OpenSans</string>
-            <string>OpenSans</string>
-            <string>OpenSans</string>
-            <string>OpenSans</string>
-            <string>OpenSans</string>
-            <string>OpenSans</string>
-            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -275,7 +267,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-yS-JIh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-yS-JIh">
                                 <rect key="frame" x="0.0" y="64" width="768" height="5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="qix-Ef-5SM"/>
@@ -392,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPA-up-xcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2365" y="1134"/>
+            <point key="canvasLocation" x="3221" y="-2298"/>
         </scene>
         <!--Skills Collection View Controller-->
         <scene sceneID="vbr-Dp-2o3">
@@ -827,7 +819,7 @@
                                 <color key="textColor" red="0.32549019610000002" green="0.44705882349999998" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-YQ-3XV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-YQ-3XV">
                                 <rect key="frame" x="0.0" y="64" width="768" height="5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="Yug-xZ-Gxg"/>
@@ -906,7 +898,7 @@
                                     <constraint firstAttribute="width" constant="46" id="uVb-Hw-uGN"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="4131AE09-308A-41EC-9719-EFBDB45C9E5F" backgroundImage="4131AE09-308A-41EC-9719-EFBDB45C9E5F">
+                                <state key="normal" image="C5824241-BA05-47AD-AF07-8CA2A30FC863" backgroundImage="C5824241-BA05-47AD-AF07-8CA2A30FC863">
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -1235,12 +1227,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqz-WD-XWF">
-                                <rect key="frame" x="235" y="759" width="533" height="83"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JH5-r5-lu9">
                                 <rect key="frame" x="-7" y="93" width="775" height="110"/>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -1357,45 +1343,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="21" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5i-Dw-HJR">
-                                <rect key="frame" x="235" y="515" width="517" height="21"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="___________________________________________________________________________________________________________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPR-9X-igy">
                                 <rect key="frame" x="16" y="904" width="752" height="24"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxl-fZ-XKW">
-                                <rect key="frame" x="235" y="473" width="517" height="21"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tu-yr-8Wb">
-                                <rect key="frame" x="235" y="617" width="517" height="21"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwz-Z6-1V2">
-                                <rect key="frame" x="235" y="656" width="517" height="21"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlQ-km-FS3">
-                                <rect key="frame" x="235" y="704" width="517" height="21"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMy-lh-HPl">
-                                <rect key="frame" x="235" y="753" width="517" height="21"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1448,12 +1398,6 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7I-wI-0Dr">
-                                <rect key="frame" x="235" y="884" width="145" height="28"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.262602646" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLJ-Fu-3Iv">
                                 <rect key="frame" x="235" y="273" width="251" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1469,6 +1413,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CBe-Kn-9yM">
+                                <rect key="frame" x="235" y="472" width="251" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-3z-mu3">
+                                <rect key="frame" x="235" y="512" width="251" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8T-lQ-5Gc">
+                                <rect key="frame" x="235" y="612" width="251" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSl-wm-voj">
+                                <rect key="frame" x="235" y="749" width="251" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIQ-zV-dsF">
+                                <rect key="frame" x="235" y="704" width="509" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8m-7T-GX6">
+                                <rect key="frame" x="235" y="656" width="251" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9i-IS-MU3">
+                                <rect key="frame" x="235" y="789" width="26" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ea3-zE-X0X">
+                                <rect key="frame" x="235" y="882" width="251" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1477,18 +1461,21 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="lblAptitude" destination="gwz-Z6-1V2" id="P1M-ip-wC7"/>
-                        <outlet property="lblArea" destination="Pxl-fZ-XKW" id="h2b-aV-M2h"/>
+                        <outlet property="lblAptitude" destination="q8m-7T-GX6" id="p4r-xI-N6N"/>
+                        <outlet property="lblArea" destination="CBe-Kn-9yM" id="m2P-b4-Bgi"/>
                         <outlet property="lblCandidateName" destination="qEO-Bg-V1k" id="WhS-sy-zWg"/>
-                        <outlet property="lblCulture" destination="2Tu-yr-8Wb" id="PI1-Cw-JAb"/>
-                        <outlet property="lblDecision" destination="w7I-wI-0Dr" id="Q5b-FZ-8FI"/>
+                        <outlet property="lblCulture" destination="B8T-lQ-5Gc" id="ttn-vM-maG"/>
+                        <outlet property="lblDecision" destination="Ea3-zE-X0X" id="4M0-4Z-qKw"/>
                         <outlet property="lblEmail" destination="bLJ-Fu-3Iv" id="xo3-XM-5rZ"/>
-                        <outlet property="lblFavorite" destination="oMy-lh-HPl" id="IQ9-PA-o1Y"/>
+                        <outlet property="lblFavorite" destination="gSl-wm-voj" id="gvQ-q5-E2W"/>
                         <outlet property="lblGradDate" destination="8df-CF-pE4" id="G1W-yc-3a9"/>
+                        <outlet property="lblJobType" destination="eIU-xO-Eil" id="Bld-J6-3Zi"/>
                         <outlet property="lblNameSubHeader" destination="KHy-pg-44N" id="VN3-qb-r4D"/>
+                        <outlet property="lblNotes" destination="Y9i-IS-MU3" id="ekd-eU-7cJ"/>
                         <outlet property="lblRecruiterName" destination="8Dz-Mk-UYa" id="hna-yW-4VR"/>
-                        <outlet property="lblSkills" destination="t5i-Dw-HJR" id="ifu-oo-Uxc"/>
-                        <outlet property="lblTechSkill" destination="MlQ-km-FS3" id="sY1-gQ-aTU"/>
+                        <outlet property="lblSkills" destination="kPS-3z-mu3" id="cbn-tt-uA7"/>
+                        <outlet property="lblTechSkill" destination="bIQ-zV-dsF" id="hvo-ga-knp"/>
+                        <segue destination="DGa-VG-AdE" kind="show" identifier="editProfile" id="BLB-J5-Z4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIR-hV-cia" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1497,7 +1484,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="4131AE09-308A-41EC-9719-EFBDB45C9E5F" width="240" height="228">
+        <image name="Apparatus-Color-logo" width="98" height="21"/>
+        <image name="Apparatus-Symbol" width="300" height="300"/>
+        <image name="Apparatus-White1color" width="325" height="108"/>
+        <image name="C5824241-BA05-47AD-AF07-8CA2A30FC863" width="240" height="228">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -5198,16 +5188,14 @@ A2DPAANg3gADYOIAA2DpAANg8QADYP4AA2EDAANhBQADYQcAA2EMAANhFAADYRcAA2EcAANhJAADYScA
 A2E5AANhPAADYUEAAAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAANhQw
 </mutableData>
         </image>
-        <image name="Apparatus-Color-logo" width="98" height="21"/>
-        <image name="Apparatus-Symbol" width="300" height="300"/>
-        <image name="Apparatus-White1color" width="325" height="108"/>
         <image name="camera" width="116" height="94"/>
         <image name="menu" width="33" height="26"/>
         <image name="red-banner" width="2880" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="spy-1Q-FEW"/>
-        <segue reference="KCJ-hB-M1z"/>
+        <segue reference="BLB-J5-Z4N"/>
         <segue reference="wis-wa-JDH"/>
+        <segue reference="KCJ-hB-M1z"/>
+        <segue reference="spy-1Q-FEW"/>
     </inferredMetricsTieBreakers>
 </document>
