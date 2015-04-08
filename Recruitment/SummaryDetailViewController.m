@@ -59,6 +59,15 @@
 
 @synthesize tempVar;
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"editProfile"]) {
+        ProfileControllerController *destViewController = segue.destinationViewController;
+        
+        //uses "candidateName" from Summary page and pushes it to the "editProfile" so it can be seen.
+        destViewController.editCandidateName = candidateName;
+        
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
