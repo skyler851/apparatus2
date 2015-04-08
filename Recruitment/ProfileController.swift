@@ -6,28 +6,23 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 import UIKit
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Foundation
-
->>>>>>> origin/master
-var statusResume = ""
-var statusSkills = ""
-var areaEntered = ""
-<<<<<<< HEAD
-var statusProfile = ""
-=======
-<<<<<<< HEAD
 import ParseUI
-=======
+
 var statusResume = ""
 var areaEntered = ""
 var statusProfile = ""
->>>>>>> master
->>>>>>> CandidateList
-=======
->>>>>>> origin/master
+var statusSkills = ""
+
+@objc class AreaConstant {
+    private init() {}
+    class func area() -> String { return areaEntered }
+}
+
+@objc class CandidateConstant {
+    private init() {}
+    class func candidate() -> String { return candName }
+}
 
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
