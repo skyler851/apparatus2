@@ -37,6 +37,8 @@ NSArray *EventTimeSelected;
     
     //Puts Table info into a array
     EventsArray = [retrieveEvents findObjects];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,10 +75,14 @@ NSArray *EventTimeSelected;
     //Sets up the Array to be displayed (needed if wanting a different row in different places)
     PFObject *TempObject = [EventsArray objectAtIndex:indexPath.row];
     
+    //Date formatter
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMM dd, yyyy"];
+    
     //Displays the Skills in the labels
     cell.EventsLabel.text = [TempObject objectForKey:@"eventName"];
     cell.UniversityEventLabel.text = [TempObject objectForKey:@"university"];
-    cell.EventDateLabel.text = [TempObject objectForKey:@"date"];
+    cell.EventDateLabel.text = [formatter stringFromDate:[TempObject objectForKey:@"date"]];
     
     return cell;
 }
@@ -91,6 +97,10 @@ NSArray *EventTimeSelected;
     PFQuery *retrieveEventUniversity =[PFQuery queryWithClassName:@"EventsTable"];
     [retrieveEventUniversity whereKey:@"university" equalTo:EventSelected];
     UniversitiesSelected = [retrieveEventUniversity findObjects];
+    
+    //Date formatter
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMM dd, yyyy"];
     
     //Getting the Date/Time of Event selected
     PFQuery *retrieveEventTime =[PFQuery queryWithClassName:@"EventsTable"];

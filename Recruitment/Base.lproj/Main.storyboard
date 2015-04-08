@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1292,7 +1292,7 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfu-Kg-ARE">
-                                <rect key="frame" x="16" y="128" width="736" height="844"/>
+                                <rect key="frame" x="16" y="128" width="736" height="876"/>
                                 <connections>
                                     <segue destination="l4S-ZV-lrl" kind="embed" id="1xr-nc-dVA"/>
                                 </connections>
@@ -1321,11 +1321,11 @@
             <objects>
                 <collectionViewController id="l4S-ZV-lrl" customClass="EventsCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="J3X-S5-b9a">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="876"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qpx-EC-YTa">
-                            <size key="itemSize" width="175" height="70"/>
+                            <size key="itemSize" width="350" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1365,6 +1365,7 @@
                                     <outlet property="EventDateLabel" destination="azb-iB-06s" id="tba-Dg-ZbZ"/>
                                     <outlet property="EventsLabel" destination="LhQ-Zi-MVH" id="DtU-3O-ySm"/>
                                     <outlet property="UniversityEventLabel" destination="Qco-YA-4sy" id="3yk-dv-aBg"/>
+                                    <segue destination="wc1-GC-iJH" kind="show" id="ovK-zL-9pd"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -1376,7 +1377,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdY-ql-2ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2206" y="-223"/>
+            <point key="canvasLocation" x="2226" y="-59"/>
         </scene>
     </scenes>
     <resources>
@@ -1388,8 +1389,8 @@
         <image name="red-banner" width="2880" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JeT-gW-cdI"/>
-        <segue reference="spy-1Q-FEW"/>
         <segue reference="wis-wa-JDH"/>
+        <segue reference="ovK-zL-9pd"/>
+        <segue reference="JeT-gW-cdI"/>
     </inferredMetricsTieBreakers>
 </document>

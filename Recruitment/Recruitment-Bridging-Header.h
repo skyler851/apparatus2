@@ -10,8 +10,14 @@
 #import "SWRevealViewController.h"
 
 #import "SkillsCollectionViewController.m"
+//SkillResult - NSString
+
 
 #import "EventsCollectionViewController.m"
+//UniversitiesSelected  - NSArray
+//EventSelected         - NSArray
+//EventTimeSelected     - NSArray
+
 
 #import <Parse/Parse.h>
 // or #import <ParseOSX/ParseOSX.h>
