@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
 class EventsViewController: UIViewController {
     var toPass:String!
+    var toPass2:String!
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
 
@@ -30,6 +32,18 @@ class EventsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //passes the employee name to next contoller
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toNewCandidatePage") {
+            var svc = segue.destinationViewController as NewCandidateController;
+            
+            svc.toPass = SchoolSelected
+            svc.toPass2 = Event
+            
+        }
+    }
+
     
 
     /*

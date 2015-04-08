@@ -20,6 +20,8 @@
 NSArray *UniversitiesSelected;
 NSArray *EventSelected;
 NSArray *EventTimeSelected;
+NSString *SchoolSelected;
+NSString *Event;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -93,10 +95,15 @@ NSArray *EventTimeSelected;
     
     EventSelected = [TempObject objectForKey:@"eventName"];
     
+    SchoolSelected = [TempObject objectForKey:@"university"];
+    Event = [TempObject objectForKey:@"eventName"];
+    
     //Getting the University of Event selected
     PFQuery *retrieveEventUniversity =[PFQuery queryWithClassName:@"EventsTable"];
     [retrieveEventUniversity whereKey:@"university" equalTo:EventSelected];
     UniversitiesSelected = [retrieveEventUniversity findObjects];
+    
+    
     
     //Date formatter
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
