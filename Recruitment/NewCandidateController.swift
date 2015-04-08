@@ -5,6 +5,7 @@ var candidateEmail = ""
 class NewCandidateController: UIViewController{
     
     var toPass:String!
+    var toPass2:String!
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     
@@ -91,6 +92,8 @@ class NewCandidateController: UIViewController{
                 if (objects.count == 0) {
                     //get the call Candidate from parse and enter the data into the columns
                     var object = PFObject(className: "Candidates")
+                    object.setObject(SchoolSelected , forKey: "university")
+                    object.setObject(Event , forKey: "event")
                     object.setObject(usrEntered , forKey: "name")
                     object.setObject(emlEntered, forKey: "email")
                     object.setObject(gradEntered, forKey: "gradDate")
@@ -201,6 +204,8 @@ class NewCandidateController: UIViewController{
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            println(UniversitiesSelected)
             
             //display Recruiter name
             lblRecruiterName.title = name

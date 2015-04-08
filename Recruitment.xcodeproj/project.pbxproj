@@ -44,6 +44,9 @@
 		56FA6DD31AD1B35B005ED4F3 /* UniversityListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FA6DD11AD1B35B005ED4F3 /* UniversityListTableViewController.m */; };
 		56FA6DD51AD1B3AD005ED4F3 /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA6DD41AD1B3AD005ED4F3 /* UniversityListViewController.swift */; };
 		56FE897B1AC8F7D600A4E4EB /* ScoreContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FE897A1AC8F7D600A4E4EB /* ScoreContoller.swift */; };
+		578F001E1AD306C200F2F6B4 /* EventsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 578F001D1AD306C200F2F6B4 /* EventsCollectionViewController.m */; };
+		578F00211AD306F500F2F6B4 /* EventsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 578F00201AD306F500F2F6B4 /* EventsCollectionViewCell.m */; };
+		578F00241AD30A0200F2F6B4 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F00231AD30A0200F2F6B4 /* EventsViewController.swift */; };
 		57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */; };
 		57CA15C81A9BADE1009EC3C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CA15C71A9BADE1009EC3C7 /* ViewController.swift */; };
 		57CA15D01A9BADE1009EC3C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57CA15CE1A9BADE1009EC3C7 /* LaunchScreen.xib */; };
@@ -114,6 +117,11 @@
 		56FA6DD11AD1B35B005ED4F3 /* UniversityListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityListTableViewController.m; sourceTree = "<group>"; };
 		56FA6DD41AD1B3AD005ED4F3 /* UniversityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
 		56FE897A1AC8F7D600A4E4EB /* ScoreContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreContoller.swift; sourceTree = "<group>"; };
+		578F001C1AD306C200F2F6B4 /* EventsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCollectionViewController.h; sourceTree = "<group>"; };
+		578F001D1AD306C200F2F6B4 /* EventsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCollectionViewController.m; sourceTree = "<group>"; };
+		578F001F1AD306F500F2F6B4 /* EventsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCollectionViewCell.h; sourceTree = "<group>"; };
+		578F00201AD306F500F2F6B4 /* EventsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCollectionViewCell.m; sourceTree = "<group>"; };
+		578F00231AD30A0200F2F6B4 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		57CA15C01A9BADE1009EC3C7 /* Recruitment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recruitment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CA15C41A9BADE1009EC3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 				56B5902E1AC8F43300F29A86 /* ProfileController.swift */,
 				56FE897A1AC8F7D600A4E4EB /* ScoreContoller.swift */,
 				56BA83F81ACA19640045C0CF /* ResumeController.swift */,
+				578F00231AD30A0200F2F6B4 /* EventsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +261,17 @@
 			name = "University List";
 			sourceTree = "<group>";
 		};
+		578F00221AD306FC00F2F6B4 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				578F001C1AD306C200F2F6B4 /* EventsCollectionViewController.h */,
+				578F001D1AD306C200F2F6B4 /* EventsCollectionViewController.m */,
+				578F001F1AD306F500F2F6B4 /* EventsCollectionViewCell.h */,
+				578F00201AD306F500F2F6B4 /* EventsCollectionViewCell.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		57CA15B71A9BADE1009EC3C7 = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +300,7 @@
 				56847ADC1AC0E31E00082B65 /* Recruitment-Bridging-Header.h */,
 				5696A2641AC0CE6F0032BCCF /* SWRevealViewController */,
 				5696A25B1AC0C72E0032BCCF /* Controllers */,
+				578F00221AD306FC00F2F6B4 /* Events */,
 				57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */,
 				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
 				5696B3671AC219A000E82061 /* CandidateViewController.swift */,
@@ -436,12 +457,14 @@
 			files = (
 				57E3094B1AC4F9F000B3B40E /* SkillsCollectionViewController.m in Sources */,
 				56FA6DD31AD1B35B005ED4F3 /* UniversityListTableViewController.m in Sources */,
+				578F001E1AD306C200F2F6B4 /* EventsCollectionViewController.m in Sources */,
 				56FA6DD21AD1B35B005ED4F3 /* UniversityListTableViewCell.m in Sources */,
 				57CA15C81A9BADE1009EC3C7 /* ViewController.swift in Sources */,
 				5696A25D1AC0C77D0032BCCF /* LoginController.swift in Sources */,
 				5696A2611AC0CAE60032BCCF /* NewCandidateController.swift in Sources */,
 				560127A81AC8ED630009AF1E /* ThankYouController.swift in Sources */,
 				56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */,
+				578F00241AD30A0200F2F6B4 /* EventsViewController.swift in Sources */,
 				56847AE21AC20B2200082B65 /* SWRevealViewController.m in Sources */,
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
 				56FA6DD51AD1B3AD005ED4F3 /* UniversityListViewController.swift in Sources */,
@@ -450,6 +473,7 @@
 				56BA83F91ACA19640045C0CF /* ResumeController.swift in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
 				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
+				578F00211AD306F500F2F6B4 /* EventsCollectionViewCell.m in Sources */,
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
 				56FE897B1AC8F7D600A4E4EB /* ScoreContoller.swift in Sources */,
@@ -516,6 +540,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -559,7 +584,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
