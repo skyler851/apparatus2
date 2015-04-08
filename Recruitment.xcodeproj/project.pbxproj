@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		560127A81AC8ED630009AF1E /* ThankYouController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560127A71AC8ED630009AF1E /* ThankYouController.swift */; };
+		56356C331ACE067500E2D0EC /* AdminMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56356C321ACE067500E2D0EC /* AdminMenuController.swift */; };
 		563FD37E1AAA43B1004B6EB7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563FD37D1AAA43B1004B6EB7 /* OpenSans-Regular.ttf */; };
 		563FD3811AAA4C83004B6EB7 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563FD3801AAA4C83004B6EB7 /* OpenSans-Light.ttf */; };
 		563FD3831AAA4C90004B6EB7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563FD3821AAA4C90004B6EB7 /* OpenSans-Bold.ttf */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		560127A71AC8ED630009AF1E /* ThankYouController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouController.swift; sourceTree = "<group>"; };
+		56356C321ACE067500E2D0EC /* AdminMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminMenuController.swift; sourceTree = "<group>"; };
 		563FD37D1AAA43B1004B6EB7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		563FD3801AAA4C83004B6EB7 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		563FD3821AAA4C90004B6EB7 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				56B5902E1AC8F43300F29A86 /* ProfileController.swift */,
 				56FE897A1AC8F7D600A4E4EB /* ScoreContoller.swift */,
 				56BA83F81ACA19640045C0CF /* ResumeController.swift */,
+				56356C321ACE067500E2D0EC /* AdminMenuController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
 				565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */,
 				56BA83F91ACA19640045C0CF /* ResumeController.swift in Sources */,
+				56356C331ACE067500E2D0EC /* AdminMenuController.swift in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
 				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
