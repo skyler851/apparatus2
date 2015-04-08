@@ -1,47 +1,58 @@
-#import "SkillsCollectionViewController.h"
-#import "SkillsCollectionViewCell.h"
+//
+//  EventsCollectionViewController.m
+//  Recruitment
+//
+//  Created by Sean VanPelt on 4/6/15.
+//  Copyright (c) 2015 AppAtUs. All rights reserved.
+//
 
-@interface SkillsCollectionViewController ()
+#import "EventsCollectionViewController.h"
+#import "EventsCollectionViewCell.h"
+
+@interface EventsCollectionViewController ()
 
 @end
 
-@implementation SkillsCollectionViewController {
-    NSArray *SkillsArray; //Sets up my Array
+@implementation EventsCollectionViewController {
+    NSArray *EventsArray; //Sets up my Array
 }
 
-NSArray *SkillIndexPath;
-
-NSString *SkillResult = @"";
-
-static NSString * const reuseIdentifier = @"Cell";
-
+NSArray *UniversitiesSelected;
+NSArray *EventSelected;
+NSArray *EventTimeSelected;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     //Runs the "retrieveFromParse method
     [self performSelector:@selector(retrieveFromParse)];
-    
-    //Allows for selecting more than one Skill
-    self.collectionView.allowsMultipleSelection = YES;
-    
 }
 
 - (void) retrieveFromParse {
     //Get info from the database
-    PFQuery *retrieveSkills =[PFQuery queryWithClassName:@"SkillsTable"];
+    PFQuery *retrieveEvents =[PFQuery queryWithClassName:@"EventsTable"];
     
     //Orders the Skills in ABC Order
-    [retrieveSkills orderByAscending:@"Skills"];
+    [retrieveEvents orderByAscending:@"university"];
     
     //Puts Table info into a array
-    SkillsArray = [retrieveSkills findObjects];
+    EventsArray = [retrieveEvents findObjects];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -53,43 +64,42 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 //warning Incomplete method implementation -- Return the number of items in the section
-    return SkillsArray.count;
+    return EventsArray.count;
 }
 
-
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SkillsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    EventsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventsCell" forIndexPath:indexPath];
     
     //Sets up the Array to be displayed (needed if wanting a different row in different places)
-    PFObject *TempObject = [SkillsArray objectAtIndex:indexPath.row];
+    PFObject *TempObject = [EventsArray objectAtIndex:indexPath.row];
     
     //Displays the Skills in the labels
-    cell.SkillsLabel.text = [TempObject objectForKey:@"Skills"];
+    cell.EventsLabel.text = [TempObject objectForKey:@"eventName"];
+    cell.UniversityEventLabel.text = [TempObject objectForKey:@"university"];
+    cell.EventDateLabel.text = [TempObject objectForKey:@"date"];
     
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
-
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell* cell = [collectionView cellForItemAtIndexPath:indexPath];
-    cell.contentView.backgroundColor = [UIColor colorWithRed:(253/255.0) green:(128/255.0) blue:(35/255.0) alpha:1.0];
     
-    //Gets selected Skills and puts them into a string
-    PFObject *TempObject = [SkillsArray objectAtIndex:indexPath.row];
-    SkillResult = [SkillResult stringByAppendingString:[TempObject objectForKey:@"Skills"]];
-    SkillResult = [SkillResult stringByAppendingString:@", "];
+    PFObject *TempObject = [EventsArray objectAtIndex:indexPath.row];
     
-    //NSLog(@"SkillResult: %@", SkillResult);
+    EventSelected = [TempObject objectForKey:@"eventName"];
+    
+    //Getting the University of Event selected
+    PFQuery *retrieveEventUniversity =[PFQuery queryWithClassName:@"EventsTable"];
+    [retrieveEventUniversity whereKey:@"university" equalTo:EventSelected];
+    UniversitiesSelected = [retrieveEventUniversity findObjects];
+    
+    //Getting the Date/Time of Event selected
+    PFQuery *retrieveEventTime =[PFQuery queryWithClassName:@"EventsTable"];
+    [retrieveEventTime whereKey:@"date" equalTo:EventSelected];
+    EventTimeSelected = [retrieveEventTime findObjects];
     
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell* cell = [collectionView cellForItemAtIndexPath:indexPath];
-    cell.contentView.backgroundColor = [UIColor colorWithRed:(84/255.0) green:(118/255.0) blue:(140/255.0) alpha:1.0];
-}
-
-//#################################################################
+#pragma mark <UICollectionViewDelegate>
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

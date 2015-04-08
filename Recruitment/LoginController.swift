@@ -116,7 +116,7 @@ class LoginController: UIViewController {
     //passes the employee name to next contoller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "toEventsPage") {
-            var svc = segue.destinationViewController as EventsController;
+            var svc = segue.destinationViewController as EventsViewController;
             
             svc.toPass = name
             
