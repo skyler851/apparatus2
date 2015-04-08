@@ -6,28 +6,13 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 import UIKit
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Foundation
+import ParseUI
 
->>>>>>> origin/master
 var statusResume = ""
 var statusSkills = ""
 var areaEntered = ""
-<<<<<<< HEAD
 var statusProfile = ""
-=======
-<<<<<<< HEAD
-import ParseUI
-=======
-var statusResume = ""
-var areaEntered = ""
-var statusProfile = ""
->>>>>>> master
->>>>>>> CandidateList
-=======
->>>>>>> origin/master
 
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
 
