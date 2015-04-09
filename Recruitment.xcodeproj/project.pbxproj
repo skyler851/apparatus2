@@ -37,7 +37,12 @@
 		56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5902E1AC8F43300F29A86 /* ProfileController.swift */; };
 		56BA83F91ACA19640045C0CF /* ResumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BA83F81ACA19640045C0CF /* ResumeController.swift */; };
 		56BE0FE01AAD2413008B0848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0FDE1AAD2413008B0848 /* Main.storyboard */; };
-
+		56D5807D1AD6038800B25117 /* AdminEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D5807C1AD6038800B25117 /* AdminEmployeeController.swift */; };
+		56D5807F1AD6039900B25117 /* AdminEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D5807E1AD6039900B25117 /* AdminEventsController.swift */; };
+		56D580811AD603B200B25117 /* AdminAOIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D580801AD603B200B25117 /* AdminAOIController.swift */; };
+		56D580831AD614C200B25117 /* AdminEmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D580821AD614C200B25117 /* AdminEmployeeTableViewController.swift */; };
+		56D580851AD6156400B25117 /* AdminEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D580841AD6156400B25117 /* AdminEventsTableViewController.swift */; };
+		56D580871AD6159600B25117 /* AdminAIOTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D580861AD6159600B25117 /* AdminAIOTableViewController.swift */; };
 		56FA6DCC1AD1B30E005ED4F3 /* CandidateListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FA6DC91AD1B30E005ED4F3 /* CandidateListTableViewCell.m */; };
 		56FA6DCD1AD1B30E005ED4F3 /* CandidateListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FA6DCB1AD1B30E005ED4F3 /* CandidateListTableViewController.m */; };
 		56FA6DD21AD1B35B005ED4F3 /* UniversityListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FA6DCF1AD1B35B005ED4F3 /* UniversityListTableViewCell.m */; };
@@ -103,7 +108,12 @@
 		56B5902E1AC8F43300F29A86 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		56BA83F81ACA19640045C0CF /* ResumeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeController.swift; sourceTree = "<group>"; };
 		56BE0FDF1AAD2413008B0848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-
+		56D5807C1AD6038800B25117 /* AdminEmployeeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEmployeeController.swift; sourceTree = "<group>"; };
+		56D5807E1AD6039900B25117 /* AdminEventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventsController.swift; sourceTree = "<group>"; };
+		56D580801AD603B200B25117 /* AdminAOIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAOIController.swift; sourceTree = "<group>"; };
+		56D580821AD614C200B25117 /* AdminEmployeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEmployeeTableViewController.swift; sourceTree = "<group>"; };
+		56D580841AD6156400B25117 /* AdminEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventsTableViewController.swift; sourceTree = "<group>"; };
+		56D580861AD6159600B25117 /* AdminAIOTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAIOTableViewController.swift; sourceTree = "<group>"; };
 		56FA6DC81AD1B30E005ED4F3 /* CandidateListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateListTableViewCell.h; sourceTree = "<group>"; };
 		56FA6DC91AD1B30E005ED4F3 /* CandidateListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandidateListTableViewCell.m; sourceTree = "<group>"; };
 		56FA6DCA1AD1B30E005ED4F3 /* CandidateListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandidateListTableViewController.h; sourceTree = "<group>"; };
@@ -123,7 +133,7 @@
 		57CA15DA1A9BADE1009EC3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CA15DB1A9BADE1009EC3C7 /* RecruitmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitmentTests.swift; sourceTree = "<group>"; };
 		57CA15E51A9D0BFE009EC3C7 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
-		57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminMenu.swift; path = ../AdminMenu.swift; sourceTree = "<group>"; };
+		57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminMenu.swift; sourceTree = "<group>"; };
 		57CA15EB1A9E8508009EC3C7 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		57CA15EF1A9E89F6009EC3C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		57E309491AC4F9F000B3B40E /* SkillsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillsCollectionViewController.h; sourceTree = "<group>"; };
@@ -230,6 +240,20 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		56D5807B1AD6035800B25117 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */,
+				56D5807C1AD6038800B25117 /* AdminEmployeeController.swift */,
+				56D5807E1AD6039900B25117 /* AdminEventsController.swift */,
+				56D580801AD603B200B25117 /* AdminAOIController.swift */,
+				56D580821AD614C200B25117 /* AdminEmployeeTableViewController.swift */,
+				56D580841AD6156400B25117 /* AdminEventsTableViewController.swift */,
+				56D580861AD6159600B25117 /* AdminAIOTableViewController.swift */,
+			);
+			name = Admin;
+			sourceTree = "<group>";
+		};
 		56FA6DC61AD1B297005ED4F3 /* Candidate List */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +279,7 @@
 		57CA15B71A9BADE1009EC3C7 = {
 			isa = PBXGroup;
 			children = (
+				56D5807B1AD6035800B25117 /* Admin */,
 				5696B3691AC21A3900E82061 /* libsqlite3.dylib */,
 				57CA15C21A9BADE1009EC3C7 /* Recruitment */,
 				57CA15D81A9BADE1009EC3C7 /* RecruitmentTests */,
@@ -284,7 +309,6 @@
 				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
 				5696B3671AC219A000E82061 /* CandidateViewController.swift */,
 				563FD37F1AAA44A3004B6EB7 /* Fonts */,
-				57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */,
 				57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */,
 				57CA15EF1A9E89F6009EC3C7 /* Images.xcassets */,
 				57CA15E51A9D0BFE009EC3C7 /* Checkbox.swift */,
@@ -441,6 +465,9 @@
 				5696A25D1AC0C77D0032BCCF /* LoginController.swift in Sources */,
 				5696A2611AC0CAE60032BCCF /* NewCandidateController.swift in Sources */,
 				560127A81AC8ED630009AF1E /* ThankYouController.swift in Sources */,
+				56D580871AD6159600B25117 /* AdminAIOTableViewController.swift in Sources */,
+				56D580831AD614C200B25117 /* AdminEmployeeTableViewController.swift in Sources */,
+				56D580851AD6156400B25117 /* AdminEventsTableViewController.swift in Sources */,
 				56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */,
 				56847AE21AC20B2200082B65 /* SWRevealViewController.m in Sources */,
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
@@ -448,7 +475,9 @@
 				565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */,
 				56FA6DCD1AD1B30E005ED4F3 /* CandidateListTableViewController.m in Sources */,
 				56BA83F91ACA19640045C0CF /* ResumeController.swift in Sources */,
+				56D5807D1AD6038800B25117 /* AdminEmployeeController.swift in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
+				56D5807F1AD6039900B25117 /* AdminEventsController.swift in Sources */,
 				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
@@ -456,6 +485,7 @@
 				5696B3681AC219A000E82061 /* CandidateViewController.swift in Sources */,
 				57CA15EA1A9E62B4009EC3C7 /* AdminMenu.swift in Sources */,
 				56FA6DCC1AD1B30E005ED4F3 /* CandidateListTableViewCell.m in Sources */,
+				56D580811AD603B200B25117 /* AdminAOIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
