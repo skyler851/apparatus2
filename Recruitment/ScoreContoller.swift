@@ -21,7 +21,7 @@ class ScoreController: UIViewController{
     @IBOutlet weak var culture: UISegmentedControl!
     @IBOutlet weak var aptitude: UISegmentedControl!
     @IBOutlet weak var tech: UISegmentedControl!
-    @IBOutlet weak var notes: UITextField!
+    @IBOutlet weak var notes: UITextView!
     @IBOutlet weak var decision: UISegmentedControl!
     @IBOutlet weak var star: Score!
     
