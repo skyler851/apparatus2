@@ -9,7 +9,6 @@
 #import "CandidateListTableViewController.h"
 #import "CandidateListTableViewCell.h"
 #import "SummaryDetailViewController.h"
-#import "Recruitment-Swift.h"
 
 @interface CandidateListTableViewController ()
 

@@ -8,6 +8,7 @@
 
 #import "SummaryDetailViewController.h"
 #import "Recruitment-Swift.h"
+#import "EditSummaryViewController.h"
 
 @interface SummaryDetailViewController ()
 
@@ -59,12 +60,35 @@
 
 @synthesize tempVar;
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"editProfile"]) {
-        ProfileControllerController *destViewController = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"editSummary"]) {
+        EditSummaryViewController *destViewController = segue.destinationViewController;
         
-        //uses "candidateName" from Summary page and pushes it to the "editProfile" so it can be seen.
-        destViewController.editCandidateName = candidateName;
+        //pushes all data from summary detail page to variables on edit summary page
+        
+        destViewController.candidateName = candidateName;
+        destViewController.email = email;
+        destViewController.jobType = jobType;
+        NSLog(@"Error: %@", jobType);
+
+        //convert from date to string to display
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"MMMM YYYY"];
+        NSString *outDate = [formatter stringFromDate:gradDate];
+        destViewController.gradDate = outDate;
+        
+        destViewController.jobType = jobType;
+        destViewController.area = areaOfInterest;
+        destViewController.skills = skills;
+        destViewController.cultureFit = cultureFit;
+        destViewController.aptitude = aptitude;
+        destViewController.techSkill = techSkills;
+        destViewController.favorite = favorite;
+        destViewController.decision = decision;
+        destViewController.notes = notes;
+
+     
         
     }
 }
@@ -100,7 +124,6 @@
     recruiterName = [NameConstant recName];
     lblRecruiterName.title = recruiterName;
     
-    tempVar = [CandidateConstant candidate];
     
     
     

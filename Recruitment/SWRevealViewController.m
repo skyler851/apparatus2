@@ -1669,12 +1669,12 @@ const int FrontViewPositionNone = 0xff;
             [self performSegueWithIdentifier:SWSegueFrontIdentifier sender:nil];
         }
         @catch(NSException *exception) {}
-        
-        @try
-        {
-            [self performSegueWithIdentifier:SWSegueLeftIdentifier sender:nil];
-        }
-        @catch(NSException *exception) {}
+//        
+//        @try
+//        {
+//            [self performSegueWithIdentifier:SWSegueLeftIdentifier sender:nil];
+//        }
+//        @catch(NSException *exception) {}
     }
 }
 
@@ -1799,7 +1799,7 @@ const int FrontViewPositionNone = 0xff;
 
 NSString * const SWSegueRearIdentifier = @"sw_rear";
 NSString * const SWSegueFrontIdentifier = @"sw_front";
-NSString * const SWSegueLeftIdentifier = @"sw_left";
+//NSString * const SWSegueLeftIdentifier = @"sw_left";
 
 
 #pragma mark - SWRevealViewControllerSegueSetController class
@@ -1820,8 +1820,8 @@ NSString * const SWSegueLeftIdentifier = @"sw_left";
     else if ( [identifier isEqualToString:SWSegueRearIdentifier] )
         operation = SWRevealControllerOperationReplaceRearController;
     
-    else if ( [identifier isEqualToString:SWSegueLeftIdentifier] )
-        operation = SWRevealControllerOperationReplaceLeftController;
+//    else if ( [identifier isEqualToString:SWSegueLeftIdentifier] )
+//        operation = SWRevealControllerOperationReplaceLeftController;
     
     if ( operation != SWRevealControllerOperationNone )
         [rvc _performTransitionOperation:operation withViewController:dvc animated:NO];

@@ -37,7 +37,7 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var candidateName: UILabel!
     @IBOutlet weak var candidateInfo: UILabel!
     
-    var editCandidateName = candName
+   
     
     //Area of interest
     var TempArray = ["AREA OF INTEREST:",
@@ -242,17 +242,6 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "editProfile"{
-            self.candidateName.text = editCandidateName
-            println("hello")
-        }
-        if segue.identifier == "toProfilePage"{
-            self.candidateName.text = candName
-        }
-        
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -260,7 +249,8 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
         //display recruiter name in toolbar
         lblRecruiterName.title = name
         //var x = tempVar
-        candidateName.text = editCandidateName
+        
+        candidateName.text = candName
         
         //display candidate name in heading
         var instanceOfCustomObject: CandidateListTableViewController = CandidateListTableViewController()
@@ -312,15 +302,6 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     }
     
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }
 

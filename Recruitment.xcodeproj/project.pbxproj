@@ -13,6 +13,7 @@
 		563FD3831AAA4C90004B6EB7 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563FD3821AAA4C90004B6EB7 /* OpenSans-Bold.ttf */; };
 		565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A9D511AC4DD3D00819C07 /* MenuController.swift */; };
 		5666CDEE1AD4FA9F008FE428 /* SummaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5666CDEC1AD4FA9F008FE428 /* SummaryDetailViewController.m */; };
+		5666CDF21AD5EC20008FE428 /* EditSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5666CDF11AD5EC20008FE428 /* EditSummaryViewController.m */; };
 		56847AE21AC20B2200082B65 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56847AE11AC20B2200082B65 /* SWRevealViewController.m */; };
 		5696A2531AC0C63D0032BCCF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696A2521AC0C63D0032BCCF /* MapKit.framework */; };
 		5696A25D1AC0C77D0032BCCF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696A25C1AC0C77D0032BCCF /* LoginController.swift */; };
@@ -72,8 +73,10 @@
 		563FD3801AAA4C83004B6EB7 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		563FD3821AAA4C90004B6EB7 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		565A9D511AC4DD3D00819C07 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		5666CDEC1AD4FA9F008FE428 /* SummaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryDetailViewController.m; sourceTree = "<group>"; };
-		5666CDED1AD4FA9F008FE428 /* SummaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryDetailViewController.h; sourceTree = "<group>"; };
+		5666CDEC1AD4FA9F008FE428 /* SummaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryDetailViewController.m; path = Recruitment/SummaryDetailViewController.m; sourceTree = "<group>"; };
+		5666CDED1AD4FA9F008FE428 /* SummaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryDetailViewController.h; path = Recruitment/SummaryDetailViewController.h; sourceTree = "<group>"; };
+		5666CDF01AD5EC20008FE428 /* EditSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSummaryViewController.h; sourceTree = "<group>"; };
+		5666CDF11AD5EC20008FE428 /* EditSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSummaryViewController.m; sourceTree = "<group>"; };
 		56847ADC1AC0E31E00082B65 /* Recruitment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Recruitment-Bridging-Header.h"; sourceTree = "<group>"; };
 		56847AE01AC20B2200082B65 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		56847AE11AC20B2200082B65 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -178,6 +181,18 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		5666CDEF1AD5EB4B008FE428 /* Summary Page */ = {
+			isa = PBXGroup;
+			children = (
+				5666CDEC1AD4FA9F008FE428 /* SummaryDetailViewController.m */,
+				5666CDED1AD4FA9F008FE428 /* SummaryDetailViewController.h */,
+				5666CDF01AD5EC20008FE428 /* EditSummaryViewController.h */,
+				5666CDF11AD5EC20008FE428 /* EditSummaryViewController.m */,
+			);
+			name = "Summary Page";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		5696A25A1AC0C6670032BCCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,15 +291,14 @@
 		57CA15C21A9BADE1009EC3C7 /* Recruitment */ = {
 			isa = PBXGroup;
 			children = (
+				5666CDEF1AD5EB4B008FE428 /* Summary Page */,
 				56FA6DC71AD1B2A3005ED4F3 /* University List */,
 				56FA6DC61AD1B297005ED4F3 /* Candidate List */,
 				56847ADC1AC0E31E00082B65 /* Recruitment-Bridging-Header.h */,
+				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
 				5696A2641AC0CE6F0032BCCF /* SWRevealViewController */,
 				5696A25B1AC0C72E0032BCCF /* Controllers */,
 				57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */,
-				56BE0FDE1AAD2413008B0848 /* Main.storyboard */,
-				5666CDEC1AD4FA9F008FE428 /* SummaryDetailViewController.m */,
-				5666CDED1AD4FA9F008FE428 /* SummaryDetailViewController.h */,
 				5696B3671AC219A000E82061 /* CandidateViewController.swift */,
 				563FD37F1AAA44A3004B6EB7 /* Fonts */,
 				57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */,
@@ -454,6 +468,7 @@
 				5666CDEE1AD4FA9F008FE428 /* SummaryDetailViewController.m in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
 				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
+				5666CDF21AD5EC20008FE428 /* EditSummaryViewController.m in Sources */,
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
 				56FE897B1AC8F7D600A4E4EB /* ScoreContoller.swift in Sources */,
