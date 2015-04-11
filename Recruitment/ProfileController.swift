@@ -8,16 +8,9 @@
 import UIKit
 import Foundation
 import ParseUI
-<<<<<<< HEAD
 
 var statusResume = ""
 var statusSkills = ""
-=======
-
-
-var statusSkills = ""
-var statusResume = ""
->>>>>>> Summary2
 var areaEntered = ""
 var statusProfile = ""
 
