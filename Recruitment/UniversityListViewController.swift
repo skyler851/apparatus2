@@ -12,8 +12,10 @@ class UniversityListViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblRecruiterName.title = name
 
         // Do any additional setup after loading the view.
         

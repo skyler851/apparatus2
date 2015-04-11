@@ -6,18 +6,15 @@
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 
-
 #import "SWRevealViewController.h"
-
 #import "SkillsCollectionViewController.m"
 //SkillResult - NSString
-
-
 #import "EventsCollectionViewController.m"
 //UniversitiesSelected  - NSArray
 //EventSelected         - NSArray
 //EventTimeSelected     - NSArray
 
-
+#import "CandidateListTableViewCell.h"
+#import "CandidateListTableViewController.h"
 #import <Parse/Parse.h>
-// or #import <ParseOSX/ParseOSX.h>
+#import "SummaryDetailViewController.h"

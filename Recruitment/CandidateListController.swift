@@ -8,14 +8,20 @@
 
 import UIKit
 
+@objc class NameConstant {
+    private init() {}
+    class func recName() -> String { return name }
+}
 class CandidateListController: UIViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
+    @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+        lblRecruiterName.title = name
+
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
