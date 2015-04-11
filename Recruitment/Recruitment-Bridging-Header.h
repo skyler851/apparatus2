@@ -8,7 +8,7 @@
 
 #import "SWRevealViewController.h"
 #import "SkillsCollectionViewController.m"
-<<<<<<< HEAD
+
 //SkillResult - NSString
 #import "EventsCollectionViewController.m"
 //UniversitiesSelected  - NSArray
@@ -19,9 +19,5 @@
 #import "CandidateListTableViewController.h"
 #import <Parse/Parse.h>
 #import "SummaryDetailViewController.h"
-=======
-#import "CandidateListTableViewCell.h"
-#import "CandidateListTableViewController.h"
-#import <Parse/Parse.h>
-#import "SummaryDetailViewController.h"
->>>>>>> Summary2
+
+

@@ -491,15 +491,10 @@
 				5666CDEE1AD4FA9F008FE428 /* SummaryDetailViewController.m in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
 				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 				578F00211AD306F500F2F6B4 /* EventsCollectionViewCell.m in Sources */,
-=======
 				5666CDF21AD5EC20008FE428 /* EditSummaryViewController.m in Sources */,
->>>>>>> Summary2
-=======
-				5666CDF21AD5EC20008FE428 /* EditSummaryViewController.m in Sources */,
->>>>>>> Summary2
+
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
 				56FE897B1AC8F7D600A4E4EB /* ScoreContoller.swift in Sources */,
