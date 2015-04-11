@@ -20,7 +20,8 @@
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
-
+<<<<<<< HEAD
+=======
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
@@ -30,6 +31,7 @@
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
             <string>OpenSans-Bold</string>
+>>>>>>> Summary2
         </mutableArray>
         <mutableArray key="OpenSans-Light.ttf">
             <string>OpenSans-Light</string>
@@ -74,7 +76,8 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
-
+<<<<<<< HEAD
+=======
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -85,6 +88,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+>>>>>>> Summary2
         </mutableArray>
     </customFonts>
     <scenes>
@@ -929,9 +933,11 @@
                                     <constraint firstAttribute="width" constant="46" id="uVb-Hw-uGN"/>
                                 </constraints>
                                 <color key="tintColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-
+<<<<<<< HEAD
+                                <state key="normal">
+=======
                                 <state key="normal" image="11BE2C78-DC0E-4CE4-9CD1-A1FA0D9DCC09" backgroundImage="11BE2C78-DC0E-4CE4-9CD1-A1FA0D9DCC09">
-
+>>>>>>> Summary2
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -1248,6 +1254,7 @@
             </objects>
             <point key="canvasLocation" x="447" y="-1375"/>
         </scene>
+<<<<<<< HEAD
         <!--Events-->
         <scene sceneID="74Z-gQ-VAU">
             <objects>
@@ -1271,14 +1278,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ogk-aV-Vau"/>
                                     <barButtonItem tag="1" image="Apparatus-Color-logo" id="psv-f3-Y6G">
-                                    </barButtonItem>
-                                    </items>
-                                    </toolbar>
-                                    </subviews>
-                                    </view>
-                                    </viewController>
-                                    </objects>
-                                    </scene>
+=======
         <!--Summary-->
         <scene sceneID="k4t-4e-G3q">
             <objects>
@@ -1537,11 +1537,13 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="V8y-OO-9FO"/>
                                     <barButtonItem tag="1" image="Apparatus-Color-logo" id="oqJ-5b-Pau">
+>>>>>>> Summary2
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
+<<<<<<< HEAD
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfu-Kg-ARE">
                                 <rect key="frame" x="16" y="128" width="736" height="876"/>
                                 <connections>
@@ -1632,7 +1634,8 @@
         </scene>
     </scenes>
     <resources>
-
+=======
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b6Y-Yb-geV" firstAttribute="trailing" secondItem="bPR-9X-igy" secondAttribute="trailing" id="2Eg-hF-3uo"/>
@@ -2237,7 +2240,6 @@
             <point key="canvasLocation" x="2297" y="-2349"/>
         </scene>
     </scenes>
-    </resources>
     <resources>
         <image name="11BE2C78-DC0E-4CE4-9CD1-A1FA0D9DCC09" width="240" height="228">
             <mutableData key="keyedArchiveRepresentation">
@@ -5940,6 +5942,7 @@ A2DPAANg3gADYOIAA2DpAANg8QADYP4AA2EDAANhBQADYQcAA2EMAANhFAADYRcAA2EcAANhJAADYScA
 A2E5AANhPAADYUEAAAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAANhQw
 </mutableData>
         </image>
+>>>>>>> Summary2
         <image name="Apparatus-Color-logo" width="98" height="21"/>
         <image name="Apparatus-Symbol" width="300" height="300"/>
         <image name="Apparatus-White1color" width="325" height="108"/>
@@ -5948,9 +5951,16 @@ A2E5AANhPAADYUEAAAAAAAAEAQAAAAAAAABCAAAAAAAAAAAAAAAAAANhQw
         <image name="red-banner" width="2880" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
 
+        <segue reference="spy-1Q-FEW"/>
+        <segue reference="JeT-gW-cdI"/>
+        <segue reference="wis-wa-JDH"/>
+
+=======
         <segue reference="spy-1Q-FEW"/>
         <segue reference="KCJ-hB-M1z"/>
         <segue reference="wis-wa-JDH"/>
+>>>>>>> Summary2
     </inferredMetricsTieBreakers>
 </document>
