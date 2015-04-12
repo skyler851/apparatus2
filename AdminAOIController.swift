@@ -1,12 +1,21 @@
+//
+//  AdminAOIController.swift
+//  Recruitment
+//
+//  Created by Stephanie Kyler on 4/8/15.
+//  Copyright (c) 2015 AppAtUs. All rights reserved.
+//
+
+import Foundation
 import UIKit
 
 
-class AdminMenuController: UIViewController{
+class AdminAOIController: UIViewController{
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     
-
-        override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         //display recruiter name in toolbar

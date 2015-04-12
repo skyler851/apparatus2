@@ -8,7 +8,6 @@
 
 #import "CandidateListTableViewController.h"
 #import "CandidateListTableViewCell.h"
-#import "SummaryDetailViewController.h"
 
 @interface CandidateListTableViewController ()
 
@@ -19,35 +18,6 @@
     NSArray *CandidateDecisionArray;
 }
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //pass variable to summary page
-    if ([segue.identifier isEqualToString:@"toSummary"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        SummaryDetailViewController *destViewController = segue.destinationViewController;
-        //get data from object
-        PFObject *TempObjectCandidates = [CandidateListArray objectAtIndex:indexPath.row];
-
-        //save as variables in SummaryDetailViewController.h file
-        destViewController.candidateName = [TempObjectCandidates objectForKey:@"name"];
-        
-        destViewController.email = [TempObjectCandidates objectForKey:@"email"];
-        destViewController.gradDate = [TempObjectCandidates objectForKey:@"gradDate"];
-        destViewController.jobType = [TempObjectCandidates objectForKey:@"jobType"];
-        destViewController.areaOfInterest = [TempObjectCandidates objectForKey:@"area"];
-        destViewController.skills = [TempObjectCandidates objectForKey:@"skills"];
-        destViewController.cultureFit = [TempObjectCandidates objectForKey:@"culture"];
-        destViewController.aptitude = [TempObjectCandidates objectForKey:@"aptitude"];
-        destViewController.techSkills = [TempObjectCandidates objectForKey:@"tech"];
-        destViewController.favorite = [TempObjectCandidates objectForKey:@"favorite"];
-        destViewController.decision = [TempObjectCandidates objectForKey:@"decision"];
-        destViewController.notes = [TempObjectCandidates objectForKey:@"notes"];
-        
-        
-    }
-    
-    
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     

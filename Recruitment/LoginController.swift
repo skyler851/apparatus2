@@ -7,17 +7,18 @@
 //
 
 import UIKit
+
 var name = ""
 var status = ""
 
 class LoginController: UIViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var txtUsername: UITextField!
-
+    @IBOutlet weak var lblError: UILabel!
     
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
         
-        if identifier == "toEventsPage"{
+        if identifier == "toCandidatePage"{
             if (txtUsername.text.isEmpty) {
                 //alert empty password
                 let alert = UIAlertView()
@@ -43,13 +44,11 @@ class LoginController: UIViewController {
             }
         
             if status == "true"{
-
-                performSegueWithIdentifier("toEventsPage", sender: self)
+                performSegueWithIdentifier("toCandidatePage", sender: self)
                 return true
             }
         }
         return true
-        
     }
     
     @IBAction func btnSubmit(sender: AnyObject) {
@@ -87,7 +86,7 @@ class LoginController: UIViewController {
                 println("Error: \(error) \(error.userInfo!)")
             }
             
-         self.shouldPerformSegueWithIdentifier("toEventsPage", sender: self)
+         self.shouldPerformSegueWithIdentifier("toCandidatePage", sender: self)
             
         }
     }
@@ -115,8 +114,8 @@ class LoginController: UIViewController {
     
     //passes the employee name to next contoller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "toEventsPage") {
-            var svc = segue.destinationViewController as EventsViewController;
+        if (segue.identifier == "toCandidatePage") {
+            var svc = segue.destinationViewController as NewCandidateController;
             
             svc.toPass = name
             
