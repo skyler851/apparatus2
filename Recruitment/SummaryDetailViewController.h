@@ -39,7 +39,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblSkills;
 @property (nonatomic, strong) NSString *skills;
 
-@property (weak, nonatomic) IBOutlet UILabel *lblNotes;
+@property (weak, nonatomic) IBOutlet UITextView *lblNotes;
 @property (nonatomic, strong) NSString *notes;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblCulture;

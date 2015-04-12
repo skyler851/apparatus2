@@ -61,6 +61,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.txtNotes.layer.borderWidth = 0.5;
+    self.txtNotes.layer.borderColor = [UIColor colorWithRed:(200/255.0) green:(200/255.0) blue:(200/255.0) alpha:1.0].CGColor;
+    self.txtNotes.layer.cornerRadius = 8;
+    
     recruiterName = [NameConstant recName];
     lblRecruiterName.title = recruiterName;
     

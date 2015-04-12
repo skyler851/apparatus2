@@ -50,7 +50,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtFavorite;
 @property (nonatomic, strong) NSString *favorite;
 
-@property (weak, nonatomic) IBOutlet UITextField *txtNotes;
+@property (weak, nonatomic) IBOutlet UITextView *txtNotes;
 @property (nonatomic, strong) NSString *notes;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtDecision;
