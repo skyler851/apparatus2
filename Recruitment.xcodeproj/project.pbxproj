@@ -36,6 +36,14 @@
 		5696B3961AC232B900E82061 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3921AC232B900E82061 /* ParseCrashReporting.framework */; };
 		5696B3971AC232B900E82061 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */; };
 		5696B3981AC232B900E82061 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696B3941AC232B900E82061 /* ParseUI.framework */; };
+		56B114E81ADAE39C000CFAD2 /* AdminAIOTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B114E21ADAE39B000CFAD2 /* AdminAIOTableViewController.swift */; };
+		56B114E91ADAE39C000CFAD2 /* AdminAOIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B114E31ADAE39B000CFAD2 /* AdminAOIController.swift */; };
+		56B114EA1ADAE39C000CFAD2 /* AdminEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B114E41ADAE39B000CFAD2 /* AdminEmployeeController.swift */; };
+		56B114EB1ADAE39C000CFAD2 /* AdminEmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B114E51ADAE39B000CFAD2 /* AdminEmployeeTableViewController.swift */; };
+		56B114EC1ADAE39C000CFAD2 /* AdminEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B114E61ADAE39B000CFAD2 /* AdminEventsController.swift */; };
+		56B114ED1ADAE39C000CFAD2 /* AdminEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B114E71ADAE39B000CFAD2 /* AdminEventsTableViewController.swift */; };
+		56B114F01ADAE492000CFAD2 /* ChooseAdminEmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B114EE1ADAE492000CFAD2 /* ChooseAdminEmployeesViewController.swift */; };
+		56B114F11ADAE492000CFAD2 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B114EF1ADAE492000CFAD2 /* EmployeeDetailViewController.swift */; };
 		56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5902E1AC8F43300F29A86 /* ProfileController.swift */; };
 		56BA83F91ACA19640045C0CF /* ResumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BA83F81ACA19640045C0CF /* ResumeController.swift */; };
 		56BE0FE01AAD2413008B0848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BE0FDE1AAD2413008B0848 /* Main.storyboard */; };
@@ -108,6 +116,14 @@
 		5696B3921AC232B900E82061 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		5696B3931AC232B900E82061 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		5696B3941AC232B900E82061 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		56B114E21ADAE39B000CFAD2 /* AdminAIOTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAIOTableViewController.swift; sourceTree = "<group>"; };
+		56B114E31ADAE39B000CFAD2 /* AdminAOIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAOIController.swift; sourceTree = "<group>"; };
+		56B114E41ADAE39B000CFAD2 /* AdminEmployeeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEmployeeController.swift; sourceTree = "<group>"; };
+		56B114E51ADAE39B000CFAD2 /* AdminEmployeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEmployeeTableViewController.swift; sourceTree = "<group>"; };
+		56B114E61ADAE39B000CFAD2 /* AdminEventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventsController.swift; sourceTree = "<group>"; };
+		56B114E71ADAE39B000CFAD2 /* AdminEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventsTableViewController.swift; sourceTree = "<group>"; };
+		56B114EE1ADAE492000CFAD2 /* ChooseAdminEmployeesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAdminEmployeesViewController.swift; sourceTree = "<group>"; };
+		56B114EF1ADAE492000CFAD2 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		56B5902E1AC8F43300F29A86 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		56BA83F81ACA19640045C0CF /* ResumeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeController.swift; sourceTree = "<group>"; };
 		56BE0FDF1AAD2413008B0848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,7 +151,7 @@
 		57CA15DA1A9BADE1009EC3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CA15DB1A9BADE1009EC3C7 /* RecruitmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitmentTests.swift; sourceTree = "<group>"; };
 		57CA15E51A9D0BFE009EC3C7 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
-		57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminMenu.swift; path = ../AdminMenu.swift; sourceTree = "<group>"; };
+		57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminMenu.swift; sourceTree = "<group>"; };
 		57CA15EB1A9E8508009EC3C7 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		57CA15EF1A9E89F6009EC3C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		57E309491AC4F9F000B3B40E /* SkillsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillsCollectionViewController.h; sourceTree = "<group>"; };
@@ -231,6 +247,8 @@
 		5696A25B1AC0C72E0032BCCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				56B114EE1ADAE492000CFAD2 /* ChooseAdminEmployeesViewController.swift */,
+				56B114EF1ADAE492000CFAD2 /* EmployeeDetailViewController.swift */,
 				56FA6DD41AD1B3AD005ED4F3 /* UniversityListViewController.swift */,
 				57CA15C71A9BADE1009EC3C7 /* ViewController.swift */,
 				5696A25C1AC0C77D0032BCCF /* LoginController.swift */,
@@ -253,6 +271,20 @@
 				56847AE11AC20B2200082B65 /* SWRevealViewController.m */,
 			);
 			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		56B114E11ADAE388000CFAD2 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */,
+				56B114E21ADAE39B000CFAD2 /* AdminAIOTableViewController.swift */,
+				56B114E31ADAE39B000CFAD2 /* AdminAOIController.swift */,
+				56B114E41ADAE39B000CFAD2 /* AdminEmployeeController.swift */,
+				56B114E51ADAE39B000CFAD2 /* AdminEmployeeTableViewController.swift */,
+				56B114E61ADAE39B000CFAD2 /* AdminEventsController.swift */,
+				56B114E71ADAE39B000CFAD2 /* AdminEventsTableViewController.swift */,
+			);
+			name = Admin;
 			sourceTree = "<group>";
 		};
 		56FA6DC61AD1B297005ED4F3 /* Candidate List */ = {
@@ -291,6 +323,7 @@
 		57CA15B71A9BADE1009EC3C7 = {
 			isa = PBXGroup;
 			children = (
+				56B114E11ADAE388000CFAD2 /* Admin */,
 				5696B3691AC21A3900E82061 /* libsqlite3.dylib */,
 				57CA15C21A9BADE1009EC3C7 /* Recruitment */,
 				57CA15D81A9BADE1009EC3C7 /* RecruitmentTests */,
@@ -322,7 +355,6 @@
 				57E3094F1AC4FB0F00B3B40E /* SkillsCollectionView */,
 				5696B3671AC219A000E82061 /* CandidateViewController.swift */,
 				563FD37F1AAA44A3004B6EB7 /* Fonts */,
-				57CA15E91A9E62B4009EC3C7 /* AdminMenu.swift */,
 				57CA15C51A9BADE1009EC3C7 /* AppDelegate.swift */,
 				57CA15EF1A9E89F6009EC3C7 /* Images.xcassets */,
 				57CA15E51A9D0BFE009EC3C7 /* Checkbox.swift */,
@@ -473,12 +505,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E3094B1AC4F9F000B3B40E /* SkillsCollectionViewController.m in Sources */,
+				56B114EB1ADAE39C000CFAD2 /* AdminEmployeeTableViewController.swift in Sources */,
 				56FA6DD31AD1B35B005ED4F3 /* UniversityListTableViewController.m in Sources */,
 				578F001E1AD306C200F2F6B4 /* EventsCollectionViewController.m in Sources */,
 				56FA6DD21AD1B35B005ED4F3 /* UniversityListTableViewCell.m in Sources */,
 				57CA15C81A9BADE1009EC3C7 /* ViewController.swift in Sources */,
 				5696A25D1AC0C77D0032BCCF /* LoginController.swift in Sources */,
 				5696A2611AC0CAE60032BCCF /* NewCandidateController.swift in Sources */,
+				56B114E81ADAE39C000CFAD2 /* AdminAIOTableViewController.swift in Sources */,
 				560127A81AC8ED630009AF1E /* ThankYouController.swift in Sources */,
 				56B5902F1AC8F43300F29A86 /* ProfileController.swift in Sources */,
 				578F00241AD30A0200F2F6B4 /* EventsViewController.swift in Sources */,
@@ -486,21 +520,25 @@
 				57CA15C61A9BADE1009EC3C7 /* AppDelegate.swift in Sources */,
 				56FA6DD51AD1B3AD005ED4F3 /* UniversityListViewController.swift in Sources */,
 				565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */,
+				56B114EA1ADAE39C000CFAD2 /* AdminEmployeeController.swift in Sources */,
+				56B114ED1ADAE39C000CFAD2 /* AdminEventsTableViewController.swift in Sources */,
 				56FA6DCD1AD1B30E005ED4F3 /* CandidateListTableViewController.m in Sources */,
+				56B114F11ADAE492000CFAD2 /* EmployeeDetailViewController.swift in Sources */,
 				56BA83F91ACA19640045C0CF /* ResumeController.swift in Sources */,
+				56B114E91ADAE39C000CFAD2 /* AdminAOIController.swift in Sources */,
 				5666CDEE1AD4FA9F008FE428 /* SummaryDetailViewController.m in Sources */,
 				5696A25F1AC0CA870032BCCF /* CandidateListController.swift in Sources */,
 				57E3094E1AC4F9FC00B3B40E /* SkillsCollectionViewCell.m in Sources */,
-
 				578F00211AD306F500F2F6B4 /* EventsCollectionViewCell.m in Sources */,
+				56B114EC1ADAE39C000CFAD2 /* AdminEventsController.swift in Sources */,
 				5666CDF21AD5EC20008FE428 /* EditSummaryViewController.m in Sources */,
-
 				57CA15E61A9D0BFE009EC3C7 /* Checkbox.swift in Sources */,
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
 				56FE897B1AC8F7D600A4E4EB /* ScoreContoller.swift in Sources */,
 				5696B3681AC219A000E82061 /* CandidateViewController.swift in Sources */,
 				57CA15EA1A9E62B4009EC3C7 /* AdminMenu.swift in Sources */,
 				56FA6DCC1AD1B30E005ED4F3 /* CandidateListTableViewCell.m in Sources */,
+				56B114F01ADAE492000CFAD2 /* ChooseAdminEmployeesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

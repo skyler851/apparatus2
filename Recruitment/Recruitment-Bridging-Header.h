@@ -17,7 +17,9 @@
 
 #import "CandidateListTableViewCell.h"
 #import "CandidateListTableViewController.h"
+#import "ParseUI/ParseUI.h"
 #import <Parse/Parse.h>
+// or #import <ParseOSX/ParseOSX.h>
 #import "SummaryDetailViewController.h"
 
 
