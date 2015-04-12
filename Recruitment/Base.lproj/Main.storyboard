@@ -3308,11 +3308,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wis-wa-JDH"/>
-<<<<<<< HEAD
         <segue reference="ovK-zL-9pd"/>
-=======
         <segue reference="spy-1Q-FEW"/>
->>>>>>> Notes
         <segue reference="JeT-gW-cdI"/>
     </inferredMetricsTieBreakers>
 </document>
