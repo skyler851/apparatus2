@@ -14,7 +14,7 @@ class EmployeeDetailViewController: UIViewController {
     
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtEmpID: UITextField!
-    
+    @IBOutlet weak var menuButton:UIBarButtonItem!
     @IBOutlet weak var lblRecruiterName: UIBarButtonItem!
     // Container to store the view table selected object
     var currentObject : PFObject?
@@ -53,6 +53,13 @@ override func viewDidLoad() {
         txtEmpID.text = object["employeeID"] as String
         
     }
+    //menu
+    if self.revealViewController() != nil {
+        menuButton.target = self.revealViewController()
+        menuButton.action = "revealToggle:"
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
+
     
     
 }
