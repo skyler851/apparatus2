@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJW-bc-Lb1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -78,6 +78,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+<<<<<<< HEAD
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -94,6 +95,8 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+=======
+>>>>>>> Notes
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1415,14 +1418,6 @@
                                 </segments>
                                 <color key="tintColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Notes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdU-5E-vYv">
-                                <rect key="frame" x="16" y="543" width="736" height="247"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="247" id="pFT-5M-EoG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R1-W1-hxn" customClass="Score" customModule="Recruitment" customModuleProvider="target">
                                 <rect key="frame" x="665" y="456" width="46" height="47"/>
                                 <constraints>
@@ -1450,6 +1445,13 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Notes:" translatesAutoresizingMaskIntoConstraints="NO" id="hBP-Ad-z8S">
+                                <rect key="frame" x="16" y="543" width="736" height="247"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1480,7 +1482,6 @@
                             <constraint firstItem="1R1-W1-hxn" firstAttribute="top" secondItem="jQR-b7-Ilx" secondAttribute="bottom" constant="26" id="K4j-Vy-LDP"/>
                             <constraint firstItem="wrf-c7-eOd" firstAttribute="leading" secondItem="cHh-Qp-Yrl" secondAttribute="leading" constant="139" id="Lic-Bk-V9O"/>
                             <constraint firstItem="P5k-45-4fq" firstAttribute="top" secondItem="Zrj-zu-FWE" secondAttribute="bottom" constant="24" id="QYv-QP-11e"/>
-                            <constraint firstItem="XdU-5E-vYv" firstAttribute="leading" secondItem="RvA-do-tga" secondAttribute="leading" id="RpL-U3-GUr"/>
                             <constraint firstItem="EKA-40-IhK" firstAttribute="firstBaseline" secondItem="hPZ-7b-o4O" secondAttribute="firstBaseline" id="T39-sc-pZ2"/>
                             <constraint firstItem="yR1-Sj-sTQ" firstAttribute="top" secondItem="Zrj-zu-FWE" secondAttribute="bottom" constant="32" id="T7v-fC-kUm"/>
                             <constraint firstItem="35c-s0-tvD" firstAttribute="top" secondItem="jNJ-zi-T8d" secondAttribute="bottom" constant="29" id="XwP-i8-GSe"/>
@@ -1489,13 +1490,11 @@
                             <constraint firstItem="Ksa-Bn-zXV" firstAttribute="baseline" secondItem="8Gt-Ec-str" secondAttribute="baseline" id="ZWd-2U-qM3"/>
                             <constraint firstItem="8Gt-Ec-str" firstAttribute="leading" secondItem="cHh-Qp-Yrl" secondAttribute="leading" constant="236" id="ZXg-E8-SAJ"/>
                             <constraint firstItem="91m-9q-Pvs" firstAttribute="firstBaseline" secondItem="35c-s0-tvD" secondAttribute="firstBaseline" id="ZoU-Mu-yQU"/>
-                            <constraint firstItem="XdU-5E-vYv" firstAttribute="top" secondItem="1R1-W1-hxn" secondAttribute="bottom" constant="40" id="brf-IK-2Ze"/>
                             <constraint firstItem="uxc-8j-H4c" firstAttribute="centerX" secondItem="O7N-Md-uSr" secondAttribute="centerX" id="c6a-7S-sH2"/>
                             <constraint firstItem="91m-9q-Pvs" firstAttribute="trailing" secondItem="Ksa-Bn-zXV" secondAttribute="trailing" id="cdO-Gn-P20"/>
                             <constraint firstItem="O7N-Md-uSr" firstAttribute="top" secondItem="cHh-Qp-Yrl" secondAttribute="top" constant="113" id="e2z-ZL-vqM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1R1-W1-hxn" secondAttribute="trailing" constant="41" id="g9G-ms-9mF"/>
                             <constraint firstItem="EKA-40-IhK" firstAttribute="top" secondItem="j88-33-07X" secondAttribute="bottom" constant="25" id="gos-hv-ODE"/>
-                            <constraint firstItem="XdU-5E-vYv" firstAttribute="trailing" secondItem="jQR-b7-Ilx" secondAttribute="trailing" id="mN8-XP-rTe"/>
                             <constraint firstItem="8Gt-Ec-str" firstAttribute="leading" secondItem="35c-s0-tvD" secondAttribute="leading" id="nCD-Le-N6m"/>
                             <constraint firstItem="91m-9q-Pvs" firstAttribute="leading" secondItem="Ksa-Bn-zXV" secondAttribute="leading" id="nrd-MJ-oZw"/>
                             <constraint firstItem="Ksa-Bn-zXV" firstAttribute="top" secondItem="avw-hh-0L8" secondAttribute="bottom" constant="25" id="nxh-NB-wVm"/>
@@ -1549,7 +1548,7 @@
                         <outlet property="decision" destination="wrf-c7-eOd" id="zIA-o4-jaj"/>
                         <outlet property="lblRecruiterName" destination="KK6-6m-g1K" id="kMZ-2I-0UH"/>
                         <outlet property="menuButton" destination="Tb5-Xn-aq9" id="zj5-or-rSy"/>
-                        <outlet property="notes" destination="XdU-5E-vYv" id="CV8-Uj-nlS"/>
+                        <outlet property="notes" destination="hBP-Ad-z8S" id="XcH-aD-VBV"/>
                         <outlet property="star" destination="1R1-W1-hxn" id="K9a-LA-5QS"/>
                         <outlet property="tech" destination="jQR-b7-Ilx" id="Ga0-hR-6RT"/>
                         <segue destination="wc1-GC-iJH" kind="show" identifier="fromScoreToNewCandidate" id="spy-1Q-FEW"/>
@@ -3312,7 +3311,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wis-wa-JDH"/>
+<<<<<<< HEAD
         <segue reference="ovK-zL-9pd"/>
+=======
+        <segue reference="spy-1Q-FEW"/>
+>>>>>>> Notes
         <segue reference="JeT-gW-cdI"/>
     </inferredMetricsTieBreakers>
 </document>
