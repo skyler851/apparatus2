@@ -94,6 +94,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -325,7 +326,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-yS-JIh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-yS-JIh">
                                 <rect key="frame" x="0.0" y="64" width="768" height="5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="qix-Ef-5SM"/>
@@ -1351,7 +1352,7 @@
                                 <color key="textColor" red="0.32549019610000002" green="0.44705882349999998" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-YQ-3XV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="red-banner" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-YQ-3XV">
                                 <rect key="frame" x="0.0" y="64" width="768" height="5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="Yug-xZ-Gxg"/>
@@ -1444,8 +1445,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Notes:" translatesAutoresizingMaskIntoConstraints="NO" id="hBP-Ad-z8S">
                                 <rect key="frame" x="16" y="543" width="736" height="247"/>
-                                <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -3308,7 +3308,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wis-wa-JDH"/>
-        <segue reference="ovK-zL-9pd"/>
         <segue reference="spy-1Q-FEW"/>
         <segue reference="JeT-gW-cdI"/>
     </inferredMetricsTieBreakers>

@@ -137,6 +137,10 @@ class ScoreController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.notes.layer.borderWidth = 1.0;
+        self.notes.layer.borderColor = UIColor( red: 84/255, green: 118/255, blue:125/255, alpha: 1.0 ).CGColor
+        self.notes.layer.cornerRadius = 8;
+        
         //display Recruiter name
         lblRecruiterName.title = name
         
