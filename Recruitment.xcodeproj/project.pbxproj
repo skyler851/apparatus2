@@ -14,6 +14,8 @@
 		565A9D521AC4DD3D00819C07 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A9D511AC4DD3D00819C07 /* MenuController.swift */; };
 		5666CDEE1AD4FA9F008FE428 /* SummaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5666CDEC1AD4FA9F008FE428 /* SummaryDetailViewController.m */; };
 		5666CDF21AD5EC20008FE428 /* EditSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5666CDF11AD5EC20008FE428 /* EditSummaryViewController.m */; };
+		567441AC1ADB7ECE00128738 /* ChooseEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567441AB1ADB7ECE00128738 /* ChooseEventViewController.swift */; };
+		567441AE1ADB820500128738 /* EventsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567441AD1ADB820500128738 /* EventsDetailViewController.swift */; };
 		56847AE21AC20B2200082B65 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56847AE11AC20B2200082B65 /* SWRevealViewController.m */; };
 		5696A2531AC0C63D0032BCCF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5696A2521AC0C63D0032BCCF /* MapKit.framework */; };
 		5696A25D1AC0C77D0032BCCF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696A25C1AC0C77D0032BCCF /* LoginController.swift */; };
@@ -88,6 +90,8 @@
 		5666CDED1AD4FA9F008FE428 /* SummaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryDetailViewController.h; path = Recruitment/SummaryDetailViewController.h; sourceTree = "<group>"; };
 		5666CDF01AD5EC20008FE428 /* EditSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSummaryViewController.h; sourceTree = "<group>"; };
 		5666CDF11AD5EC20008FE428 /* EditSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSummaryViewController.m; sourceTree = "<group>"; };
+		567441AB1ADB7ECE00128738 /* ChooseEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseEventViewController.swift; sourceTree = "<group>"; };
+		567441AD1ADB820500128738 /* EventsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsDetailViewController.swift; sourceTree = "<group>"; };
 		56847ADC1AC0E31E00082B65 /* Recruitment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Recruitment-Bridging-Header.h"; sourceTree = "<group>"; };
 		56847AE01AC20B2200082B65 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		56847AE11AC20B2200082B65 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 		5696A25B1AC0C72E0032BCCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				567441AB1ADB7ECE00128738 /* ChooseEventViewController.swift */,
+				567441AD1ADB820500128738 /* EventsDetailViewController.swift */,
 				56B114EE1ADAE492000CFAD2 /* ChooseAdminEmployeesViewController.swift */,
 				56B114EF1ADAE492000CFAD2 /* EmployeeDetailViewController.swift */,
 				56FA6DD41AD1B3AD005ED4F3 /* UniversityListViewController.swift */,
@@ -505,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E3094B1AC4F9F000B3B40E /* SkillsCollectionViewController.m in Sources */,
+				567441AE1ADB820500128738 /* EventsDetailViewController.swift in Sources */,
 				56B114EB1ADAE39C000CFAD2 /* AdminEmployeeTableViewController.swift in Sources */,
 				56FA6DD31AD1B35B005ED4F3 /* UniversityListTableViewController.m in Sources */,
 				578F001E1AD306C200F2F6B4 /* EventsCollectionViewController.m in Sources */,
@@ -536,6 +543,7 @@
 				57CA15EC1A9E8508009EC3C7 /* Score.swift in Sources */,
 				56FE897B1AC8F7D600A4E4EB /* ScoreContoller.swift in Sources */,
 				5696B3681AC219A000E82061 /* CandidateViewController.swift in Sources */,
+				567441AC1ADB7ECE00128738 /* ChooseEventViewController.swift in Sources */,
 				57CA15EA1A9E62B4009EC3C7 /* AdminMenu.swift in Sources */,
 				56FA6DCC1AD1B30E005ED4F3 /* CandidateListTableViewCell.m in Sources */,
 				56B114F01ADAE492000CFAD2 /* ChooseAdminEmployeesViewController.swift in Sources */,

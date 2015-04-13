@@ -1,17 +1,15 @@
 //
-//  ChooseAdminEmployeesViewController.swift
+//  ChooseEventViewController.swift
 //  Recruitment
 //
-//  Created by Stephanie Kyler on 4/11/15.
+//  Created by Stephanie Kyler on 4/13/15.
 //  Copyright (c) 2015 AppAtUs. All rights reserved.
 //
 
 import UIKit
-import Foundation
 
-class ChooseAdminEmployeesViewController: PFQueryTableViewController {
-    
-    
+class ChooseEventViewController: PFQueryTableViewController {
+
     // Initialise the PFQueryTable tableview
     override init!(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -21,8 +19,8 @@ class ChooseAdminEmployeesViewController: PFQueryTableViewController {
         super.init(coder: aDecoder)
         
         // Configure the PFQueryTableView
-        self.parseClassName = "Employee"
-        self.textKey = "Name"
+        self.parseClassName = "EventsTable"
+        self.textKey = "eventName"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = false
     }
@@ -31,7 +29,7 @@ class ChooseAdminEmployeesViewController: PFQueryTableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // Get the new view controller using [segue destinationViewController].
-        var detailScene = segue.destinationViewController as EmployeeDetailViewController
+        var detailScene = segue.destinationViewController as EventsDetailViewController
         
         // Pass the selected object to the destination view controller.
         if let indexPath = self.tableView.indexPathForSelectedRow() {
@@ -51,7 +49,7 @@ class ChooseAdminEmployeesViewController: PFQueryTableViewController {
         passwordPrompt.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
             
             textField.layer.cornerRadius = 0.2
-           
+            
             textField.placeholder = "Name"
             textField.secureTextEntry = true
             
@@ -62,54 +60,56 @@ class ChooseAdminEmployeesViewController: PFQueryTableViewController {
         })
         
         presentViewController(passwordPrompt, animated: true, completion: nil)
-        
-        
-    }
-    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        return true
-    }
-    
-    
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let row = Int(indexPath.row)
+        }
 
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+            return true
         }
+    
+    
+        override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+            if editingStyle == UITableViewCellEditingStyle.Delete {
+                if let indexPath = self.tableView.indexPathForSelectedRow() {
+                    let row = Int(indexPath.row)
+    
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            }
+            }
         }
-    }
     
     
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery! {
-        var query = PFQuery(className: "Employee")
-        query.orderByAscending("Name")
+        var query = PFQuery(className: "EventsTable")
+        query.orderByAscending("eventName")
         return query
     }
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject) -> PFTableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as PFTableViewCell!
+        var cell = tableView.dequeueReusableCellWithIdentifier("EventCell") as PFTableViewCell!
         if cell == nil {
-            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "EventCell")
         }
         
         // Extract values from the PFObject to display in the table cell
-        cell?.textLabel?.text = object["Name"] as String!
+        cell?.textLabel?.text = object["eventName"] as String!
         
         return cell
     }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+
+
 }
