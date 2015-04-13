@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "UniversityListTableViewCell.h"
 
-NSArray *UniversitySelected;
+NSArray *UniversityEventSelected;
 
 @interface UniversityListTableViewController : UITableViewController
 

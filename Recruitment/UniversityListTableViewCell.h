@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UniversityListTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *UniversityEventLabel;
 @property (weak, nonatomic) IBOutlet UILabel *UniversityLabel;
 
 

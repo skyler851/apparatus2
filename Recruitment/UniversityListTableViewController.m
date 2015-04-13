@@ -63,6 +63,8 @@
     
     //Displays the Skills in the labels
     cell.UniversityLabel.text = [TempObject objectForKey:@"university"];
+    cell.UniversityEventLabel.text = [TempObject objectForKey:@"eventName"];
+    
     
     return cell;
 }
@@ -72,7 +74,7 @@
     
     PFObject *TempObjectUniversity = [UniversityListArray objectAtIndex:indexPath.row];
     
-    UniversitySelected = [TempObjectUniversity objectForKey:@"university"];
+    UniversityEventSelected = [TempObjectUniversity objectForKey:@"eventName"];
     
 }
 

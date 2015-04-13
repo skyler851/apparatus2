@@ -63,7 +63,7 @@
     //Get info from the database
     PFQuery *retrieveCandidates =[PFQuery queryWithClassName:@"Candidates"];
     
-    [retrieveCandidates whereKey:@"university" equalTo:UniversitySelected];
+    [retrieveCandidates whereKey:@"event" equalTo:UniversityEventSelected];
     
     [retrieveCandidates orderByDescending:@"decision"];
     
