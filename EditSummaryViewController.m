@@ -56,11 +56,19 @@
 @synthesize txtDecision;
 @synthesize decision;
 
+@synthesize txtUniversity;
+@synthesize university;
+
+@synthesize txtEvent;
+@synthesize event;
+
+@synthesize txtcandRecruiter;
+@synthesize candRecruiter;
+
 @synthesize btnSave;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.txtNotes.layer.borderWidth = 0.5;
     self.txtNotes.layer.borderColor = [UIColor colorWithRed:(200/255.0) green:(200/255.0) blue:(200/255.0) alpha:1.0].CGColor;
     self.txtNotes.layer.cornerRadius = 8;
@@ -73,7 +81,8 @@
     
     
     lblCandidateInfo.text = [NSString stringWithFormat:@"%@ %@ %@",jobType, @" | ", gradDate];
-    
+    NSLog(@"Error: %@", candRecruiter);
+
     txtEmail.text = [NSString stringWithFormat:@"%@",email];
     txtGradDate.text = [NSString stringWithFormat:@"%@", gradDate];
     txtJobType.text = [NSString stringWithFormat:@"%@",jobType];
@@ -85,6 +94,10 @@
     txtFavorite.text = [NSString stringWithFormat:@"%@",favorite];
     txtNotes.text = [NSString stringWithFormat:@"%@",notes];
     txtDecision.text = [NSString stringWithFormat:@"%@",decision];
+    txtcandRecruiter.text = [NSString stringWithFormat:@"%@",candRecruiter];
+    txtUniversity.text = [NSString stringWithFormat:@"%@",university];
+    txtEvent.text = [NSString stringWithFormat:@"%@",event];
+    
     if ([txtDecision.text  isEqual: @"Yes"]) {
         txtDecision.textColor = [UIColor colorWithRed:(0/255.0) green:(139/255.0) blue:(3/255.0) alpha:1.0];
     } else {
@@ -118,6 +131,9 @@
                 decision = txtDecision.text;
                 area = txtArea.text;
                 notes = txtNotes.text;
+                university = txtUniversity.text;
+                event = txtEvent.text;
+                candRecruiter = txtcandRecruiter.text;
                 
                 NSLog(@"New Date: %@", gradDate);
 
@@ -140,6 +156,9 @@
                 [object setObject: favorite forKey:@"favorite"];
                 [object setObject: decision forKey:@"decision"];
                 [object setObject: notes forKey:@"notes"];
+                [object setObject: university forKey:@"university"];
+                [object setObject: event forKey:@"event"];
+                [object setObject: candRecruiter forKey:@"recruiter"];
                 
             // save
             [object saveInBackground];

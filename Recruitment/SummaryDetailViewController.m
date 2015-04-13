@@ -58,6 +58,16 @@
 @synthesize lblDecision;
 @synthesize decision;
 
+@synthesize lblEvent;
+@synthesize event;
+
+@synthesize lblUniversity;
+@synthesize university;
+
+@synthesize candRecruiter;
+@synthesize cRecruiter;
+
+
 @synthesize tempVar;
 
 
@@ -87,6 +97,10 @@
         destViewController.favorite = favorite;
         destViewController.decision = decision;
         destViewController.notes = notes;
+        destViewController.university = university;
+        destViewController.event = event;
+        destViewController.candRecruiter = cRecruiter;
+        
 
      
         
@@ -116,6 +130,11 @@
     lblTechSkill.text = [NSString stringWithFormat:@"%@",techSkills];
     lblFavorite.text = [NSString stringWithFormat:@"%@",favorite];
     lblDecision.text = [NSString stringWithFormat:@"%@",decision];
+    
+    lblUniversity.text = [NSString stringWithFormat:@"%@",university];
+    lblEvent.text = [NSString stringWithFormat:@"%@",event];
+    candRecruiter.text = [NSString stringWithFormat:@"%@",cRecruiter];
+    
     if ([lblDecision.text  isEqual: @"Yes"]) {
         lblDecision.textColor = [UIColor colorWithRed:(0/255.0) green:(139/255.0) blue:(3/255.0) alpha:1.0];
     } else {

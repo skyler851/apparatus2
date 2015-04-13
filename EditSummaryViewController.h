@@ -34,6 +34,15 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *txtArea;
 @property (nonatomic, strong) NSString *area;
+@property (weak, nonatomic) IBOutlet UITextField *txtUniversity;
+@property (nonatomic, strong) NSString *university;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtEvent;
+@property (nonatomic, strong) NSString *event;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtcandRecruiter;
+@property (nonatomic, strong) NSString *candRecruiter;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *txtSkills;
 @property (nonatomic, strong) NSString *skills;
@@ -55,4 +64,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *txtDecision;
 @property (nonatomic, strong) NSString *decision;
+
+
+
 @end

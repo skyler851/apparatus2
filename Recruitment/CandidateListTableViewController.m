@@ -42,6 +42,9 @@
         destViewController.favorite = [TempObjectCandidates objectForKey:@"favorite"];
         destViewController.decision = [TempObjectCandidates objectForKey:@"decision"];
         destViewController.notes = [TempObjectCandidates objectForKey:@"notes"];
+        destViewController.university = [TempObjectCandidates objectForKey:@"university"];
+        destViewController.event = [TempObjectCandidates objectForKey:@"event"];
+        destViewController.cRecruiter = [TempObjectCandidates objectForKey:@"recruiter"];
         
         
     }

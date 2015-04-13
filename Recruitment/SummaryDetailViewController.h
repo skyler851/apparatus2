@@ -27,6 +27,15 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblGradDate;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblUniversity;
+@property (nonatomic, strong) NSString *university;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblEvent;
+@property (nonatomic, strong) NSString *event;
+
+@property (weak, nonatomic) IBOutlet UILabel *candRecruiter;
+@property (nonatomic, strong) NSString *cRecruiter;
+
 @property (nonatomic, strong) NSString *gradDate;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblJobType;
