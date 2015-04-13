@@ -21,6 +21,7 @@ class NewCandidateController: UIViewController{
     var gradEntered = NSDate()
     var jobEntered = 0
     var jobToParse = ""
+    var recruiterName = name
     
     //perform segue to go to thank you page
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
@@ -98,7 +99,8 @@ class NewCandidateController: UIViewController{
                     object.setObject(emlEntered, forKey: "email")
                     object.setObject(gradEntered, forKey: "gradDate")
                     object.setObject(jobToParse, forKey: "jobType")
-                    
+                    object.setObject(name, forKey: "recruiter")
+
                     object.saveInBackgroundWithBlock {
                         (success: Bool, error: NSError!) -> Void in
                         if (success) {
