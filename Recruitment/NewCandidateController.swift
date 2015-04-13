@@ -23,6 +23,8 @@ class NewCandidateController: UIViewController{
     var jobToParse = ""
     var recruiterName = name
     
+    let DemoResumeImage = UIImage(named: "DemoResume")
+    
     //perform segue to go to thank you page
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
         
@@ -100,6 +102,7 @@ class NewCandidateController: UIViewController{
                     object.setObject(gradEntered, forKey: "gradDate")
                     object.setObject(jobToParse, forKey: "jobType")
                     object.setObject(name, forKey: "recruiter")
+                    object.setObject(self.DemoResumeImage, forKey: "resume")
 
                     object.saveInBackgroundWithBlock {
                         (success: Bool, error: NSError!) -> Void in
@@ -203,7 +206,15 @@ class NewCandidateController: UIViewController{
             
         }
         //end submit stuff
-        
+    
+        @IBAction func DemoResumeButton(AnyObject) {
+            let alert = UIAlertView()
+            alert.title = "Resume Saved"
+            alert.message = "Resumed is saved to the device."
+            alert.addButtonWithTitle("OK")
+            alert.show()
+        }
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             
