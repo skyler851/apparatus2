@@ -13,6 +13,7 @@ var statusResume = ""
 var statusSkills = ""
 var areaEntered = ""
 var statusProfile = ""
+var SkillResult2 = SkillResult
 
 
 @objc class AreaConstant {
@@ -119,6 +120,7 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
                     (success: Bool, error: NSError!) -> Void in
                     if (success) {
                         // The object has been saved.
+                        SkillResult = ""
                         
                     } else {
                         // There was a problem, check error.description
