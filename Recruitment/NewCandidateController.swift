@@ -1,4 +1,6 @@
 import UIKit
+import ParseUI
+import Foundation
 
 var candidateEmail = ""
 
@@ -79,7 +81,9 @@ class NewCandidateController: UIViewController{
         var gradEntered = gradDate.date
         var jobEntered = jobType.selectedSegmentIndex
         var jobToParse = ""
-        
+        let imageData = UIImagePNGRepresentation(self.DemoResumeImage)
+        let imageFile = PFFile(name:"DemoResume.png", data:imageData)
+
         if (jobEntered == 0){ jobToParse = "Full-Time May"}
         else if (jobEntered == 1){jobToParse = "Full-Time Dec"}
         else {jobToParse = "Internship"}
@@ -102,7 +106,8 @@ class NewCandidateController: UIViewController{
                     object.setObject(gradEntered, forKey: "gradDate")
                     object.setObject(jobToParse, forKey: "jobType")
                     object.setObject(name, forKey: "recruiter")
-                    object.setObject(self.DemoResumeImage, forKey: "resume")
+                    //object.setObject(self.DemoResumeImage, forKey: "resume")
+                    object["resume"] = imageFile
 
                     object.saveInBackgroundWithBlock {
                         (success: Bool, error: NSError!) -> Void in
