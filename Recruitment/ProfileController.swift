@@ -15,16 +15,6 @@ var areaEntered = ""
 var statusProfile = ""
 
 
-@objc class AreaConstant {
-    private init() {}
-    class func area() -> String { return areaEntered }
-}
-
-@objc class CandidateConstant {
-    private init() {}
-    class func candidate() -> String { return candName }
-}
-
 
 
 class ProfileControllerController: UIViewController, UIPickerViewDelegate {
@@ -245,17 +235,47 @@ class ProfileControllerController: UIViewController, UIPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var query = PFQuery(className:"Candidates")
+        query.whereKey("email", equalTo: candidateEmail )
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            if error == nil  {
+                
+                // Fetch matching entry in database
+                
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        candName = object["name"] as String
+                        
+                    }
+                    
+                    if (objects.count == 0) {
+                        println("no objects")
+                    }
+                }
+                
+                
+            }else {
+                // Log details of the failure
+                
+                
+                println("Error: \(error) \(error.userInfo!)")
+            }
+            
+            
+        
+    }
+
         //display recruiter name in toolbar
         lblRecruiterName.title = name
         //var x = tempVar
         
         candidateName.text = candName
         
-        //display candidate name in heading
-        var instanceOfCustomObject: CandidateListTableViewController = CandidateListTableViewController()
         
         
-        //display candidate name in heading
+        //display candidate info in heading
         candidateInfo.text = jobType + " | " + gradDate
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()

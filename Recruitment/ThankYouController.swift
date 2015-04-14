@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 var candName = ""
 var jobType = ""
 var gradDate = ""
@@ -30,12 +31,12 @@ func getCandidateName(){
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             
-            if error == nil {
+            if (error == nil) {
                 
                 // Fetch matching entry in database
                 if let objects = objects as? [PFObject] {
                     for object in objects {
-                        
+                       
                         candName = object["name"] as String
                         jobType = object["jobType"] as String
                         
@@ -51,23 +52,23 @@ func getCandidateName(){
            
             }else {
                 // Log details of the failure
-                println("Error: \(error) \(error.userInfo!)")
+                println("Error:")
             }
             
             
-        }
+    }
   
-        
+    
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //prepare Candidate name for profile page
+        getCandidateName()
         //display recruiter name in toolbar
         lblRecruiterName.title = name
         
-        //prepare Candidate name for profile page
-        getCandidateName()
+        
         
         //menu
         if self.revealViewController() != nil {
@@ -77,8 +78,7 @@ func getCandidateName(){
         }
     }
     
-    //passes the employee name to next contoller
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

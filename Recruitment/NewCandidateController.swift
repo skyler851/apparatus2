@@ -108,18 +108,11 @@ class NewCandidateController: UIViewController{
                     object.setObject(name, forKey: "recruiter")
                     //object.setObject(self.DemoResumeImage, forKey: "resume")
                     object["resume"] = imageFile
+                    object.save()
 
-                    object.saveInBackgroundWithBlock {
-                        (success: Bool, error: NSError!) -> Void in
-                        if (success) {
-                            // The object has been saved.
-                            
-                        } else {
-                            // There was a problem, check error.description
-                        }
-                    }
                     status = "true"
                     candidateEmail = emlEntered
+                    
                 }
                 
                 if (objects.count != 0) {
@@ -215,7 +208,7 @@ class NewCandidateController: UIViewController{
         @IBAction func DemoResumeButton(AnyObject) {
             let alert = UIAlertView()
             alert.title = "Resume Saved"
-            alert.message = "Resumed is saved to the device."
+            alert.message = "Resume is saved to the device."
             alert.addButtonWithTitle("OK")
             alert.show()
         }
