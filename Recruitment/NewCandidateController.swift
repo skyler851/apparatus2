@@ -1,4 +1,6 @@
 import UIKit
+import ParseUI
+import Foundation
 
 var candidateEmail = ""
 
@@ -22,6 +24,8 @@ class NewCandidateController: UIViewController{
     var jobEntered = 0
     var jobToParse = ""
     var recruiterName = name
+    
+    let DemoResumeImage = UIImage(named: "DemoResume")
     
     //perform segue to go to thank you page
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
@@ -77,7 +81,9 @@ class NewCandidateController: UIViewController{
         var gradEntered = gradDate.date
         var jobEntered = jobType.selectedSegmentIndex
         var jobToParse = ""
-        
+        let imageData = UIImagePNGRepresentation(self.DemoResumeImage)
+        let imageFile = PFFile(name:"DemoResume.png", data:imageData)
+
         if (jobEntered == 0){ jobToParse = "Full-Time May"}
         else if (jobEntered == 1){jobToParse = "Full-Time Dec"}
         else {jobToParse = "Internship"}
@@ -100,18 +106,13 @@ class NewCandidateController: UIViewController{
                     object.setObject(gradEntered, forKey: "gradDate")
                     object.setObject(jobToParse, forKey: "jobType")
                     object.setObject(name, forKey: "recruiter")
+                    //object.setObject(self.DemoResumeImage, forKey: "resume")
+                    object["resume"] = imageFile
+                    object.save()
 
-                    object.saveInBackgroundWithBlock {
-                        (success: Bool, error: NSError!) -> Void in
-                        if (success) {
-                            // The object has been saved.
-                            
-                        } else {
-                            // There was a problem, check error.description
-                        }
-                    }
                     status = "true"
                     candidateEmail = emlEntered
+                    
                 }
                 
                 if (objects.count != 0) {
@@ -203,7 +204,15 @@ class NewCandidateController: UIViewController{
             
         }
         //end submit stuff
-        
+    
+        @IBAction func DemoResumeButton(AnyObject) {
+            let alert = UIAlertView()
+            alert.title = "Resume Saved"
+            alert.message = "Resume is saved to the device."
+            alert.addButtonWithTitle("OK")
+            alert.show()
+        }
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             
